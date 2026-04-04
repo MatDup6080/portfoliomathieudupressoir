@@ -1,0 +1,546 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Préventions - Cybersécurité | Mathieu Dupressoir</title>
+    <link rel="stylesheet" href="style_cyber.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="logo-wrapper">
+                    <i class="fas fa-shield-alt logo-icon"></i>
+                    <span class="logo-text">MD</span>
+                </div>
+            </div>
+
+            <ul class="nav-menu">
+                <li>
+                    <a href="../index.html" class="nav-link">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Portfolio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Veille_cyber.html" class="nav-link active">
+                        <i class="fas fa-home"></i>
+                        <span>Introduction</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Fonctionnement.html" class="nav-link">
+                        <i class="fas fa-cogs"></i>
+                        <span>Fonctionnement</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#attaques" class="nav-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Attaques</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#protection" class="nav-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Protections</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#preventions" class="nav-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Préventions</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#outils" class="nav-link">
+                        <i class="fas fa-tools"></i>
+                        <span>Outils</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#acteurs" class="nav-link">
+                        <i class="fas fa-rocket"></i>
+                        <span>Acteurs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#hackers" class="nav-link">
+                        <i class="fas fa-rocket"></i>
+                        <span>Hackers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Faits_divers" class="nav-link">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Faits divers</span>
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="https://www.ssi.gouv.fr/" class="btn btn-primary btn-small" target="_blank">
+                    <i class="fas fa-lock"></i>
+                    <span>ANSSI</span>
+                </a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu mobile">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo-wrapper">
+                <i class="fas fa-shield-alt logo-icon"></i>
+                <span class="logo-text">DUP-M</span>
+            </div>
+            <button class="menu-close" id="menuClose" aria-label="Fermer le menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-menu">
+            <li>
+                <a href="../index.html" class="mobile-nav-link">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Portfolio</span>
+                </a>
+            </li>
+            <li>
+                <a href="Veille_cyber.html" class="mobile-nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Introduction</span>
+                </a>
+            </li>
+            <li>
+                <a href="#histoire" class="mobile-nav-link">
+                    <i class="fas fa-history"></i>
+                    <span>Histoire</span>
+                </a>
+            </li>
+            <li>
+                <a href="Fonctionnement.html" class="mobile-nav-link">
+                    <i class="fas fa-cogs"></i>
+                    <span>Fonctionnement</span>
+                </a>
+            </li>
+            <li>
+                <a href="#attaques" class="mobile-nav-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Attaques</span>
+                </a>
+            </li>
+            <li>
+                <a href="#preventions" class="mobile-nav-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Préventions</span>
+                </a>
+            </li>
+            <li>
+                <a href="#outils" class="mobile-nav-link">
+                    <i class="fas fa-tools"></i>
+                    <span>Outils</span>
+                </a>
+            </li>
+            <li>
+                <a href="#acteurs" class="mobile-nav-link">
+                    <i class="fas fa-rocket"></i>
+                    <span>Acteurs</span>
+                </a>
+            </li>
+            <li>
+                <a href="#hackers" class="mobile-nav-link">
+                    <i class="fas fa-rocket"></i>
+                    <span>Hackers</span>
+                </a>
+            </li>
+            <li>
+                <a href="#Faits_divers" class="mobile-nav-link">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Faits divers</span>
+                </a>
+            </li>
+        </ul>
+        <div class="mobile-menu-footer">
+            <a href="https://www.ssi.gouv.fr/" class="btn btn-primary btn-block" target="_blank">
+                <i class="fas fa-lock"></i>
+                <span>Visiter l'ANSSI</span>
+            </a>
+        </div>
+    </div>
+    <!-- Contenu principal -->
+    <main class="main-content">
+
+        <!-- Les 10 mesures de prévention -->
+        <section class="parcours-section" id="preventions" style="margin-top: 4rem;">
+            <div class="section-header">
+                <h2 class="section-title">Les 10 Mesures Essentielles de Prévention</h2>
+            </div>
+
+            <div class="parcours-grid">
+
+                <!-- 1. Mots de passe -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-key"></i></div>
+                        <h3 class="parcours-title">Mots de Passe Solides</h3>
+                        <p class="parcours-subtitle">Protéger vos accès</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Utilisez des mots de passe longs, complexes et différents sur chaque service. La majorité des attaques exploite des mots de passe trop simples ou réutilisés. Activez la double authentification (2FA) dès que possible.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-lightbulb"></i> Bonnes pratiques</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Gestionnaire de mots de passe (Bitwarden, KeePass)</li>
+                                <li><i class="fas fa-check-circle"></i> Double authentification (2FA / MFA)</li>
+                                <li><i class="fas fa-check-circle"></i> Changement régulier en cas de doute</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Authentification</span>
+                            <span class="skill-tag">2FA</span>
+                            <span class="skill-tag">MFA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Sauvegardes -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-database"></i></div>
+                        <h3 class="parcours-title">Sauvegardes Régulières</h3>
+                        <p class="parcours-subtitle">Ne perdez jamais vos données</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            En cas de piratage, de panne ou de vol, la sauvegarde est souvent le seul moyen de récupérer vos données. Sauvegardez régulièrement vos PC, téléphones et tablettes sur un support externe que vous déconnectez ensuite.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-lightbulb"></i> Bonnes pratiques</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Règle 3-2-1 (3 copies, 2 supports, 1 hors site)</li>
+                                <li><i class="fas fa-check-circle"></i> Disque USB débranché après sauvegarde</li>
+                                <li><i class="fas fa-check-circle"></i> Sauvegarde automatique et planifiée</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Sauvegarde</span>
+                            <span class="skill-tag">Résilience</span>
+                            <span class="skill-tag">3-2-1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Mises à jour -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-sync-alt"></i></div>
+                        <h3 class="parcours-title">Mises à Jour Immédiates</h3>
+                        <p class="parcours-subtitle">Corriger les failles de sécurité</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Appliquez les mises à jour de sécurité dès qu'elles sont disponibles sur tous vos appareils (PC, tablettes, téléphones). Elles corrigent les vulnérabilités exploitables par des pirates pour s'introduire dans vos systèmes.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-lightbulb"></i> Bonnes pratiques</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Mises à jour automatiques activées</li>
+                                <li><i class="fas fa-check-circle"></i> OS, navigateurs et applications à jour</li>
+                                <li><i class="fas fa-check-circle"></i> Ne pas ignorer les alertes de mise à jour</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Patch</span>
+                            <span class="skill-tag">Vulnérabilité</span>
+                            <span class="skill-tag">OS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Antivirus -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-shield-virus"></i></div>
+                        <h3 class="parcours-title">Utiliser un Antivirus</h3>
+                        <p class="parcours-subtitle">Se protéger des malwares connus</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Les antivirus protègent contre la grande majorité des attaques et virus connus. Des solutions gratuites ou payantes existent selon vos besoins. Vérifiez régulièrement que votre antivirus est à jour et lancez des analyses approfondies.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-lightbulb"></i> Bonnes pratiques</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Antivirus actif et mis à jour en permanence</li>
+                                <li><i class="fas fa-check-circle"></i> Analyses (scans) périodiques approfondies</li>
+                                <li><i class="fas fa-check-circle"></i> Solution EDR pour les environnements pro</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Antivirus</span>
+                            <span class="skill-tag">EDR</span>
+                            <span class="skill-tag">Malware</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Sources officielles -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-store"></i></div>
+                        <h3 class="parcours-title">Sources Officielles Uniquement</h3>
+                        <p class="parcours-subtitle">Télécharger en toute sécurité</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            N'installez des applications que depuis les stores et sites officiels des éditeurs (Apple App Store, Google Play Store). Évitez les sites de streaming ou téléchargement illégaux, souvent vecteurs de virus et de logiciels espions.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-lightbulb"></i> Bonnes pratiques</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Télécharger uniquement sur App Store / Google Play</li>
+                                <li><i class="fas fa-check-circle"></i> Vérifier l'éditeur et les avis de l'application</li>
+                                <li><i class="fas fa-check-circle"></i> Éviter les APK hors store sur Android</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">App Store</span>
+                            <span class="skill-tag">Téléchargement</span>
+                            <span class="skill-tag">Confiance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Messages suspects -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-envelope-open-text"></i></div>
+                        <h3 class="parcours-title">Méfiance face aux Messages</h3>
+                        <p class="parcours-subtitle">Détecter l'hameçonnage</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Face à un message inattendu ou alarmiste (e-mail, SMS, chat), vérifiez toujours l'identité de l'expéditeur par un autre canal. Il peut s'agir de phishing visant à voler vos identifiants, ou d'un lien vers un site malveillant.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-lightbulb"></i> Bonnes pratiques</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Ne jamais cliquer sur un lien suspect</li>
+                                <li><i class="fas fa-check-circle"></i> Confirmer l'expéditeur par téléphone</li>
+                                <li><i class="fas fa-check-circle"></i> Signaler les messages douteux à signal-spam.fr</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Phishing</span>
+                            <span class="skill-tag">SMS</span>
+                            <span class="skill-tag">Ingénierie sociale</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Sites marchands -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-shopping-cart"></i></div>
+                        <h3 class="parcours-title">Vérifier les Sites Marchands</h3>
+                        <p class="parcours-subtitle">Acheter en sécurité en ligne</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            De nombreux sites de vente frauduleux imitent des boutiques légitimes. Avant tout achat, vérifiez que vous n'êtes pas sur un faux site, contrôlez la crédibilité de l'offre et consultez les avis clients pour éviter arnaques et contrefaçons.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-lightbulb"></i> Bonnes pratiques</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Vérifier le cadenas HTTPS dans la barre d'adresse</li>
+                                <li><i class="fas fa-check-circle"></i> Consulter les avis sur des sites tiers (Trustpilot)</li>
+                                <li><i class="fas fa-check-circle"></i> Utiliser une carte virtuelle pour les paiements</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">E-commerce</span>
+                            <span class="skill-tag">HTTPS</span>
+                            <span class="skill-tag">Fraude</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Réseaux sociaux -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-users"></i></div>
+                        <h3 class="parcours-title">Maîtriser ses Réseaux Sociaux</h3>
+                        <p class="parcours-subtitle">Protéger sa vie privée en ligne</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Les réseaux sociaux contiennent de nombreuses données personnelles sensibles. Sécurisez vos comptes, configurez vos paramètres de confidentialité et ne relayez pas d'informations non vérifiées pour éviter d'être un vecteur de désinformation.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-lightbulb"></i> Bonnes pratiques</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Mot de passe unique et 2FA activé</li>
+                                <li><i class="fas fa-check-circle"></i> Publications limitées au cercle de confiance</li>
+                                <li><i class="fas fa-check-circle"></i> Ne pas partager de fake news</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Vie privée</span>
+                            <span class="skill-tag">Confidentialité</span>
+                            <span class="skill-tag">OSINT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Séparation des usages -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-user-tie"></i></div>
+                        <h3 class="parcours-title">Séparer Perso &amp; Pro</h3>
+                        <p class="parcours-subtitle">Cloisonner les usages numériques</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            La frontière entre usages personnels et professionnels s'efface souvent. Il est essentiel de les séparer : un piratage d'un compte personnel ne doit pas compromettre l'entreprise, et inversement. Matériels, messageries et clouds distincts.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-lightbulb"></i> Bonnes pratiques</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Appareils dédiés pro et perso si possible</li>
+                                <li><i class="fas fa-check-circle"></i> Comptes e-mail et cloud distincts</li>
+                                <li><i class="fas fa-check-circle"></i> Ne pas connecter des clés USB perso sur un poste pro</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Cloisonnement</span>
+                            <span class="skill-tag">BYOD</span>
+                            <span class="skill-tag">Entreprise</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. Wi-Fi publics -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-wifi"></i></div>
+                        <h3 class="parcours-title">Éviter les Wi-Fi Publics</h3>
+                        <p class="parcours-subtitle">Protéger ses connexions en mobilité</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Les réseaux Wi-Fi publics sont souvent peu sécurisés et peuvent être contrôlés ou usurpés par des pirates capturant vos données (mots de passe, coordonnées bancaires). Privilégiez votre connexion mobile (4G/5G) ou un VPN.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-lightbulb"></i> Bonnes pratiques</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Préférer la 4G/5G au Wi-Fi public</li>
+                                <li><i class="fas fa-check-circle"></i> Utiliser un VPN sur les réseaux inconnus</li>
+                                <li><i class="fas fa-check-circle"></i> Ne jamais réaliser d'opérations bancaires en Wi-Fi public</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Wi-Fi</span>
+                            <span class="skill-tag">VPN</span>
+                            <span class="skill-tag">Mobilité</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bandeau source -->
+            <div style="text-align: center; margin-top: 2.5rem; padding: 1.2rem 2rem; background: rgba(0, 212, 255, 0.07); border: 1px solid rgba(0, 212, 255, 0.2); border-radius: 12px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                <p style="margin: 0; font-size: 0.9rem; opacity: 0.85;">
+                    <i class="fas fa-info-circle" style="color: var(--accent, #00d4ff); margin-right: 0.5rem;"></i>
+                    Source officielle :
+                    <a href="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/10-mesures-essentielles-assurer-securite-numerique"
+                       target="_blank" rel="noopener noreferrer"
+                       style="color: var(--accent, #00d4ff); font-weight: 600; text-decoration: none;">
+                        cybermalveillance.gouv.fr
+                    </a>
+                    — Dispositif national d'assistance et de prévention en cybersécurité
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>DUP-M</span>
+                </div>
+                <p class="footer-description">
+                    Développeur full-stack passionné par la sécurité informatique,
+                    les réseaux et la protection des systèmes d'information.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/mathieu-dupressoir-384376329/" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/MatDup6080" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="/cdn-cgi/l/email-protection#f09d918498999585de948580829583839f9982b09588919d809c95de939f9d" class="social-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Navigation</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#histoire">Histoire</a></li>
+                    <li><a href="#fonctionnement">Fonctionnement</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Ressources utiles</h3>
+                <ul class="footer-links">
+                    <li><a href="https://www.ssi.gouv.fr/" target="_blank">ANSSI (France)</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Contact</h3>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f69b97829e9f9383d892838684938585999f84b6938e979b869a93d895999b">[email&#160;protected]</a></span>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>France</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Mathieu Dupressoir — Portfolio</p>
+        </div>
+    </footer>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>

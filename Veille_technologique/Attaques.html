@@ -1,0 +1,801 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attaques - Cybersécurité | Mathieu Dupressoir</title>
+    <link rel="stylesheet" href="style_cyber.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="logo-wrapper">
+                    <i class="fas fa-shield-alt logo-icon"></i>
+                    <span class="logo-text">MD</span>
+                </div>
+            </div>
+
+            <ul class="nav-menu">
+                <li>
+                    <a href="../index.html" class="nav-link">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Portfolio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Veille_cyber.html" class="nav-link active">
+                        <i class="fas fa-home"></i>
+                        <span>Introduction</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Fonctionnement.html" class="nav-link">
+                        <i class="fas fa-cogs"></i>
+                        <span>Fonctionnement</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#attaques" class="nav-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Attaques</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#protection" class="nav-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Protections</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#preventions" class="nav-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Préventions</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#outils" class="nav-link">
+                        <i class="fas fa-tools"></i>
+                        <span>Outils</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#acteurs" class="nav-link">
+                        <i class="fas fa-rocket"></i>
+                        <span>Acteurs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#hackers" class="nav-link">
+                        <i class="fas fa-rocket"></i>
+                        <span>Hackers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Faits_divers" class="nav-link">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Faits divers</span>
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="https://www.ssi.gouv.fr/" class="btn btn-primary btn-small" target="_blank">
+                    <i class="fas fa-lock"></i>
+                    <span>ANSSI</span>
+                </a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu mobile">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo-wrapper">
+                <i class="fas fa-shield-alt logo-icon"></i>
+                <span class="logo-text">DUP-M</span>
+            </div>
+            <button class="menu-close" id="menuClose" aria-label="Fermer le menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-menu">
+            <li>
+                <a href="../index.html" class="mobile-nav-link">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Portfolio</span>
+                </a>
+            </li>
+            <li>
+                <a href="Veille_cyber.html" class="mobile-nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Introduction</span>
+                </a>
+            </li>
+            <li>
+                <a href="#histoire" class="mobile-nav-link">
+                    <i class="fas fa-history"></i>
+                    <span>Histoire</span>
+                </a>
+            </li>
+            <li>
+                <a href="Fonctionnement.html" class="mobile-nav-link">
+                    <i class="fas fa-cogs"></i>
+                    <span>Fonctionnement</span>
+                </a>
+            </li>
+            <li>
+                <a href="#attaques" class="mobile-nav-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Attaques</span>
+                </a>
+            </li>
+            <li>
+                <a href="#preventions" class="mobile-nav-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Préventions</span>
+                </a>
+            </li>
+            <li>
+                <a href="#outils" class="mobile-nav-link">
+                    <i class="fas fa-tools"></i>
+                    <span>Outils</span>
+                </a>
+            </li>
+            <li>
+                <a href="#acteurs" class="mobile-nav-link">
+                    <i class="fas fa-rocket"></i>
+                    <span>Acteurs</span>
+                </a>
+            </li>
+            <li>
+                <a href="#hackers" class="mobile-nav-link">
+                    <i class="fas fa-rocket"></i>
+                    <span>Hackers</span>
+                </a>
+            </li>
+            <li>
+                <a href="#Faits_divers" class="mobile-nav-link">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Faits divers</span>
+                </a>
+            </li>
+        </ul>
+        <div class="mobile-menu-footer">
+            <a href="https://www.ssi.gouv.fr/" class="btn btn-primary btn-block" target="_blank">
+                <i class="fas fa-lock"></i>
+                <span>Visiter l'ANSSI</span>
+            </a>
+        </div>
+    </div>
+    <!-- Contenu principal -->
+    <main class="main-content">
+
+        <!-- Les 20 types d'attaques -->
+        <section class="parcours-section" id="types-attaques">
+            <div class="section-header">
+                <h2 class="section-title">Les 20 Attaques les Plus Courantes</h2>
+                <p class="section-subtitle">Comprendre chaque menace pour mieux s'en protéger</p>
+            </div>
+
+            <div class="parcours-grid">
+
+                <!-- 1. DoS / DDoS -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-server"></i></div>
+                        <h3 class="parcours-title">DoS &amp; DDoS</h3>
+                        <p class="parcours-subtitle">Déni de service</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Une attaque DoS sature les ressources d'un système jusqu'à le rendre incapable de répondre aux requêtes légitimes. Une DDoS amplifie ce principe en coordonnant des milliers de machines infectées (botnet) pour noyer la cible.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-shield-alt"></i> Protection</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Pare-feu avec filtrage des requêtes</li>
+                                <li><i class="fas fa-check-circle"></i> Services anti-DDoS (Cloudflare, AWS Shield)</li>
+                                <li><i class="fas fa-check-circle"></i> Limitation du débit (rate limiting)</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Réseau</span>
+                            <span class="skill-tag">Botnet</span>
+                            <span class="skill-tag">Disponibilité</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. MITM -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-user-ninja"></i></div>
+                        <h3 class="parcours-title">Attaque MITM</h3>
+                        <p class="parcours-subtitle">Homme du milieu</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            L'attaquant s'intercale entre deux parties qui communiquent pour écouter, modifier ou voler les données échangées, sans que ni l'une ni l'autre ne le sache. Souvent exploitée sur les réseaux Wi-Fi publics non sécurisés.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-shield-alt"></i> Protection</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Chiffrement fort (TLS/HTTPS)</li>
+                                <li><i class="fas fa-check-circle"></i> Utilisation d'un VPN</li>
+                                <li><i class="fas fa-check-circle"></i> Éviter les Wi-Fi publics</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Réseau</span>
+                            <span class="skill-tag">Interception</span>
+                            <span class="skill-tag">Wi-Fi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Phishing -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-fish"></i></div>
+                        <h3 class="parcours-title">Phishing</h3>
+                        <p class="parcours-subtitle">Hameçonnage</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            L'attaquant envoie des e-mails imitant des sources de confiance (banques, administrations) pour inciter la victime à cliquer sur un lien malveillant ou à divulguer ses identifiants. Repose entièrement sur l'ingénierie sociale.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-shield-alt"></i> Protection</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Vérifier l'adresse de l'expéditeur</li>
+                                <li><i class="fas fa-check-circle"></i> Ne jamais cliquer sur un lien suspect</li>
+                                <li><i class="fas fa-check-circle"></i> Activer l'authentification à deux facteurs</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Ingénierie sociale</span>
+                            <span class="skill-tag">E-mail</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Whale Phishing -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-crown"></i></div>
+                        <h3 class="parcours-title">Whale Phishing</h3>
+                        <p class="parcours-subtitle">Chasse à la baleine</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Variante du phishing ciblant les cadres dirigeants et hauts responsables d'une organisation. Ces cibles ont accès à des informations stratégiques et sont plus susceptibles de payer une rançon pour protéger leur réputation.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-shield-alt"></i> Protection</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Sensibilisation des dirigeants</li>
+                                <li><i class="fas fa-check-circle"></i> Vérification rigoureuse des e-mails</li>
+                                <li><i class="fas fa-check-circle"></i> Validation humaine pour les virements</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Ciblé</span>
+                            <span class="skill-tag">Dirigeants</span>
+                            <span class="skill-tag">Ransomware</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Spear Phishing -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-crosshairs"></i></div>
+                        <h3 class="parcours-title">Spear Phishing</h3>
+                        <p class="parcours-subtitle">Harponnage ciblé</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Forme de phishing hautement personnalisée : l'attaquant étudie sa cible en détail (réseaux sociaux, LinkedIn) pour rédiger un message qui semble parfaitement légitime, usurpant souvent l'identité d'un proche ou d'un collaborateur.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-shield-alt"></i> Protection</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Vérifier les en-têtes et champs "Répondre à"</li>
+                                <li><i class="fas fa-check-circle"></i> Confirmer par un autre canal les demandes urgentes</li>
+                                <li><i class="fas fa-check-circle"></i> Limiter les infos personnelles en ligne</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">OSINT</span>
+                            <span class="skill-tag">Usurpation</span>
+                            <span class="skill-tag">Ciblé</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Ransomware -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-lock"></i></div>
+                        <h3 class="parcours-title">Ransomware</h3>
+                        <p class="parcours-subtitle">Rançongiciel</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Le malware chiffre les fichiers ou systèmes de la victime et exige une rançon (souvent en cryptomonnaie) pour restituer l'accès. Peut se propager sur tout un réseau en quelques heures, paralysant entreprises et hôpitaux.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-shield-alt"></i> Protection</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Sauvegardes régulières hors ligne (règle 3-2-1)</li>
+                                <li><i class="fas fa-check-circle"></i> Pare-feu nouvelle génération (NGFW)</li>
+                                <li><i class="fas fa-check-circle"></i> Mises à jour et patchs réguliers</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Chiffrement</span>
+                            <span class="skill-tag">Rançon</span>
+                            <span class="skill-tag">Malware</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Attaque par mot de passe -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-key"></i></div>
+                        <h3 class="parcours-title">Attaque par Mot de Passe</h3>
+                        <p class="parcours-subtitle">Credential attack</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            L'attaquant tente de découvrir les identifiants d'un utilisateur via plusieurs méthodes : force brute (essais systématiques), attaque par dictionnaire (mots courants), interception réseau ou ingénierie sociale.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-shield-alt"></i> Protection</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Mots de passe longs et aléatoires</li>
+                                <li><i class="fas fa-check-circle"></i> Règle de verrouillage après N échecs</li>
+                                <li><i class="fas fa-check-circle"></i> Gestionnaire de mots de passe + MFA</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Brute force</span>
+                            <span class="skill-tag">Dictionnaire</span>
+                            <span class="skill-tag">Credentials</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Injection SQL -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-database"></i></div>
+                        <h3 class="parcours-title">Injection SQL</h3>
+                        <p class="parcours-subtitle">SQLi</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            L'attaquant insère des commandes SQL malveillantes dans un champ de formulaire. Si l'application ne filtre pas les entrées, la base de données exécute ces commandes, permettant de lire, modifier ou supprimer des données sensibles.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-shield-alt"></i> Protection</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Requêtes préparées (prepared statements)</li>
+                                <li><i class="fas fa-check-circle"></i> Principe du moindre privilège</li>
+                                <li><i class="fas fa-check-circle"></i> Validation et assainissement des entrées</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Base de données</span>
+                            <span class="skill-tag">Web</span>
+                            <span class="skill-tag">Injection</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Interprétation d'URL -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-link"></i></div>
+                        <h3 class="parcours-title">Interprétation d'URL</h3>
+                        <p class="parcours-subtitle">URL poisoning</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            L'attaquant manipule manuellement l'URL d'une application web pour accéder à des pages réservées (admin, back-office) en devinant leur structure. Permet parfois d'accéder à des données d'autres utilisateurs ou à des fonctions d'administration.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-shield-alt"></i> Protection</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Authentification forte sur toutes les zones sensibles</li>
+                                <li><i class="fas fa-check-circle"></i> Authentification multi-facteurs (MFA)</li>
+                                <li><i class="fas fa-check-circle"></i> Vérification des autorisations côté serveur</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Web</span>
+                            <span class="skill-tag">Accès non autorisé</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. Usurpation DNS -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-globe"></i></div>
+                        <h3 class="parcours-title">Usurpation DNS</h3>
+                        <p class="parcours-subtitle">DNS spoofing</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            L'attaquant falsifie les enregistrements DNS pour rediriger les utilisateurs vers un site frauduleux imitant un site légitime. La victime pense visiter son site habituel et y saisit ses identifiants qui sont alors volés.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-shield-alt"></i> Protection</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Mettre à jour régulièrement les serveurs DNS</li>
+                                <li><i class="fas fa-check-circle"></i> Activer DNSSEC</li>
+                                <li><i class="fas fa-check-circle"></i> Utiliser des résolveurs DNS sécurisés</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">DNS</span>
+                            <span class="skill-tag">Réseau</span>
+                            <span class="skill-tag">Phishing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11. Détournement de session -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-random"></i></div>
+                        <h3 class="parcours-title">Détournement de Session</h3>
+                        <p class="parcours-subtitle">Session hijacking</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            L'attaquant vole ou usurpe le token de session d'un utilisateur authentifié pour prendre le contrôle de sa connexion sans avoir besoin de ses identifiants. Le serveur croit alors communiquer avec l'utilisateur légitime.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-shield-alt"></i> Protection</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Utiliser un VPN pour les accès sensibles</li>
+                                <li><i class="fas fa-check-circle"></i> Tokens de session aléatoires et expirables</li>
+                                <li><i class="fas fa-check-circle"></i> HTTPS obligatoire</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Session</span>
+                            <span class="skill-tag">MITM</span>
+                            <span class="skill-tag">Token</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 12. Force brute -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-hammer"></i></div>
+                        <h3 class="parcours-title">Attaque par Force Brute</h3>
+                        <p class="parcours-subtitle">Brute force</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            L'attaquant essaie automatiquement toutes les combinaisons possibles d'identifiants à l'aide de bots, jusqu'à trouver la bonne. Plus le mot de passe est court et prévisible, plus l'attaque est rapide à réussir.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-shield-alt"></i> Protection</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Règle de verrouillage de compte</li>
+                                <li><i class="fas fa-check-circle"></i> Mots de passe longs (&gt;12 caractères, aléatoires)</li>
+                                <li><i class="fas fa-check-circle"></i> CAPTCHA sur les formulaires de connexion</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Automatisé</span>
+                            <span class="skill-tag">Credentials</span>
+                            <span class="skill-tag">Bot</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 13. Attaques Web -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-spider"></i></div>
+                        <h3 class="parcours-title">Attaques Web</h3>
+                        <p class="parcours-subtitle">CSRF &amp; falsification</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Ces attaques exploitent les vulnérabilités des applications web. Les CSRF (Cross-Site Request Forgery) amènent une victime à effectuer une action à son insu (virement, changement de mot de passe). La falsification de paramètres modifie les valeurs que l'application utilise pour ses contrôles de sécurité.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-shield-alt"></i> Protection</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Tokens anti-CSRF</li>
+                                <li><i class="fas fa-check-circle"></i> En-têtes SameSite sur les cookies</li>
+                                <li><i class="fas fa-check-circle"></i> Audit régulier du code applicatif</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">CSRF</span>
+                            <span class="skill-tag">Web App</span>
+                            <span class="skill-tag">Paramètres</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 14. Menaces internes -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-user-times"></i></div>
+                        <h3 class="parcours-title">Menaces Internes</h3>
+                        <p class="parcours-subtitle">Insider threats</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Les menaces les plus dangereuses viennent parfois de l'intérieur : un employé malveillant, négligent ou compromis peut provoquer des dégâts considérables car il connaît l'architecture du système et y a déjà accès.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-shield-alt"></i> Protection</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Principe du moindre privilège</li>
+                                <li><i class="fas fa-check-circle"></i> MFA sur les accès sensibles</li>
+                                <li><i class="fas fa-check-circle"></i> Journalisation et surveillance des accès</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Interne</span>
+                            <span class="skill-tag">Privilèges</span>
+                            <span class="skill-tag">Audit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 15. Trojan -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-horse"></i></div>
+                        <h3 class="parcours-title">Cheval de Troie</h3>
+                        <p class="parcours-subtitle">Trojan horse</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Un logiciel malveillant dissimulé dans un programme d'apparence légitime. Une fois exécuté par l'utilisateur, il ouvre une porte dérobée (backdoor) permettant à l'attaquant de prendre le contrôle du système à distance.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-shield-alt"></i> Protection</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Ne télécharger que depuis des sources officielles</li>
+                                <li><i class="fas fa-check-circle"></i> Pare-feu nouvelle génération (NGFW)</li>
+                                <li><i class="fas fa-check-circle"></i> Sensibilisation des utilisateurs</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Backdoor</span>
+                            <span class="skill-tag">Malware</span>
+                            <span class="skill-tag">Ingénierie sociale</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 16. Drive-by -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-car-crash"></i></div>
+                        <h3 class="parcours-title">Attaque Drive-by</h3>
+                        <p class="parcours-subtitle">Infection par visite</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Un code malveillant est intégré à un site web compromis. La simple visite de la page — sans aucun clic ni téléchargement volontaire — suffit à infecter l'appareil de la victime en exploitant des failles du navigateur ou des plugins.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-shield-alt"></i> Protection</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Mettre à jour navigateur et plugins (Flash, PDF)</li>
+                                <li><i class="fas fa-check-circle"></i> Logiciel de filtrage Web</li>
+                                <li><i class="fas fa-check-circle"></i> Désactiver les plugins inutiles</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Navigateur</span>
+                            <span class="skill-tag">Exploit</span>
+                            <span class="skill-tag">Web</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 17. XSS -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-code"></i></div>
+                        <h3 class="parcours-title">XSS</h3>
+                        <p class="parcours-subtitle">Cross-Site Scripting</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            L'attaquant injecte un script malveillant dans une page web consultée par d'autres utilisateurs. Quand la victime clique sur le contenu piégé, le script s'exécute dans son navigateur et peut voler ses cookies, modifier des données ou effectuer des actions en son nom.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-shield-alt"></i> Protection</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Liste blanche des entrées autorisées</li>
+                                <li><i class="fas fa-check-circle"></i> Encodage des sorties HTML</li>
+                                <li><i class="fas fa-check-circle"></i> Content Security Policy (CSP)</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Web App</span>
+                            <span class="skill-tag">Script</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 18. Écoute clandestine -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-headset"></i></div>
+                        <h3 class="parcours-title">Écoute Clandestine</h3>
+                        <p class="parcours-subtitle">Eavesdropping</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            L'attaquant intercepte passivement ou activement le trafic réseau pour collecter des identifiants, mots de passe ou données bancaires transitant en clair. Très efficace sur les réseaux non chiffrés (HTTP, Wi-Fi ouvert).
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-shield-alt"></i> Protection</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Chiffrement systématique des communications (TLS)</li>
+                                <li><i class="fas fa-check-circle"></i> VPN sur les réseaux publics</li>
+                                <li><i class="fas fa-check-circle"></i> Éviter les protocoles non chiffrés (HTTP, FTP)</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">MITM</span>
+                            <span class="skill-tag">Réseau</span>
+                            <span class="skill-tag">Interception</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 19. Attaque d'anniversaire -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-fingerprint"></i></div>
+                        <h3 class="parcours-title">Attaque d'Anniversaire</h3>
+                        <p class="parcours-subtitle">Birthday attack</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Basée sur le paradoxe mathématique de l'anniversaire, cette attaque exploite la probabilité de collision dans les algorithmes de hachage. L'attaquant crée un hash identique à celui d'un message légitime pour le substituer frauduleusement.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-shield-alt"></i> Protection</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Utiliser des fonctions de hachage longues (SHA-256+)</li>
+                                <li><i class="fas fa-check-circle"></i> Renouveler régulièrement les clés cryptographiques</li>
+                                <li><i class="fas fa-check-circle"></i> Éviter MD5 et SHA-1 (obsolètes)</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Cryptographie</span>
+                            <span class="skill-tag">Hash</span>
+                            <span class="skill-tag">Collision</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 20. Malware -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-biohazard"></i></div>
+                        <h3 class="parcours-title">Attaque par Malware</h3>
+                        <p class="parcours-subtitle">Logiciel malveillant</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Terme générique regroupant tous les logiciels conçus pour nuire : virus, vers, spywares, adwares, keyloggers… Le malware peut se propager d'un appareil à l'autre, espionner l'utilisateur, détruire des données ou servir de vecteur pour d'autres attaques (ransomware, MITM, phishing).
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-shield-alt"></i> Protection</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Antivirus et EDR à jour</li>
+                                <li><i class="fas fa-check-circle"></i> Ne pas ouvrir de pièces jointes inconnues</li>
+                                <li><i class="fas fa-check-circle"></i> Sensibilisation et formation des utilisateurs</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Virus</span>
+                            <span class="skill-tag">Spyware</span>
+                            <span class="skill-tag">Keylogger</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>DUP-M</span>
+                </div>
+                <p class="footer-description">
+                    Développeur full-stack passionné par la sécurité informatique,
+                    les réseaux et la protection des systèmes d'information.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/mathieu-dupressoir-384376329/" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/MatDup6080" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="/cdn-cgi/l/email-protection#f09d918498999585de948580829583839f9982b09588919d809c95de939f9d" class="social-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Navigation</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#histoire">Histoire</a></li>
+                    <li><a href="#fonctionnement">Fonctionnement</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Ressources utiles</h3>
+                <ul class="footer-links">
+                    <li><a href="https://www.ssi.gouv.fr/" target="_blank">ANSSI (France)</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Contact</h3>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f69b97829e9f9383d892838684938585999f84b6938e979b869a93d895999b">[email&#160;protected]</a></span>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>France</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Mathieu Dupressoir — Portfolio</p>
+        </div>
+    </footer>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>

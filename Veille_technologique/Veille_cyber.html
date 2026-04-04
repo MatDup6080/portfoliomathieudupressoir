@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille Technologique - Cybersécurité | Mathieu Dupressoir</title>
+    <link rel="stylesheet" href="style_cyber.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="logo-wrapper">
+                    <i class="fas fa-shield-alt logo-icon"></i>
+                    <span class="logo-text">MD</span>
+                </div>
+            </div>
+
+            <ul class="nav-menu">
+                <li>
+                    <a href="../index.html" class="nav-link">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Portfolio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#introduction" class="nav-link active">
+                        <i class="fas fa-home"></i>
+                        <span>Introduction</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#histoire" class="nav-link">
+                        <i class="fas fa-history"></i>
+                        <span>Histoire</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Fonctionnement.html" class="nav-link">
+                        <i class="fas fa-cogs"></i>
+                        <span>Fonctionnement</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Attaques.html" class="nav-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Attaques</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#protection" class="nav-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Protections</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Preventions.html" class="nav-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Préventions</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#outils" class="nav-link">
+                        <i class="fas fa-tools"></i>
+                        <span>Outils</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#acteurs" class="nav-link">
+                        <i class="fas fa-rocket"></i>
+                        <span>Acteurs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#hackers" class="nav-link">
+                        <i class="fas fa-rocket"></i>
+                        <span>Hackers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Faits_divers" class="nav-link">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Faits divers</span>
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="https://www.ssi.gouv.fr/" class="btn btn-primary btn-small" target="_blank">
+                    <i class="fas fa-lock"></i>
+                    <span>ANSSI</span>
+                </a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu mobile">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo-wrapper">
+                <i class="fas fa-shield-alt logo-icon"></i>
+                <span class="logo-text">DUP-M</span>
+            </div>
+            <button class="menu-close" id="menuClose" aria-label="Fermer le menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-menu">
+            <li>
+                <a href="../index.html" class="nav-link">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Portfolio</span>
+                </a>
+            </li>
+            <li>
+                <a href="#introduction" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Introduction</span>
+                </a>
+            </li>
+            <li>
+                <a href="#histoire" class="nav-link">
+                    <i class="fas fa-history"></i>
+                    <span>Histoire</span>
+                </a>
+            </li>
+            <li>
+                <a href="fonctionnement.html" class="nav-link">
+                    <i class="fas fa-cogs"></i>
+                    <span>Fonctionnement</span>
+                </a>
+            </li>
+            <li>
+                <a href="Attaques.html" class="nav-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Attaques</span>
+                </a>
+            </li>
+            <li>
+                <a href="Preventions.html" class="nav-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Préventions</span>
+                </a>
+            </li>
+            <li>
+                <a href="#outils" class="nav-link">
+                    <i class="fas fa-tools"></i>
+                    <span>Outils</span>
+                </a>
+            </li>
+            <li>
+                <a href="#acteurs" class="nav-link">
+                    <i class="fas fa-rocket"></i>
+                    <span>Acteurs</span>
+                </a>
+            </li>
+            <li>
+                <a href="#hackers" class="nav-link">
+                    <i class="fas fa-rocket"></i>
+                    <span>Hackers</span>
+                </a>
+            </li>
+            <li>
+                <a href="#Faits_divers" class="nav-link">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Faits divers</span>
+                </a>
+            </li>
+        </ul>
+        <div class="mobile-menu-footer">
+            <a href="https://www.ssi.gouv.fr/" class="btn btn-primary btn-block" target="_blank">
+                <i class="fas fa-lock"></i>
+                <span>Visiter l'ANSSI</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <main class="main-content">
+
+        <!-- ===== HERO ===== -->
+        <section class="hero-section" id="introduction">
+            <div class="hero-overlay"></div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="welcome-badge">
+                        <span class="badge-text">CYBERSÉCURITÉ</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        <span class="title-line">Les différents aspects de la</span>
+                        <span class="title-line accent">Cybersécurité</span>
+                    </h1>
+
+                    <div class="typing-wrapper">
+                        <span class="typing-prefix">&gt; </span><span id="typingText"></span>
+                    </div>
+
+                    <p class="hero-description">
+                        Page consacrée à la cybersécurité et ses différentes facettes,
+                        explorant les attaques, les défenses, les outils et l'impact
+                        de la sécurité numérique sur notre société.
+                    </p>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">+60%</div>
+                            <div class="stat-label">Hausse des cyberattaques en France (2024)</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10 Md$</div>
+                            <div class="stat-label">Coût moyen d'une fuite de données</div>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#histoire" class="btn btn-primary">
+                            <i class="fas fa-history"></i>
+                            <span>Histoire</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== HISTOIRE ===== -->
+        <section class="parcours-section" id="histoire">
+            <div class="section-header">
+                <h2 class="section-title">Histoire</h2>
+                <p class="section-subtitle">Les grandes étapes de l'histoire de la cybersécurité</p>
+            </div>
+
+            <div class="parcours-grid">
+
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year">Années 1960</div>
+                        <h3 class="parcours-title"> Naissance du cyberespace</h3>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            la cybersécurité n’est apparue que lorsque les ordinateurs ont commencé à être connectés, formant des réseaux. <br>
+                            Cela a commencé à se produire dans les années 1950, lorsque les premiers réseaux informatiques et modems ont été développés.<br>
+                            Toutefois, c’est dans les années 1960 qu’Internet tel que nous le connaissons aujourd’hui a commencé à prendre forme.<br><br>
+
+                            Avant l’invention des premières formes d’internet, la seule façon de pirater un ordinateur était d’y accéder physiquement.<br>
+                            Si quelqu’un le faisait illégalement, il commettait un délit d’intrusion, et non de piratage ou de cyberespionnage.
+                        </p>
+                        <div class="parcours-image-link">
+                            <a href="https://fr.wikipedia.org/wiki/Cyberespace" target="_blank" class="image-link-wrapper">
+                                <img src="/img/Cyberespace.jpg" alt="Creeper virus" class="parcours-img">
+                                <div class="image-overlay">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>En savoir plus sur la cyberespace</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year">Années 1970</div>
+                        <h3 class="parcours-title">une nouvelle rivalité</h3>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            1. La naissance du duel : Creeper vs Reaper<br>
+                            Le début de la décennie marque l'apparition du premier cycle "attaque-défense" sur ARPANET (l'ancêtre d'Internet) :<br><br>
+
+                            Creeper (1971) : Créé par Bob Thomas, c'est le premier programme auto-réplicatif (précurseur des malwares). Son but n'était pas malveillant, mais expérimental.<br><br>
+
+                            Reaper : Conçu par Ray Tomlinson en réponse à Creeper, il s'agit du tout premier logiciel de cybersécurité, créé spécifiquement pour traquer et supprimer Creeper.<br><br><br>
+
+                            2. L'essor des risques et l'ingénierie sociale<br><br>
+                            Avec l'adoption croissante de l'informatique par le gouvernement américain et les entreprises, la surface d'attaque s'est étendue :<br><br>
+
+                            Projets de protection : Le gouvernement lance des initiatives comme Protection Analysis pour automatiser la sécurité des données sensibles<br><br>
+
+                            L'affaire Kevin Mitnick (1979) : Un lycéen parvient à pirater The Ark (le système de l'entreprise DEC) et à voler des systèmes d'exploitation<br><br>
+
+                            La faille humaine : Mitnick n'a pas utilisé de code complexe, mais l'ingénierie sociale. En se faisant passer pour un ingénieur par téléphone, il a illustré dès 1970 que l'erreur humaine est souvent le maillon faible de la sécurité.<br><br><br>
+
+                            3. La standardisation du chiffrement<br><br>
+                            Pour protéger les données en mouvement, la cryptographie devient une priorité officielle :<br><br>
+
+                            Le standard DES (Data Encryption Standard) : Développé par IBM avec l'aide de la NSA, il devient une norme fédérale en 1977.<br><br>
+
+                            Impact : Bien que sa robustesse ait eu des limites, il a imposé l'idée que le chiffrement est un outil proactif indispensable. Il restera la référence mondiale jusqu'en 2001.
+                        </p>
+                        <div class="parcours-image-link">
+                            <a href="https://fr.wikipedia.org/wiki/Creeper_(programme)" target="_blank" class="image-link-wrapper">
+                                <img src="/img/Creeper.jpg" alt="Ver Morris" class="parcours-img">
+                                <div class="image-overlay">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span> programme creeper</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year">Années 1980</div>
+                        <h3 class="parcours-title"> La cybersécurité se généralise</h3>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            1. L'entrée dans la culture populaire <br><br>
+                            Les années 80 marquent le moment où le piratage informatique devient un sujet de fascination et d'inquiétude pour le grand public :<br>
+
+                            Médiatisation : Des attaques contre de grandes institutions commencent à faire la une des journaux.<br>
+
+                            Le phénomène WarGames (1983) : Ce film, bien que romancé, installe l'idée qu'un pirate peut infiltrer des systèmes critiques comme l'arsenal nucléaire, sensibilisant les masses aux risques du "cyber".<br><br><br>
+
+                            2. Le virus Vienna et le premier antivirus moderne<br><br>
+                            C'est à cette époque que la réponse technique aux malwares s'affine :<br>
+
+                            Le virus Vienna : Un programme auto-réplicatif qui corrompait les fichiers.<br>
+
+                            L'intervention de Bernd Fix (1987) : En créant un programme spécifique pour neutraliser Vienna sur son ordinateur, l'expert allemand Bernd Fix a conçu l'un des premiers exemples de logiciel antivirus "moderne".<br><br><br>
+
+                            3. La naissance du marché de la cybersécurité<br><br>
+                            La fin de la décennie voit la transformation de la cybersécurité en un véritable secteur commercial :<br>
+
+                            Commercialisation (1988) : Les premiers antivirus payants apparaissent sur le marché. Aux États-Unis, McAfee lance VirusScan, tandis qu'en Europe arrivent des programmes comme NOD antivirus ou Ultimate Virus Killer.<br>
+
+                            Automatisation de la défense : Pour la première fois, des logiciels sont vendus pour détecter et neutraliser les menaces de manière autonome, marquant le début de l'industrie de la protection numérique telle que nous la connaissons.
+                        </p>
+                        <div class="parcours-image-link">
+                            <a href="https://encyclopedia.kaspersky.fr/knowledge/year-1987/" target="_blank" class="image-link-wrapper">
+                                <img src="/img/Vienna.jpg" alt="Ver Morris" class="parcours-img">
+                                <div class="image-overlay">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span> Virus Vienna </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year">Années 1990</div>
+                        <h3 class="parcours-title">L’ère d’Internet commence</h3>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            1. La démocratisation de l'informatique<br><br>
+                            Les années 90 marquent le passage de l'ordinateur du monde professionnel au salon des particuliers :<br>
+
+                            L'ascension de Microsoft : Avec le lancement de Windows 95 et du navigateur Internet Explorer, Microsoft rend le Web accessible au grand public.<br>
+
+                            Une société connectée : L'ordinateur devient abordable. Les e-mails, les recherches en ligne et les jeux deviennent la nouvelle norme pour des millions d'utilisateurs, bien au-delà des cercles militaires ou technologiques.<br><br><br>
+
+                            2. L'e-mail : nouvel outil, nouvelle menace<br><br>
+                            L'explosion du courrier électronique (via des services comme Outlook) a créé une opportunité massive pour la cybercriminalité :<br>
+
+                            Vitesse de propagation : Internet a permis aux malwares de se diffuser à une échelle et une vitesse mondiales, autrefois impossibles.<br>
+
+                            Le virus Melissa (1999) : Une attaque historique qui a causé environ 80 millions de dollars de dommages.<br><br><br>
+
+                            3. Le cas d'école du virus Melissa<br><br>
+                            Ce malware a mis en lumière des vulnérabilités qui persistent encore aujourd'hui :<br>
+
+                            Mécanisme : Caché dans un fichier joint nommé "list.doc", le virus désactivait les sécurités d'Outlook et s'auto-envoyait aux 50 premiers contacts de la victime.<br>
+
+                            Ingénierie sociale : Le succès de Melissa reposait sur la curiosité humaine (un objet de mail intitulé "Message important").<br>
+
+                            Constat : L'incident a prouvé que les logiciels de sécurité de l'époque étaient insuffisants face à l'ingénierie sociale et que le comportement humain restait la principale faille de sécurité.<br>
+                        </p>
+                        <div class="parcours-image-link">
+                            <a href="https://www.akaoma.com/ressources/cyberattaques/melissa-virus-1999" target="_blank" class="image-link-wrapper">
+                                <img src="/img/Melissa.jpg" alt="Ver Morris" class="parcours-img">
+                                <div class="image-overlay">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span> Virus Melissa </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year">Années 2000</div>
+                        <h3 class="parcours-title">Un nouveau niveau de connectivité</h3>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            1. La cybercriminalité évolue<br><br>
+                            Les pirates abandonnent les pièces jointes infectées au profit d'une technique plus insidieuse : le phishing.<br>
+
+                            Le phishing par e-mail : En se faisant passer pour une banque ou une agence gouvernementale, les attaquants incitent les victimes à cliquer sur un lien menant vers un site piégé pour voler leurs données personnelles.<br>
+
+                            Ingénierie sociale 2.0 : Ces attaques contournent les logiciels de sécurité en exploitant la psychologie humaine, une tactique toujours redoutablement efficace aujourd'hui.<br><br>
+
+                            En réponse, le département américain de la sécurité intérieure crée sa division nationale de cybersécurité, reconnaissant officiellement que la cybersécurité est désormais un enjeu national.<br><br><br>
+
+                            2. La cybersécurité se démocratise<br><br>
+                            Des entreprises comme Avast lancent les premiers logiciels de sécurité gratuits grand public.<br>
+
+                            Apparition des premiers VPN commerciaux (milieu des années 2000) : Ces outils permettent à n'importe qui de chiffrer ses communications en ligne sans expertise technique.<br>
+
+                            Sécurité dans le cloud (2007) : Panda Security et McAfee publient les premières solutions antivirus basées sur le cloud, contournant les limitations de mémoire des appareils et ouvrant la voie à une protection accessible à tous.
+                        </p>
+                        <div class="parcours-image-link">
+                            <a href="https://fr.wikipedia.org/wiki/Hame%C3%A7onnage" target="_blank" class="image-link-wrapper">
+                                <img src="/img/phishing.jpg" alt="Phishing années 2000" class="parcours-img">
+                                <div class="image-overlay">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>En savoir plus sur le phishing</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year">Années 2010</div>
+                        <h3 class="parcours-title">Conflits dans le cyberespace</h3>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            1. La cyberguerre entre dans l'Histoire<br><br>
+                            En 2010, les centrifugeuses du programme nucléaire iranien sont sabotées par Stuxnet, un malware d'une sophistication inédite, vraisemblablement développé par les États-Unis et Israël. C'est la première cyberattaque connue à causer des dommages physiques à des infrastructures réelles, ouvrant une nouvelle ère de conflits numériques entre États.<br><br><br>
+
+                            2. Le débat sur la confidentialité<br><br>
+                            Le grand public prend conscience que des entreprises comme Facebook et Google collectent massivement leurs données personnelles pour cibler de la publicité.<br>
+
+                            En réaction, un nouveau secteur émerge : les outils de protection de la vie privée (navigateurs, moteurs de recherche et VPN axés sur la confidentialité connaissent un essor spectaculaire).<br><br><br>
+
+                            3. L'ère des méga-violations de données<br><br>
+                            Les années 2010 sont marquées par des fuites de données massives :<br>
+
+                            Yahoo (2013) : 3 milliards de comptes exposés — la plus grande violation de données de l'Histoire, révélée seulement en 2016.<br>
+
+                            First American (2019) : 850 millions de documents sensibles divulgués.<br>
+
+                            Facebook (2019) : Plus de 500 millions de profils d'utilisateurs exposés.<br>
+
+                            Ces incidents démontrent que la protection de la vie privée et la sécurité sont indissociables.
+                        </p>
+                        <div class="parcours-image-link">
+                            <a href="https://fr.wikipedia.org/wiki/Stuxnet" target="_blank" class="image-link-wrapper">
+                                <img src="/img/stuxnet.jpg" alt="Stuxnet cyberguerre" class="parcours-img">
+                                <div class="image-overlay">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>En savoir plus sur Stuxnet</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year">Années 2020</div>
+                        <h3 class="parcours-title">La cyberguerre s'installe</h3>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            1. Le Covid-19 : un accélérateur de cybermenaces<br><br>
+                            Le passage massif au télétravail en 2020 expose des millions d'appareils personnels aux réseaux d'entreprise. Les pirates en profitent : selon Sophos, plus de la moitié des entreprises sont touchées par des ransomwares en 2020. Les arnaques par phishing liées au Covid (faux livraisons, faux vaccins, faux contacts) se multiplient, prouvant une nouvelle fois que l'ingénierie sociale reste l'arme la plus efficace des cybercriminels.<br><br><br>
+
+                            2. L'attaque du Colonial Pipeline (2021)<br><br>
+                            Ce gestionnaire de pipeline de gaz sur la côte Est des États-Unis est frappé par un ransomware. Les pirates russes volent 100 Go de données, verrouillent les systèmes et paralysent partiellement l'approvisionnement énergétique américain, provoquant une flambée des prix. L'attaque confirme que les infrastructures critiques connectées constituent des cibles hautement vulnérables.<br><br><br>
+
+                            3. La cyberguerre en Ukraine (2022)<br><br>
+                            Avant même le déclenchement du conflit armé en février 2022, l'Ukraine subit des cyberattaques massives : logiciels malveillants distribués sur les systèmes gouvernementaux, défigurations de sites officiels.<br>
+
+                            En réponse, une coalition européenne dirigée par la Lituanie déploie une équipe de réponse rapide aux cyberattaques, soutenue par l'Union européenne, pour défendre le pays dans le cyberespace.
+                        </p>
+                        <div class="parcours-image-link">
+                            <a href="https://fr.wikipedia.org/wiki/Cyberattaque_contre_Colonial_Pipeline" target="_blank" class="image-link-wrapper">
+                                <img src="/img/colonial.jpg" alt="Colonial Pipeline cyberattaque" class="parcours-img">
+                                <div class="image-overlay">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>En savoir plus sur Colonial Pipeline</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year">Et ensuite ?</div>
+                        <h3 class="parcours-title">L'avenir de la cybersécurité</h3>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            1. L'IA comme gardienne du cyberespace<br><br>
+                            Les systèmes d'intelligence artificielle, grâce à l'apprentissage profond, sont capables de détecter des menaces subtiles qu'aucun humain ne repérerait seul. À l'avenir, la cybersécurité reposera de plus en plus sur des agents IA auto-apprenants, capables d'anticiper et de neutraliser les attaques en temps réel.<br><br><br>
+
+                            2. La cyberguerre mondiale, un risque croissant<br><br>
+                            Les cyberattaques entre États offrent un avantage stratégique majeur : elles sont dévastatrices, ne mettent pas le personnel militaire en danger direct et restent difficiles à attribuer avec certitude. Ce modèle pourrait conduire à des conflits cybernétiques à grande échelle entre superpuissances — sans que personne n'assume jamais officiellement la responsabilité de ses actes.<br><br><br>
+
+                            3. Une fusion totale avec le numérique<br><br>
+                            Maisons connectées, objets intelligents, suivi permanent par nos appareils : notre vie est de plus en plus imbriquée dans le cyberespace. La course aux armements entre attaquants et défenseurs ne s'arrêtera pas. Elle a commencé il y a plus d'un demi-siècle avec Creeper et Reaper sur ARPANET. Elle se poursuit aujourd'hui, avec des enjeux infiniment plus élevés.
+                        </p>
+                        <div class="parcours-image-link">
+                            <a href="https://fr.wikipedia.org/wiki/Intelligence_artificielle" target="_blank" class="image-link-wrapper">
+                                <img src="/img/ia_cyber.jpg" alt="IA et cybersécurité" class="parcours-img">
+                                <div class="image-overlay">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>IA et cybersécurité</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>DUP-M</span>
+                </div>
+                <p class="footer-description">
+                    Développeur full-stack passionné par la sécurité informatique,
+                    les réseaux et la protection des systèmes d'information.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/mathieu-dupressoir-384376329/" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/MatDup6080" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="/cdn-cgi/l/email-protection#137e72677b7a76663d776663617660607c7a6153766b727e637f763d707c7e" class="social-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Navigation</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#histoire">Histoire</a></li>
+                    <li><a href="#fonctionnement">Fonctionnement</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Ressources utiles</h3>
+                <ul class="footer-links">
+                    <li><a href="https://www.ssi.gouv.fr/" target="_blank">ANSSI (France)</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Contact</h3>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d7bab6a3bfbeb2a2f9b3a2a7a5b2a4a4b8bea5e7e497b0bab6bebbf9b4b8ba">[email&#160;protected]</a></span>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>France</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Mathieu Dupressoir — Portfolio</p>
+            </div>
+    </footer>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>
