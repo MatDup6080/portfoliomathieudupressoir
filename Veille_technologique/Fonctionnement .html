@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonctionnement - Cybersécurité | Mathieu Dupressoir</title>
+    <link rel="stylesheet" href="style_cyber.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="logo-wrapper">
+                    <i class="fas fa-shield-alt logo-icon"></i>
+                    <span class="logo-text">MD</span>
+                </div>
+            </div>
+
+            <ul class="nav-menu">
+                <li>
+                    <a href="../index.html" class="nav-link">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Portfolio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Veille_cyber.html" class="nav-link active">
+                        <i class="fas fa-home"></i>
+                        <span>Introduction</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Fonctionnement.html" class="nav-link">
+                        <i class="fas fa-cogs"></i>
+                        <span>Fonctionnement</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Attaques.html" class="nav-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Attaques</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="Preventions.html" class="nav-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Préventions</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#outils" class="nav-link">
+                        <i class="fas fa-tools"></i>
+                        <span>Outils</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#acteurs" class="nav-link">
+                        <i class="fas fa-rocket"></i>
+                        <span>Acteurs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#hackers" class="nav-link">
+                        <i class="fas fa-rocket"></i>
+                        <span>Hackers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Faits_divers" class="nav-link">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Faits divers</span>
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="https://www.ssi.gouv.fr/" class="btn btn-primary btn-small" target="_blank">
+                    <i class="fas fa-lock"></i>
+                    <span>ANSSI</span>
+                </a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu mobile">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo-wrapper">
+                <i class="fas fa-shield-alt logo-icon"></i>
+                <span class="logo-text">DUP-M</span>
+            </div>
+            <button class="menu-close" id="menuClose" aria-label="Fermer le menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-menu">
+            <li>
+                <a href="../index.html" class="mobile-nav-link">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Portfolio</span>
+                </a>
+            </li>
+            <li>
+                <a href="Veille_cyber.html" class="mobile-nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Introduction</span>
+                </a>
+            </li>
+            <li>
+                <a href="#histoire" class="mobile-nav-link">
+                    <i class="fas fa-history"></i>
+                    <span>Histoire</span>
+                </a>
+            </li>
+            <li>
+                <a href="Fonctionnement.html" class="mobile-nav-link">
+                    <i class="fas fa-cogs"></i>
+                    <span>Fonctionnement</span>
+                </a>
+            </li>
+            <li>
+                <a href="Attaques.html" class="mobile-nav-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Attaques</span>
+                </a>
+            </li>
+            <li>
+                <a href="Preventions.html" class="mobile-nav-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Préventions</span>
+                </a>
+            </li>
+            <li>
+                <a href="#outils" class="mobile-nav-link">
+                    <i class="fas fa-tools"></i>
+                    <span>Outils</span>
+                </a>
+            </li>
+            <li>
+                <a href="#acteurs" class="mobile-nav-link">
+                    <i class="fas fa-rocket"></i>
+                    <span>Acteurs</span>
+                </a>
+            </li>
+            <li>
+                <a href="#hackers" class="mobile-nav-link">
+                    <i class="fas fa-rocket"></i>
+                    <span>Hackers</span>
+                </a>
+            </li>
+            <li>
+                <a href="#Faits_divers" class="mobile-nav-link">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Faits divers</span>
+                </a>
+            </li>
+        </ul>
+        <div class="mobile-menu-footer">
+            <a href="https://www.ssi.gouv.fr/" class="btn btn-primary btn-block" target="_blank">
+                <i class="fas fa-lock"></i>
+                <span>Visiter l'ANSSI</span>
+            </a>
+        </div>
+    </div>
+    <!-- Contenu principal -->
+    <main class="main-content">
+
+        <section class="contact-section" id="fonctionnement">
+            <div class="section-header">
+                <h2 class="section-title">Fonctionnement d'une cyberattaque</h2>
+                <p class="section-subtitle">Les différentes phases du cycle d'une attaque informatique (Cyber Kill Chain)</p>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-search"></i>
+                        <div>
+                            <h3>1. Reconnaissance</h3>
+                            <p>L'attaquant collecte des informations sur sa cible : adresses IP, noms de domaine, employés (LinkedIn, OSINT), technologies utilisées et éventuelles failles connues. C'est une phase passive qui peut durer des semaines sans laisser la moindre trace sur les systèmes visés.</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-virus"></i>
+                        <div>
+                            <h3>2. Armement</h3>
+                            <p>L'attaquant développe ou acquiert un exploit adaptés aux vulnérabilités découvertes : un malware, un ransomware, un kit de phishing ou une backdoor. Il conditionne le payload dans un fichier apparemment anodin (PDF, macro Office, lien URL).</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope-open-text"></i>
+                        <div>
+                            <h3>3. Livraison</h3>
+                            <p>Le vecteur d'attaque est envoyé vers la cible : e-mail de spear phishing, clé USB abandonnée, compromission d'un site web légitime (watering hole), ou exploitation directe d'un service exposé sur Internet (RDP, VPN vulnérable).</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-bug"></i>
+                        <div>
+                            <h3>4. Exploitation &amp; Persistance</h3>
+                            <p>Une fois le code malveillant exécuté, l'attaquant exploite la faille pour prendre pied sur le système. Il installe ensuite un mécanisme de persistance (clé de registre, tâche planifiée, rootkit) pour survivre aux redémarrages et maintenir l'accès sur le long terme.</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-user-secret"></i>
+                        <div>
+                            <h3>5. Mouvement latéral &amp; Exfiltration</h3>
+                            <p>L'attaquant se déplace discrètement à travers le réseau (pass-the-hash, kerberoasting), élève ses privilèges jusqu'à l'administrateur de domaine, puis exfiltre les données sensibles vers un serveur C2 (Command & Control) ou chiffre le système pour demander une rançon.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>DUP-M</span>
+                </div>
+                <p class="footer-description">
+                    Développeur full-stack passionné par la sécurité informatique,
+                    les réseaux et la protection des systèmes d'information.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/mathieu-dupressoir-384376329/" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/MatDup6080" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="/cdn-cgi/l/email-protection#f09d918498999585de948580829583839f9982b09588919d809c95de939f9d" class="social-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Navigation</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#histoire">Histoire</a></li>
+                    <li><a href="#fonctionnement">Fonctionnement</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Ressources utiles</h3>
+                <ul class="footer-links">
+                    <li><a href="https://www.ssi.gouv.fr/" target="_blank">ANSSI (France)</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Contact</h3>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f69b97829e9f9383d892838684938585999f84b6938e979b869a93d895999b">[email&#160;protected]</a></span>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>France</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Mathieu Dupressoir — Portfolio</p>
+        </div>
+    </footer>
+
+    <script src="Veille_cyber.js"></script>
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acteurs - Cybersécurité | Mathieu Dupressoir</title>
+    <link rel="stylesheet" href="style_cyber.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="logo-wrapper">
+                    <i class="fas fa-shield-alt logo-icon"></i>
+                    <span class="logo-text">MD</span>
+                </div>
+            </div>
+
+            <ul class="nav-menu">
+                <li>
+                    <a href="../index.html" class="nav-link">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Portfolio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Veille_cyber.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Introduction</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Fonctionnement.html" class="nav-link">
+                        <i class="fas fa-cogs"></i>
+                        <span>Fonctionnement</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Attaques.html" class="nav-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Attaques</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Preventions.html" class="nav-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Préventions</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Outils.html" class="nav-link">
+                        <i class="fas fa-tools"></i>
+                        <span>Outils</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Hackers.html" class="nav-link">
+                        <i class="fas fa-rocket"></i>
+                        <span>Hackers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Faits_divers.html" class="nav-link">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Faits divers</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="https://www.ssi.gouv.fr/" class="btn btn-primary btn-small" target="_blank">
+                    <i class="fas fa-lock"></i>
+                    <span>ANSSI</span>
+                </a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu mobile">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo-wrapper">
+                <i class="fas fa-shield-alt logo-icon"></i>
+                <span class="logo-text">DUP-M</span>
+            </div>
+            <button class="menu-close" id="menuClose" aria-label="Fermer le menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-menu">
+            <li>
+                <a href="../index.html" class="mobile-nav-link">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Portfolio</span>
+                </a>
+            </li>
+            <li>
+                <a href="Veille_cyber.html" class="mobile-nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Introduction</span>
+                </a>
+            </li>
+            <li>
+                <a href="Fonctionnement.html" class="mobile-nav-link">
+                    <i class="fas fa-cogs"></i>
+                    <span>Fonctionnement</span>
+                </a>
+            </li>
+            <li>
+                <a href="Attaques.html" class="nav-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Attaques</span>
+                </a>
+            </li>
+            <li>
+                <a href="Preventions.html" class="nav-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Préventions</span>
+                </a>
+            </li>
+            <li>
+                <a href="Outils.html" class="nav-link">
+                    <i class="fas fa-tools"></i>
+                    <span>Outils</span>
+                </a>
+            </li>
+            <li>
+                <a href="Hackers.html" class="nav-link">
+                    <i class="fas fa-rocket"></i>
+                    <span>Hackers</span>
+                </a>
+            </li>
+            <li>
+                <a href="Faits_divers.html" class="nav-link">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Faits divers</span>
+                </a>
+            </li>
+        </ul>
+        <div class="mobile-menu-footer">
+            <a href="https://www.ssi.gouv.fr/" class="btn btn-primary btn-block" target="_blank">
+                <i class="fas fa-lock"></i>
+                <span>Visiter l'ANSSI</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <main class="main-content">
+
+        <!-- Les acteurs de la cybersécurité -->
+        <section class="parcours-section" id="acteurs">
+            <div class="section-header">
+                <h2 class="section-title">Les Acteurs Clés de la Cybersécurité</h2>
+                <p class="section-subtitle">Les organisations qui défendent et structurent la sécurité numérique en France</p>
+            </div>
+
+            <div class="parcours-grid">
+
+                <!-- 1. Orange Cyberdéfense -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-shield-alt"></i></div>
+                        <h3 class="parcours-title">Orange Cyberdéfense</h3>
+                        <p class="parcours-subtitle">Filiale sécurité du groupe Orange</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Filiale du groupe Orange dédiée à la cybersécurité, Orange Cyberdéfense s'est imposée comme un acteur incontournable grâce à son expertise en gestion des incidents. Sa capacité à intervenir rapidement lors de cyberattaques majeures, aussi bien dans le secteur privé que public, en fait un partenaire de confiance pour les organisations les plus exposées.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-briefcase"></i> Domaines d'intervention</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Gestion et réponse aux incidents de sécurité</li>
+                                <li><i class="fas fa-check-circle"></i> Surveillance et détection des menaces (SOC)</li>
+                                <li><i class="fas fa-check-circle"></i> Accompagnement des entreprises et administrations</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Incident Response</span>
+                            <span class="skill-tag">SOC</span>
+                            <span class="skill-tag">Secteur public</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Thales -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-satellite"></i></div>
+                        <h3 class="parcours-title">Thales</h3>
+                        <p class="parcours-subtitle">Défense & systèmes critiques</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Fort d'une longue expérience dans la défense et l'aéronautique, Thales met son savoir-faire au service de la protection des réseaux les plus sensibles. Il intervient notamment auprès des administrations d'État et des industries stratégiques, dont les systèmes d'information ne peuvent tolérer aucune compromission.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-briefcase"></i> Domaines d'intervention</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Protection des infrastructures critiques nationales</li>
+                                <li><i class="fas fa-check-circle"></i> Sécurisation des réseaux gouvernementaux</li>
+                                <li><i class="fas fa-check-circle"></i> Cybersécurité pour la défense et l'aéronautique</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Défense</span>
+                            <span class="skill-tag">Infrastructures critiques</span>
+                            <span class="skill-tag">OIV</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Atos -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-cloud"></i></div>
+                        <h3 class="parcours-title">Atos</h3>
+                        <p class="parcours-subtitle">Cloud de confiance & souveraineté</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Spécialiste des solutions cloud de confiance, Atos accompagne la transformation numérique des entreprises tout en plaçant la souveraineté des données au cœur de sa démarche. Ses offres garantissent le respect des réglementations européennes et permettent aux organisations de migrer vers le cloud sans sacrifier leur sécurité ni leur indépendance.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-briefcase"></i> Domaines d'intervention</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Cloud souverain et hébergement sécurisé</li>
+                                <li><i class="fas fa-check-circle"></i> Conformité RGPD et réglementations européennes</li>
+                                <li><i class="fas fa-check-circle"></i> Transformation digitale sécurisée des entreprises</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Cloud souverain</span>
+                            <span class="skill-tag">RGPD</span>
+                            <span class="skill-tag">Conformité</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. ANSSI -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-landmark"></i></div>
+                        <h3 class="parcours-title">ANSSI</h3>
+                        <p class="parcours-subtitle">Agence Nationale de la Sécurité des SI</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Véritable chef d'orchestre de la stratégie nationale en matière de cybersécurité, l'ANSSI coordonne la réponse aux incidents d'envergure nationale et définit les standards de sécurité que les organisations publiques et privées doivent atteindre. Elle joue un rôle central dans la sensibilisation, la réglementation et la montée en compétence de l'écosystème français.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-briefcase"></i> Domaines d'intervention</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Définition des référentiels et standards nationaux</li>
+                                <li><i class="fas fa-check-circle"></i> Coordination de la réponse aux crises cyber</li>
+                                <li><i class="fas fa-check-circle"></i> Sensibilisation et certification des acteurs</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Régulation</span>
+                            <span class="skill-tag">Stratégie nationale</span>
+                            <span class="skill-tag">Certification</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>DUP-M</span>
+                </div>
+                <p class="footer-description">
+                    Développeur full-stack passionné par la sécurité informatique,
+                    les réseaux et la protection des systèmes d'information.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/mathieu-dupressoir-384376329/" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/MatDup6080" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:mathieu.dupressoir@example.com" class="social-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Navigation</h3>
+                <ul class="footer-links">
+                    <li><a href="Veille_cyber.html">Introduction</a></li>
+                    <li><a href="Fonctionnement.html">Fonctionnement</a></li>
+                    <li><a href="Attaques.html">Attaques</a></li>
+                    <li><a href="Outils.html">Outils</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Ressources utiles</h3>
+                <ul class="footer-links">
+                    <li><a href="https://www.ssi.gouv.fr/" target="_blank">ANSSI (France)</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Contact</h3>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>mathieu.dupressoir@example.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>France</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Mathieu Dupressoir — Portfolio</p>
+        </div>
+    </footer>
+
+    <script src="Veille_cyber.js"></script>
+</body>
+</html>

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outils - Cybersécurité | Mathieu Dupressoir</title>
+    <link rel="stylesheet" href="style_cyber.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="logo-wrapper">
+                    <i class="fas fa-shield-alt logo-icon"></i>
+                    <span class="logo-text">MD</span>
+                </div>
+            </div>
+
+            <ul class="nav-menu">
+                <li>
+                    <a href="../index.html" class="nav-link">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Portfolio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Veille_cyber.html" class="nav-link active">
+                        <i class="fas fa-home"></i>
+                        <span>Introduction</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#histoire" class="nav-link">
+                        <i class="fas fa-history"></i>
+                        <span>Histoire</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Fonctionnement.html" class="nav-link">
+                        <i class="fas fa-cogs"></i>
+                        <span>Fonctionnement</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Attaques.html" class="nav-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Attaques</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Preventions.html" class="nav-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Préventions</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Acteurs.html" class="nav-link">
+                        <i class="fas fa-rocket"></i>
+                        <span>Acteurs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Hackers.html" class="nav-link">
+                        <i class="fas fa-rocket"></i>
+                        <span>Hackers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Faits_divers.html" class="nav-link">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Faits divers</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="https://www.ssi.gouv.fr/" class="btn btn-primary btn-small" target="_blank">
+                    <i class="fas fa-lock"></i>
+                    <span>ANSSI</span>
+                </a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu mobile">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo-wrapper">
+                <i class="fas fa-shield-alt logo-icon"></i>
+                <span class="logo-text">DUP-M</span>
+            </div>
+            <button class="menu-close" id="menuClose" aria-label="Fermer le menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-menu">
+            <li>
+                <a href="../index.html" class="nav-link">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Portfolio</span>
+                </a>
+            </li>
+            <li>
+                <a href="Veille_cyber.html" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Introduction</span>
+                </a>
+            </li>
+            <li>
+                <a href="#histoire" class="nav-link">
+                    <i class="fas fa-history"></i>
+                    <span>Histoire</span>
+                </a>
+            </li>
+            <li>
+                <a href="Fonctionnement.html" class="nav-link">
+                    <i class="fas fa-cogs"></i>
+                    <span>Fonctionnement</span>
+                </a>
+            </li>
+            <li>
+                <a href="Attaques.html" class="nav-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Attaques</span>
+                </a>
+            </li>
+            <li>
+                <a href="Preventions.html" class="nav-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Préventions</span>
+                </a>
+            </li>
+            <li>
+                <a href="Outils.html" class="nav-link">
+                    <i class="fas fa-tools"></i>
+                    <span>Outils</span>
+                </a>
+            </li>
+            <li>
+                <a href="Acteurs.html" class="nav-link">
+                    <i class="fas fa-rocket"></i>
+                    <span>Acteurs</span>
+                </a>
+            </li>
+            <li>
+                <a href="Hackers.html" class="nav-link">
+                    <i class="fas fa-rocket"></i>
+                    <span>Hackers</span>
+                </a>
+            </li>
+            <li>
+                <a href="Faits_divers.html" class="nav-link">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Faits divers</span>
+                </a>
+            </li>
+        </ul>
+        <div class="mobile-menu-footer">
+            <a href="https://www.ssi.gouv.fr/" class="btn btn-primary btn-block" target="_blank">
+                <i class="fas fa-lock"></i>
+                <span>Visiter l'ANSSI</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <main class="main-content">
+
+        <!-- Les 9 outils de cybersécurité -->
+        <section class="parcours-section" id="outils">
+            <div class="section-header">
+                <h2 class="section-title">Les 9 Outils de Cybersécurité Essentiels</h2>
+                <p class="section-subtitle">Maîtriser les meilleurs outils pour analyser, tester et protéger son système</p>
+            </div>
+
+            <div class="parcours-grid">
+
+                <!-- 1. Nmap -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-network-wired"></i></div>
+                        <h3 class="parcours-title">Nmap</h3>
+                        <p class="parcours-subtitle">Network Mapper</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Nmap est un scanner de ports open source permettant de cartographier un réseau en découvrant les hôtes actifs, les services exposés et leurs versions. Il est largement utilisé par les administrateurs réseau pour identifier les vulnérabilités potentielles avant qu'un attaquant ne les exploite.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-wrench"></i> Cas d'usage</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Inventaire des équipements sur un réseau</li>
+                                <li><i class="fas fa-check-circle"></i> Détection de ports ouverts non autorisés</li>
+                                <li><i class="fas fa-check-circle"></i> Identification des versions de services vulnérables</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Scan réseau</span>
+                            <span class="skill-tag">Open source</span>
+                            <span class="skill-tag">Gratuit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Metasploit -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-bug"></i></div>
+                        <h3 class="parcours-title">Metasploit</h3>
+                        <p class="parcours-subtitle">Framework de pentesting</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Metasploit est un framework de test d'intrusion permettant d'exploiter activement des vulnérabilités connues sur des systèmes cibles. Utilisé lors d'audits de sécurité offensifs, il aide à mesurer concrètement l'impact d'une faille avant qu'un vrai attaquant ne s'en empare.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-wrench"></i> Cas d'usage</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Tests de pénétration sur des systèmes autorisés</li>
+                                <li><i class="fas fa-check-circle"></i> Développement de signatures IDS</li>
+                                <li><i class="fas fa-check-circle"></i> Simulation d'attaques réelles en environnement contrôlé</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Pentesting</span>
+                            <span class="skill-tag">Exploitation</span>
+                            <span class="skill-tag">IDS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Nessus -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-search"></i></div>
+                        <h3 class="parcours-title">Nessus</h3>
+                        <p class="parcours-subtitle">Scanner de vulnérabilités</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Nessus est une référence dans le domaine des scanners de vulnérabilités. Il analyse les systèmes d'exploitation, applications web, logiciels et infrastructures cloud afin de détecter les failles connues. Il permet également de réaliser des audits de conformité réglementaire.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-wrench"></i> Cas d'usage</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Audit de conformité (PCI-DSS, ISO 27001…)</li>
+                                <li><i class="fas fa-check-circle"></i> Détection de failles sur les assets IT</li>
+                                <li><i class="fas fa-check-circle"></i> Cartographie des hôtes d'un réseau</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Vulnérabilités</span>
+                            <span class="skill-tag">Compliance</span>
+                            <span class="skill-tag">Cloud</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Wireshark -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-wave-square"></i></div>
+                        <h3 class="parcours-title">Wireshark</h3>
+                        <p class="parcours-subtitle">Analyseur de paquets réseau</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Wireshark capture et analyse en temps réel les paquets de données qui transitent sur un réseau. Son interface graphique très complète permet d'inspecter en profondeur les protocoles réseau et de repérer des comportements anormaux ou des données sensibles circulant en clair.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-wrench"></i> Cas d'usage</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Diagnostic de problèmes réseau</li>
+                                <li><i class="fas fa-check-circle"></i> Détection de trafic suspect ou non chiffré</li>
+                                <li><i class="fas fa-check-circle"></i> Analyse forensique après incident</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Capture</span>
+                            <span class="skill-tag">Protocoles</span>
+                            <span class="skill-tag">Gratuit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Snort -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-bell"></i></div>
+                        <h3 class="parcours-title">Snort</h3>
+                        <p class="parcours-subtitle">IDS / IPS réseau</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Snort est à la fois un système de détection d'intrusion (IDS) et de prévention d'intrusion (IPS). Basé sur un moteur de règles, il surveille le trafic réseau en temps réel et alerte ou bloque automatiquement les paquets malveillants, offrant une réaction rapide face aux menaces actives.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-wrench"></i> Cas d'usage</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Surveillance du trafic réseau en temps réel</li>
+                                <li><i class="fas fa-check-circle"></i> Détection et blocage automatique d'intrusions</li>
+                                <li><i class="fas fa-check-circle"></i> Génération d'alertes pour les équipes SOC</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">IDS</span>
+                            <span class="skill-tag">IPS</span>
+                            <span class="skill-tag">Open source</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Burp Suite -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-spider"></i></div>
+                        <h3 class="parcours-title">Burp Suite</h3>
+                        <p class="parcours-subtitle">Audit d'applications web</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Burp Suite est un outil d'audit de sécurité dédié aux applications web. Il permet d'intercepter, modifier et rejouer des requêtes HTTP pour tester manuellement ou automatiquement la résistance d'une application face aux injections SQL, failles XSS, et autres vulnérabilités OWASP Top 10.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-wrench"></i> Cas d'usage</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Tests de pénétration sur applications web</li>
+                                <li><i class="fas fa-check-circle"></i> Détection des failles XSS et injections SQL</li>
+                                <li><i class="fas fa-check-circle"></i> Intégration dans les pipelines DevSecOps</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Web App</span>
+                            <span class="skill-tag">XSS</span>
+                            <span class="skill-tag">SQLi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Aircrack-ng -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-wifi"></i></div>
+                        <h3 class="parcours-title">Aircrack-ng</h3>
+                        <p class="parcours-subtitle">Audit des réseaux Wi-Fi</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Aircrack-ng est une suite d'outils en ligne de commande dédiée à l'audit de sécurité des réseaux sans fil. Elle permet de tester la robustesse des clés WEP et WPA, de monitorer le trafic Wi-Fi et d'évaluer le niveau de risque associé à un point d'accès ou un réseau sans fil d'entreprise.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-wrench"></i> Cas d'usage</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Test de robustesse des clés Wi-Fi</li>
+                                <li><i class="fas fa-check-circle"></i> Monitoring du trafic sans fil</li>
+                                <li><i class="fas fa-check-circle"></i> Audit de sécurité des réseaux d'entreprise</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Wi-Fi</span>
+                            <span class="skill-tag">WPA/WEP</span>
+                            <span class="skill-tag">Sans fil</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Splunk -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-chart-bar"></i></div>
+                        <h3 class="parcours-title">Splunk</h3>
+                        <p class="parcours-subtitle">Analyse des données machines</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Splunk est une plateforme SIEM (Security Information and Event Management) qui centralise et corrèle les logs issus de multiples sources : serveurs, applications, API, appareils mobiles. Grâce au machine learning, il transforme ces données brutes en alertes et tableaux de bord exploitables par les équipes sécurité.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-wrench"></i> Cas d'usage</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Centralisation et corrélation des logs</li>
+                                <li><i class="fas fa-check-circle"></i> Détection d'anomalies comportementales</li>
+                                <li><i class="fas fa-check-circle"></i> Tableaux de bord SOC en temps réel</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">SIEM</span>
+                            <span class="skill-tag">Logs</span>
+                            <span class="skill-tag">Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Acunetix -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-globe"></i></div>
+                        <h3 class="parcours-title">Acunetix</h3>
+                        <p class="parcours-subtitle">Scanner de vulnérabilités web</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Acunetix est un scanner automatisé de vulnérabilités orienté web. Il analyse les sites et applications pour détecter et prioriser les failles selon leur criticité. Grâce à ses intégrations CI/CD et son API, il s'insère naturellement dans une démarche DevSecOps pour sécuriser le code dès le développement.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-wrench"></i> Cas d'usage</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Scan automatisé des applications web</li>
+                                <li><i class="fas fa-check-circle"></i> Priorisation des vulnérabilités par criticité</li>
+                                <li><i class="fas fa-check-circle"></i> Intégration dans les pipelines CI/CD</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">DevSecOps</span>
+                            <span class="skill-tag">CI/CD</span>
+                            <span class="skill-tag">Web</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>DUP-M</span>
+                </div>
+                <p class="footer-description">
+                    Développeur full-stack passionné par la sécurité informatique,
+                    les réseaux et la protection des systèmes d'information.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/mathieu-dupressoir-384376329/" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/MatDup6080" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:mathieu.dupressoir@example.com" class="social-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Navigation</h3>
+                <ul class="footer-links">
+                    <li><a href="Veille_cyber.html">Introduction</a></li>
+                    <li><a href="Fonctionnement.html">Fonctionnement</a></li>
+                    <li><a href="Attaques.html">Attaques</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Ressources utiles</h3>
+                <ul class="footer-links">
+                    <li><a href="https://www.ssi.gouv.fr/" target="_blank">ANSSI (France)</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Contact</h3>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>mathieu.dupressoir@example.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>France</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Mathieu Dupressoir — Portfolio</p>
+        </div>
+    </footer>
+
+    <script src="Veille_cyber.js"></script>
+</body>
+</html>

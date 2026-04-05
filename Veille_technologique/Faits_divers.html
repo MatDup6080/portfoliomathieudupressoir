@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faits Divers - Cybersécurité | Mathieu Dupressoir</title>
+    <link rel="stylesheet" href="style_cyber.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="logo-wrapper">
+                    <i class="fas fa-shield-alt logo-icon"></i>
+                    <span class="logo-text">MD</span>
+                </div>
+            </div>
+
+            <ul class="nav-menu">
+                <li>
+                    <a href="../index.html" class="nav-link">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Portfolio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Veille_cyber.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Introduction</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Fonctionnement.html" class="nav-link">
+                        <i class="fas fa-cogs"></i>
+                        <span>Fonctionnement</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Attaques.html" class="nav-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Attaques</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Preventions.html" class="nav-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Préventions</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Outils.html" class="nav-link">
+                        <i class="fas fa-tools"></i>
+                        <span>Outils</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Acteurs.html" class="nav-link">
+                        <i class="fas fa-rocket"></i>
+                        <span>Acteurs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Hackers.html" class="nav-link">
+                        <i class="fas fa-rocket"></i>
+                        <span>Hackers</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="https://www.ssi.gouv.fr/" class="btn btn-primary btn-small" target="_blank">
+                    <i class="fas fa-lock"></i>
+                    <span>ANSSI</span>
+                </a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu mobile">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo-wrapper">
+                <i class="fas fa-shield-alt logo-icon"></i>
+                <span class="logo-text">DUP-M</span>
+            </div>
+            <button class="menu-close" id="menuClose" aria-label="Fermer le menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-menu">
+            <li>
+                <a href="../index.html" class="mobile-nav-link">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Portfolio</span>
+                </a>
+            </li>
+            <li>
+                <a href="Veille_cyber.html" class="mobile-nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Introduction</span>
+                </a>
+            </li>
+            <li>
+                <a href="Fonctionnement.html" class="mobile-nav-link">
+                    <i class="fas fa-cogs"></i>
+                    <span>Fonctionnement</span>
+                </a>
+            </li>
+            <li>
+                <a href="Attaques.html" class="nav-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Attaques</span>
+                </a>
+            </li>
+            <li>
+                <a href="Preventions.html" class="nav-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Préventions</span>
+                </a>
+            </li>
+            <li>
+                <a href="Outils.html" class="nav-link">
+                    <i class="fas fa-tools"></i>
+                    <span>Outils</span>
+                </a>
+            </li>
+            <li>
+                <a href="Acteurs.html" class="nav-link">
+                    <i class="fas fa-rocket"></i>
+                    <span>Acteurs</span>
+                </a>
+            </li>
+            <li>
+                <a href="Hackers.html" class="nav-link">
+                    <i class="fas fa-rocket"></i>
+                    <span>Hackers</span>
+                </a>
+            </li>
+        </ul>
+        <div class="mobile-menu-footer">
+            <a href="https://www.ssi.gouv.fr/" class="btn btn-primary btn-block" target="_blank">
+                <i class="fas fa-lock"></i>
+                <span>Visiter l'ANSSI</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <main class="main-content">
+
+        <section class="parcours-section" id="Faits_divers">
+            <div class="section-header">
+                <h2 class="section-title">Faits Divers Cybersécurité</h2>
+                <p class="section-subtitle">Les incidents, attaques et affaires marquantes de l'actualité cyber récente</p>
+            </div>
+
+            <div class="parcours-grid">
+
+                <!-- FBI intrusion -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-shield-alt"></i></div>
+                        <h3 class="parcours-title">Intrusion majeure au FBI</h3>
+                        <p class="parcours-subtitle">Avril 2026 — États-Unis</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Le FBI a reconnu avoir subi une intrusion informatique qualifiée de « majeure » après la détection d'activités anormales sur un réseau contenant des données sensibles. Selon la chaîne NBC, un groupe de pirates chinois bien connu des services de renseignement américains serait à l'origine de cette opération.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-tag"></i> Contexte</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Réseau contenant des données sensibles compromis</li>
+                                <li><i class="fas fa-check-circle"></i> Attribution présumée à un groupe de hackers chinois</li>
+                                <li><i class="fas fa-check-circle"></i> Révélé par la chaîne NBC News</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Espionnage</span>
+                            <span class="skill-tag">État-nation</span>
+                            <span class="skill-tag">FBI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Atos / État français -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-flag"></i></div>
+                        <h3 class="parcours-title">L'État rachète les activités d'Atos</h3>
+                        <p class="parcours-subtitle">Mars 2026 — France</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            L'État français est devenu l'unique actionnaire de Bull, entité regroupant les activités stratégiques d'Atos, dont les supercalculateurs utilisés pour la dissuasion nucléaire. Le gouvernement revendique cette acquisition comme une étape décisive pour la souveraineté technologique nationale, dans un contexte de tensions géopolitiques croissantes.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-tag"></i> Contexte</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Offre ferme de l'État en juin 2025</li>
+                                <li><i class="fas fa-check-circle"></i> Supercalculateurs stratégiques sous contrôle public</li>
+                                <li><i class="fas fa-check-circle"></i> Enjeu majeur de souveraineté numérique</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Souveraineté</span>
+                            <span class="skill-tag">Cloud</span>
+                            <span class="skill-tag">France</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hackers iraniens / boîte mail FBI -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-envelope-open-text"></i></div>
+                        <h3 class="parcours-title">Piratage de la boîte mail du directeur du FBI</h3>
+                        <p class="parcours-subtitle">Mars 2026 — Iran / États-Unis</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Le groupe de hackers iraniens Handala a revendiqué le piratage de la messagerie personnelle du directeur du FBI, mettant en ligne un échantillon de courriels extraits. Cet incident s'inscrit dans une vague d'opérations opportunistes menées depuis le début des tensions militaires en Iran, à portée principalement propagandiste.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-tag"></i> Contexte</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Revendiqué par le groupe Handala, proche de Téhéran</li>
+                                <li><i class="fas fa-check-circle"></i> Publication d'un échantillon de courriels en ligne</li>
+                                <li><i class="fas fa-check-circle"></i> Opération à visée principalement propagandiste</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Iran</span>
+                            <span class="skill-tag">Espionnage</span>
+                            <span class="skill-tag">Handala</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Éducation nationale -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-graduation-cap"></i></div>
+                        <h3 class="parcours-title">Fuite de données — Éducation nationale</h3>
+                        <p class="parcours-subtitle">Mars 2026 — France</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Le piratage d'un logiciel utilisé par l'Éducation nationale a compromis les données personnelles de 243 000 agents. Noms, prénoms, adresses et numéros de téléphone d'enseignants de toute la France ont été mis en ligne sur des sites de revente de données, exposant les victimes à des risques d'hameçonnage ciblé.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-tag"></i> Contexte</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> 243 000 agents de l'Éducation nationale touchés</li>
+                                <li><i class="fas fa-check-circle"></i> Données publiées sur des forums de revente</li>
+                                <li><i class="fas fa-check-circle"></i> Risque accru de phishing pour les victimes</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Fuite de données</span>
+                            <span class="skill-tag">Phishing</span>
+                            <span class="skill-tag">Secteur public</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botnets démantelés -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-network-wired"></i></div>
+                        <h3 class="parcours-title">Démantèlement de botnets mondiaux</h3>
+                        <p class="parcours-subtitle">Mars 2026 — International</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Une opération internationale coordonnée a mis hors service plusieurs botnets regroupant des millions d'appareils connectés infectés. Ces réseaux de machines zombies étaient exploités pour lancer massivement des attaques par déni de service (DDoS) contre des cibles variées à travers le monde.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-tag"></i> Contexte</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Plusieurs botnets de grande envergure neutralisés</li>
+                                <li><i class="fas fa-check-circle"></i> Opération coordonnée entre plusieurs pays</li>
+                                <li><i class="fas fa-check-circle"></i> Utilisés principalement pour des attaques DDoS</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Botnet</span>
+                            <span class="skill-tag">DDoS</span>
+                            <span class="skill-tag">Interpol</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- iPhone / Coruna -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-mobile-alt"></i></div>
+                        <h3 class="parcours-title">Outil « Coruna » — espionnage iPhone</h3>
+                        <p class="parcours-subtitle">Mars 2026 — International</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Un outil de piratage d'iPhone très élaboré, baptisé « Coruna », a été identifié comme utilisé simultanément par des services d'espionnage et des cybercriminels. Il a ciblé aussi bien des utilisateurs ukrainiens que des détenteurs chinois de cryptomonnaies, illustrant la prolifération des outils d'exploitation des vulnérabilités iOS.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-tag"></i> Contexte</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Cible des appareils sous iOS 18.4 à 18.7</li>
+                                <li><i class="fas fa-check-circle"></i> Utilisé par espions et cybercriminels</li>
+                                <li><i class="fas fa-check-circle"></i> Victimes en Ukraine et dans la communauté crypto</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">iOS</span>
+                            <span class="skill-tag">Spyware</span>
+                            <span class="skill-tag">Zero-day</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Signal / Russie -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-comment-slash"></i></div>
+                        <h3 class="parcours-title">Campagne d'espionnage sur Signal</h3>
+                        <p class="parcours-subtitle">Mars 2026 — Russie / Europe</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Une campagne d'espionnage attribuée à la Russie a ciblé des journalistes, diplomates, militaires et agents d'institutions publiques dans plusieurs pays européens via de faux messages d'alerte imitant Signal. Certains comptes WhatsApp ont également été compromis dans cette opération de grande envergure.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-tag"></i> Contexte</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Cibles : journalistes, diplomates, militaires européens</li>
+                                <li><i class="fas fa-check-circle"></i> Faux messages d'alerte imitant Signal</li>
+                                <li><i class="fas fa-check-circle"></i> Attribuée à un groupe lié à la Russie</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Russie</span>
+                            <span class="skill-tag">Espionnage</span>
+                            <span class="skill-tag">Messagerie</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- La Poste -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-box"></i></div>
+                        <h3 class="parcours-title">Cyberattaque contre La Poste</h3>
+                        <p class="parcours-subtitle">Décembre 2025 — France</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            La Poste a été frappée par une attaque par déni de service (DDoS) revendiquée par le groupe prorusse Noname057 à quelques jours de Noël, paralysant ses sites et applications pendant plusieurs jours et perturbant le suivi de colis à une période critique. La DGSI et l'unité nationale cyber ont été saisies.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-tag"></i> Contexte</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Attaque DDoS revendiquée par Noname057</li>
+                                <li><i class="fas fa-check-circle"></i> Services en ligne paralysés pendant les fêtes</li>
+                                <li><i class="fas fa-check-circle"></i> DGSI et unité nationale cyber mobilisées</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">DDoS</span>
+                            <span class="skill-tag">Noname057</span>
+                            <span class="skill-tag">France</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Urssaf / 12 millions -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-users"></i></div>
+                        <h3 class="parcours-title">Fuite de données Urssaf — 12 millions de salariés</h3>
+                        <p class="parcours-subtitle">Janvier 2026 — France</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Un accès frauduleux aux systèmes de l'Urssaf a permis de consulter et d'extraire potentiellement les données de 12 millions de salariés embauchés depuis moins de trois ans : noms, prénoms, dates de naissance, numéros Siret et dates d'embauche. L'organisme a appelé à la vigilance face aux risques d'hameçonnage.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-tag"></i> Contexte</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> 12 millions de salariés potentiellement concernés</li>
+                                <li><i class="fas fa-check-circle"></i> Données personnelles et professionnelles exposées</li>
+                                <li><i class="fas fa-check-circle"></i> Risque d'hameçonnage ciblé signalé par l'Urssaf</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Fuite de données</span>
+                            <span class="skill-tag">Urssaf</span>
+                            <span class="skill-tag">RGPD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Free / amende CNIL -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-gavel"></i></div>
+                        <h3 class="parcours-title">Free condamné à 42 millions d'euros d'amende</h3>
+                        <p class="parcours-subtitle">Janvier 2026 — France</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            L'opérateur Free a écopé d'une amende record de 42 millions d'euros pour « négligence » et « manquements particulièrement graves » à la suite d'une fuite de données d'une ampleur inédite. La décision sanctionne à la fois l'étendue de la compromission et les défaillances organisationnelles constatées dans la gestion de l'incident.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-tag"></i> Contexte</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Amende record de 42 millions d'euros infligée</li>
+                                <li><i class="fas fa-check-circle"></i> Manquements graves dans la gestion des données</li>
+                                <li><i class="fas fa-check-circle"></i> Décision qualifiée d'inédite par l'opérateur</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">RGPD</span>
+                            <span class="skill-tag">CNIL</span>
+                            <span class="skill-tag">Sanction</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pegasus / NSO Group -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-satellite-dish"></i></div>
+                        <h3 class="parcours-title">Pegasus : l'amende NSO Group réduite en appel</h3>
+                        <p class="parcours-subtitle">Octobre 2025 — International</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            Après six ans de bataille judiciaire, l'amende infligée à NSO Group pour le piratage d'utilisateurs de WhatsApp via le logiciel espion Pegasus a été réduite de 168 millions à 4 millions de dollars en appel. L'entreprise israélienne a toutefois reçu une injonction permanente lui interdisant de cibler les utilisateurs de la messagerie.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-tag"></i> Contexte</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> Amende ramenée à 4 millions de dollars en appel</li>
+                                <li><i class="fas fa-check-circle"></i> Injonction permanente contre NSO Group</li>
+                                <li><i class="fas fa-check-circle"></i> Six ans de procédure judiciaire entre WhatsApp et NSO</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">Pegasus</span>
+                            <span class="skill-tag">Spyware</span>
+                            <span class="skill-tag">Justice</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OFII / BreachForums -->
+                <div class="parcours-card">
+                    <div class="parcours-header">
+                        <div class="parcours-year"><i class="fas fa-passport"></i></div>
+                        <h3 class="parcours-title">Fuite de données — Office de l'immigration (OFII)</h3>
+                        <p class="parcours-subtitle">Janvier 2026 — France</p>
+                    </div>
+                    <div class="parcours-body">
+                        <p class="parcours-description">
+                            La justice a ouvert une enquête après la revendication sur BreachForums de la mise en vente de 2,1 millions de lignes de données appartenant à l'Office français de l'immigration et de l'intégration (OFII). Le parquet de Paris a été saisi, illustrant la vulnérabilité persistante des systèmes d'information des administrations publiques.
+                        </p>
+                        <div class="stage-missions">
+                            <h4 class="missions-title"><i class="fas fa-tag"></i> Contexte</h4>
+                            <ul class="missions-list">
+                                <li><i class="fas fa-check-circle"></i> 2,1 millions de lignes de données en vente sur BreachForums</li>
+                                <li><i class="fas fa-check-circle"></i> Enquête ouverte par le parquet de Paris</li>
+                                <li><i class="fas fa-check-circle"></i> Données sensibles de l'administration publique exposées</li>
+                            </ul>
+                        </div>
+                        <div class="parcours-skills">
+                            <span class="skill-tag">BreachForums</span>
+                            <span class="skill-tag">Revente de données</span>
+                            <span class="skill-tag">Administration</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>DUP-M</span>
+                </div>
+                <p class="footer-description">
+                    Développeur full-stack passionné par la sécurité informatique,
+                    les réseaux et la protection des systèmes d'information.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/mathieu-dupressoir-384376329/" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/MatDup6080" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:mathieu.dupressoir@example.com" class="social-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Navigation</h3>
+                <ul class="footer-links">
+                    <li><a href="Veille_cyber.html">Introduction</a></li>
+                    <li><a href="Fonctionnement.html">Fonctionnement</a></li>
+                    <li><a href="Attaques.html">Attaques</a></li>
+                    <li><a href="Outils.html">Outils</a></li>
+                    <li><a href="Acteurs.html">Acteurs</a></li>
+                    <li><a href="Hackers.html">Hackers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Ressources utiles</h3>
+                <ul class="footer-links">
+                    <li><a href="https://www.ssi.gouv.fr/" target="_blank">ANSSI (France)</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Contact</h3>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>mathieu.dupressoir@example.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>France</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Mathieu Dupressoir — Portfolio</p>
+        </div>
+    </footer>
+
+    <script src="Veille_cyber.js"></script>
+</body>
+</html>
