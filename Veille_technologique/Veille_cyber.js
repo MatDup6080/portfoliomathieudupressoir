@@ -180,3 +180,34 @@ window.addEventListener('load', () => {
     console.log('Veille Cybersécurité chargée avec succès !');
     document.body.classList.add('page-loaded');
 });
+
+// Boutons de défilement du menu
+const navMenu = document.getElementById('navMenu');
+const navScrollLeft = document.getElementById('navScrollLeft');
+const navScrollRight = document.getElementById('navScrollRight');
+
+const SCROLL_STEP = 200;
+
+function updateScrollButtons() {
+    if (!navMenu) return;
+    navScrollLeft.disabled = navMenu.scrollLeft <= 0;
+    navScrollRight.disabled = navMenu.scrollLeft + navMenu.clientWidth >= navMenu.scrollWidth - 1;
+}
+
+if (navScrollLeft && navScrollRight && navMenu) {
+    navScrollLeft.addEventListener('click', () => {
+        navMenu.scrollLeft -= SCROLL_STEP;
+        setTimeout(updateScrollButtons, 350);
+    });
+
+    navScrollRight.addEventListener('click', () => {
+        navMenu.scrollLeft += SCROLL_STEP;
+        setTimeout(updateScrollButtons, 350);
+    });
+
+    navMenu.addEventListener('scroll', updateScrollButtons);
+    window.addEventListener('resize', updateScrollButtons);
+
+    // État initial
+    updateScrollButtons();
+}

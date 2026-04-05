@@ -110,26 +110,67 @@ body.dark-theme .navbar {
     font-family: 'Roboto Mono', monospace;
 }
 
+.nav-scroll-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.nav-scroll-btn {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid rgba(239, 68, 68, 0.5);
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    transition: var(--transition);
+    z-index: 1;
+}
+
+.nav-scroll-btn:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+}
+
+.nav-scroll-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+body.dark-theme .nav-scroll-btn {
+    border-color: rgba(239, 68, 68, 0.4);
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
     gap: 0.25rem;
     margin: 0;
-    padding: 0 0.5rem;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
-    scrollbar-color: var(--primary) transparent;
+    padding: 0 0.25rem;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    flex: 1;
+    min-width: 0;
+    scrollbar-width: none;
 }
 
-    .nav-menu::-webkit-scrollbar-track {
-        background: transparent;
-    }
-
-    .nav-menu::-webkit-scrollbar-thumb {
-        background: var(--primary);
-        border-radius: 2px;
-    }
+.nav-menu::-webkit-scrollbar {
+    display: none;
+}
 
 .nav-link {
     color: var(--dark);
@@ -922,7 +963,7 @@ body.dark-theme .footer {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
-    .nav-menu {
+    .nav-scroll-wrapper {
         display: none;
     }
 

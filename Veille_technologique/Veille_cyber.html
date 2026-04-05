@@ -20,69 +20,78 @@
                 </div>
             </div>
 
-            <ul class="nav-menu">
-                <li>
-                    <a href="../index.html" class="nav-link">
-                        <i class="fas fa-user-circle"></i>
-                        <span>Portfolio</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#introduction" class="nav-link active">
-                        <i class="fas fa-home"></i>
-                        <span>Introduction</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#histoire" class="nav-link">
-                        <i class="fas fa-history"></i>
-                        <span>Histoire</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Fonctionnement.html" class="nav-link">
-                        <i class="fas fa-cogs"></i>
-                        <span>Fonctionnement</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Attaques.html" class="nav-link">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span>Attaques</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Preventions.html" class="nav-link">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span>Préventions</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Outils.html" class="nav-link">
-                        <i class="fas fa-tools"></i>
-                        <span>Outils</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Acteurs.html" class="nav-link">
-                        <i class="fas fa-rocket"></i>
-                        <span>Acteurs</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Hackers.html" class="nav-link">
-                        <i class="fas fa-rocket"></i>
-                        <span>Hackers</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Faits_divers.html" class="nav-link">
-                        <i class="fas fa-chart-line"></i>
-                        <span>Faits divers</span>
-                    </a>
-                </li>
+            <div class="nav-scroll-wrapper">
+                <button class="nav-scroll-btn nav-scroll-left" id="navScrollLeft" aria-label="Défiler à gauche">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
 
-            </ul>
+                <ul class="nav-menu" id="navMenu">
+                    <li>
+                        <a href="../index.html" class="nav-link">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Portfolio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#introduction" class="nav-link active">
+                            <i class="fas fa-home"></i>
+                            <span>Introduction</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#histoire" class="nav-link">
+                            <i class="fas fa-history"></i>
+                            <span>Histoire</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Fonctionnement.html" class="nav-link">
+                            <i class="fas fa-cogs"></i>
+                            <span>Fonctionnement</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Attaques.html" class="nav-link">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Attaques</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Preventions.html" class="nav-link">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Préventions</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Outils.html" class="nav-link">
+                            <i class="fas fa-tools"></i>
+                            <span>Outils</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Acteurs.html" class="nav-link">
+                            <i class="fas fa-rocket"></i>
+                            <span>Acteurs</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Hackers.html" class="nav-link">
+                            <i class="fas fa-rocket"></i>
+                            <span>Hackers</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Faits_divers.html" class="nav-link">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Faits divers</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <button class="nav-scroll-btn nav-scroll-right" id="navScrollRight" aria-label="Défiler à droite">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
 
             <div class="nav-actions">
                 <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
@@ -578,7 +587,7 @@
                 <ul class="footer-contact">
                     <li>
                         <i class="fas fa-envelope"></i>
-                        <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d7bab6a3bfbeb2a2f9b3a2a7a5b2a4a4b8bea5e7e497b0bab6bebbf9b4b8ba">mathieu.dupressoir03@gmail.com</a></span>
+                        <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d7bab6a3bfbeb2a2f9b3a2a7a5b2a4a4b8bea5e7e497b0bab6bebbf9b4b8ba"><span class="__cf_email__" data-cfemail="a0cdc1d4c8c9c5d58ec4d5d0d2c5d3d3cfc9d29093e0c7cdc1c9cc8ec3cfcd">[email&#160;protected]</span></a></span>
                     </li>
                     <li>
                         <i class="fas fa-map-marker-alt"></i>
@@ -590,10 +599,4 @@
 
         
             <div class="footer-bottom">
-                <p>&copy; <span id="currentYear"></span> Mathieu Dupressoir — Portfolio</p>
-            </div>
-    </footer>
-
-    <script src="Veille_cyber.js"></script>
-</body>
-</html>
+                <p>&copy; <span id="currentYear"></span> Mathieu Dupressoir — Portfolio
