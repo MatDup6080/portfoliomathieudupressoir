@@ -116,7 +116,6 @@ body.dark-theme .navbar {
     gap: 0.5rem;
     flex: 1;
     min-width: 0;
-    overflow: hidden;
 }
 
 .nav-scroll-btn {
@@ -136,20 +135,20 @@ body.dark-theme .navbar {
     z-index: 1;
 }
 
-.nav-scroll-btn:hover {
-    background: var(--primary);
-    color: white;
-    border-color: var(--primary);
-    transform: scale(1.1);
-    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
-}
+    .nav-scroll-btn:hover {
+        background: var(--primary);
+        color: white;
+        border-color: var(--primary);
+        transform: scale(1.1);
+        box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+    }
 
-.nav-scroll-btn:disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-    transform: none;
-    box-shadow: none;
-}
+    .nav-scroll-btn:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+    }
 
 body.dark-theme .nav-scroll-btn {
     border-color: rgba(239, 68, 68, 0.4);
@@ -168,9 +167,9 @@ body.dark-theme .nav-scroll-btn {
     scrollbar-width: none;
 }
 
-.nav-menu::-webkit-scrollbar {
-    display: none;
-}
+    .nav-menu::-webkit-scrollbar {
+        display: none;
+    }
 
 .nav-link {
     color: var(--dark);

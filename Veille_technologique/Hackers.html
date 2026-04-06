@@ -18,57 +18,65 @@
                     <span class="logo-text">MD</span>
                 </div>
             </div>
+            <div class="nav-scroll-wrapper">
+                <button class="nav-scroll-btn nav-scroll-left" id="navScrollLeft" aria-label="Défiler à gauche">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
 
-            <ul class="nav-menu">
-                <li>
-                    <a href="../index.html" class="nav-link">
-                        <i class="fas fa-user-circle"></i>
-                        <span>Portfolio</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Veille_cyber.html" class="nav-link">
-                        <i class="fas fa-home"></i>
-                        <span>Introduction</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Fonctionnement.html" class="nav-link">
-                        <i class="fas fa-cogs"></i>
-                        <span>Fonctionnement</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Attaques.html" class="nav-link">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span>Attaques</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Preventions.html" class="nav-link">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span>Préventions</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Outils.html" class="nav-link">
-                        <i class="fas fa-tools"></i>
-                        <span>Outils</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Acteurs.html" class="nav-link">
-                        <i class="fas fa-rocket"></i>
-                        <span>Acteurs</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Faits_divers.html" class="nav-link">
-                        <i class="fas fa-chart-line"></i>
-                        <span>Faits divers</span>
-                    </a>
-                </li>
-            </ul>
+                <ul class="nav-menu" id="navMenu">
+                    <li>
+                        <a href="../index.html" class="nav-link">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Portfolio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Veille_cyber.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Introduction</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Fonctionnement.html" class="nav-link">
+                            <i class="fas fa-cogs"></i>
+                            <span>Fonctionnement</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Attaques.html" class="nav-link">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Attaques</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Preventions.html" class="nav-link">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Préventions</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Outils.html" class="nav-link">
+                            <i class="fas fa-tools"></i>
+                            <span>Outils</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Acteurs.html" class="nav-link">
+                            <i class="fas fa-rocket"></i>
+                            <span>Acteurs</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Faits_divers.html" class="nav-link">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Faits divers</span>
+                        </a>
+                    </li>
+                </ul>
+                <button class="nav-scroll-btn nav-scroll-right" id="navScrollRight" aria-label="Défiler à droite">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
 
             <div class="nav-actions">
                 <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
@@ -158,6 +166,85 @@
     <!-- Contenu principal -->
     <main class="main-content">
 
+        <!-- Styles supplémentaires pour les catégories -->
+        <style>
+            .category-section {
+                margin-bottom: 3rem;
+            }
+
+            .category-header {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                padding: 1rem 1.5rem;
+                border-radius: 12px;
+                margin-bottom: 1.5rem;
+                font-family: 'Poppins', sans-serif;
+            }
+
+                .category-header.white-hat {
+                    background: linear-gradient(135deg, rgba(168,230,207,0.15), rgba(168,230,207,0.05));
+                    border-left: 4px solid #a8e6cf;
+                }
+
+                .category-header.grey-hat {
+                    background: linear-gradient(135deg, rgba(176,190,197,0.15), rgba(176,190,197,0.05));
+                    border-left: 4px solid #b0bec5;
+                }
+
+                .category-header.black-hat {
+                    background: linear-gradient(135deg, rgba(255,107,107,0.15), rgba(255,107,107,0.05));
+                    border-left: 4px solid #ff6b6b;
+                }
+
+            .category-title {
+                font-size: 1.4rem;
+                font-weight: 700;
+                margin: 0;
+            }
+
+                .category-title.white-hat {
+                    color: #a8e6cf;
+                }
+
+                .category-title.grey-hat {
+                    color: #b0bec5;
+                }
+
+                .category-title.black-hat {
+                    color: #ff6b6b;
+                }
+
+            .category-desc {
+                font-size: 0.85rem;
+                opacity: 0.7;
+                margin: 0;
+            }
+
+            .category-icon {
+                font-size: 2rem;
+            }
+
+            .hacker-photo {
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+                object-position: top center;
+                border-radius: 8px;
+                margin-bottom: 1rem;
+                border: 2px solid rgba(255,255,255,0.1);
+            }
+
+            .group-photo {
+                width: 100%;
+                height: 150px;
+                object-fit: cover;
+                border-radius: 8px;
+                margin-bottom: 1rem;
+                border: 2px solid rgba(255,255,255,0.1);
+            }
+        </style>
+
         <!-- Catégories de hackers -->
         <section class="parcours-section" id="hackers">
             <div class="section-header">
@@ -165,333 +252,382 @@
                 <p class="section-subtitle">Catégories, collectifs emblématiques et figures marquantes de la culture hacker</p>
             </div>
 
-            <div class="parcours-grid">
-
-                <!-- White Hat -->
-                <div class="parcours-card">
-                    <div class="parcours-header">
-                        <div class="parcours-year"><i class="fas fa-hat-cowboy" style="color:#a8e6cf;"></i></div>
-                        <h3 class="parcours-title">White Hat</h3>
-                        <p class="parcours-subtitle">Chapeau blanc — hacker éthique</p>
-                    </div>
-                    <div class="parcours-body">
-                        <p class="parcours-description">
-                            Le white hat est un expert en sécurité informatique qui met ses compétences au service de la protection des systèmes. Mandaté par des organisations pour tester leurs défenses, il agit dans un cadre légal et éthique strict. On le retrouve notamment dans les équipes de pentest, les bug bounty programs ou les SOC d'entreprise.
-                        </p>
-                        <div class="stage-missions">
-                            <h4 class="missions-title"><i class="fas fa-info-circle"></i> Caractéristiques</h4>
-                            <ul class="missions-list">
-                                <li><i class="fas fa-check-circle"></i> Agit avec autorisation explicite</li>
-                                <li><i class="fas fa-check-circle"></i> Objectif : renforcer la sécurité</li>
-                                <li><i class="fas fa-check-circle"></i> Travaille souvent pour des entreprises ou l'État</li>
-                            </ul>
-                        </div>
-                        <div class="parcours-skills">
-                            <span class="skill-tag">Éthique</span>
-                            <span class="skill-tag">Pentesting</span>
-                            <span class="skill-tag">Bug Bounty</span>
-                        </div>
+            <!-- ═══════════════════════════════════════ -->
+            <!-- CATÉGORIE : WHITE HAT                  -->
+            <!-- ═══════════════════════════════════════ -->
+            <div class="category-section">
+                <div class="category-header white-hat">
+                    <span class="category-icon">🛡️</span>
+                    <div>
+                        <h3 class="category-title white-hat">Hackers White Hat — Chapeau Blanc</h3>
+                        <p class="category-desc">Hackers éthiques au service de la sécurité, agissant dans un cadre légal et bénéfique</p>
                     </div>
                 </div>
+                <div class="parcours-grid">
 
-                <!-- Black Hat -->
-                <div class="parcours-card">
-                    <div class="parcours-header">
-                        <div class="parcours-year"><i class="fas fa-hat-cowboy" style="color:#ff6b6b;"></i></div>
-                        <h3 class="parcours-title">Black Hat</h3>
-                        <p class="parcours-subtitle">Chapeau noir — cybercriminel</p>
-                    </div>
-                    <div class="parcours-body">
-                        <p class="parcours-description">
-                            Le black hat agit de façon malveillante, cherchant à s'introduire dans des systèmes sans autorisation pour en tirer profit, nuire à des organisations ou dérober des informations sensibles. Ses motivations peuvent être financières, idéologiques ou simplement destructrices. Les plus virulents sont parfois surnommés « crashers ».
-                        </p>
-                        <div class="stage-missions">
-                            <h4 class="missions-title"><i class="fas fa-info-circle"></i> Caractéristiques</h4>
-                            <ul class="missions-list">
-                                <li><i class="fas fa-check-circle"></i> Agit sans autorisation, dans l'illégalité</li>
-                                <li><i class="fas fa-check-circle"></i> Motivations : profit, vengeance, nuisance</li>
-                                <li><i class="fas fa-check-circle"></i> Peut être affilié à des groupes criminels organisés</li>
-                            </ul>
+                    <!-- White Hat (catégorie) -->
+                    <div class="parcours-card">
+                        <div class="parcours-header">
+                            <div class="parcours-year"><i class="fas fa-hat-cowboy" style="color:#a8e6cf;"></i></div>
+                            <h3 class="parcours-title">White Hat</h3>
+                            <p class="parcours-subtitle">Chapeau blanc — hacker éthique</p>
                         </div>
-                        <div class="parcours-skills">
-                            <span class="skill-tag">Cybercriminalité</span>
-                            <span class="skill-tag">Malveillant</span>
-                            <span class="skill-tag">Illégal</span>
+                        <div class="parcours-body">
+                            <p class="parcours-description">
+                                Le white hat est un expert en sécurité informatique qui met ses compétences au service de la protection des systèmes. Mandaté par des organisations pour tester leurs défenses, il agit dans un cadre légal et éthique strict. On le retrouve notamment dans les équipes de pentest, les bug bounty programs ou les SOC d'entreprise.
+                            </p>
+                            <div class="stage-missions">
+                                <h4 class="missions-title"><i class="fas fa-info-circle"></i> Caractéristiques</h4>
+                                <ul class="missions-list">
+                                    <li><i class="fas fa-check-circle"></i> Agit avec autorisation explicite</li>
+                                    <li><i class="fas fa-check-circle"></i> Objectif : renforcer la sécurité</li>
+                                    <li><i class="fas fa-check-circle"></i> Travaille souvent pour des entreprises ou l'État</li>
+                                </ul>
+                            </div>
+                            <div class="parcours-skills">
+                                <span class="skill-tag">Éthique</span>
+                                <span class="skill-tag">Pentesting</span>
+                                <span class="skill-tag">Bug Bounty</span>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- H.D Moore -->
+                    <div class="parcours-card">
+                        <div class="parcours-header">
+                            <div class="parcours-year"><i class="fas fa-code"></i></div>
+                            <h3 class="parcours-title">H.D Moore</h3>
+                            <p class="parcours-subtitle">Créateur de Metasploit</p>
+                        </div>
+                        <div class="parcours-body">
+                            <img src="https://alchetron.com/cdn/h-d-moore-86e7e4dc-a9d7-4e0a-b24e-6b1dab0bde7-resize-750.jpeg" alt="H.D Moore" class="hacker-photo" onerror="this.style.display='none'">
+                            <p class="parcours-description">
+                                H.D Moore est le fondateur du framework Metasploit, devenu l'un des outils de test d'intrusion les plus utilisés au monde. Son travail a profondément transformé la façon dont les professionnels de la sécurité évaluent et testent la robustesse des systèmes. Il incarne le profil du hacker white hat dont les contributions bénéficient à l'ensemble de la communauté sécurité.
+                            </p>
+                            <div class="stage-missions">
+                                <h4 class="missions-title"><i class="fas fa-info-circle"></i> Faits marquants</h4>
+                                <ul class="missions-list">
+                                    <li><i class="fas fa-check-circle"></i> Création du framework Metasploit en 2003</li>
+                                    <li><i class="fas fa-check-circle"></i> Contribution majeure à la sécurité offensive</li>
+                                    <li><i class="fas fa-check-circle"></i> Référence mondiale dans la communauté pentesting</li>
+                                </ul>
+                            </div>
+                            <div class="parcours-skills">
+                                <span class="skill-tag">Metasploit</span>
+                                <span class="skill-tag">White Hat</span>
+                                <span class="skill-tag">Open Source</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chaos Computer Club -->
+                    <div class="parcours-card">
+                        <div class="parcours-header">
+                            <div class="parcours-year"><i class="fas fa-users"></i></div>
+                            <h3 class="parcours-title">Chaos Computer Club</h3>
+                            <p class="parcours-subtitle">Le plus grand groupe hacker européen</p>
+                        </div>
+                        <div class="parcours-body">
+                            <img src="https://www.ccc.de/system/uploads/120/original/chaosknoten.png" alt="Chaos Computer Club" class="group-photo" onerror="this.style.display='none'">
+                            <p class="parcours-description">
+                                Fondé en Allemagne en 1981, le Chaos Computer Club (CCC) est la plus grande association de hackers d'Europe. Reconnu pour son approche éthique et militante, il organise chaque année le Chaos Communication Congress, un événement de référence mondiale. Le CCC promeut la transparence numérique, la protection de la vie privée et la liberté de l'information.
+                            </p>
+                            <div class="stage-missions">
+                                <h4 class="missions-title"><i class="fas fa-info-circle"></i> Actions notables</h4>
+                                <ul class="missions-list">
+                                    <li><i class="fas fa-check-circle"></i> Organisation du Chaos Communication Congress annuel</li>
+                                    <li><i class="fas fa-check-circle"></i> Dénonciation de failles dans des systèmes gouvernementaux</li>
+                                    <li><i class="fas fa-check-circle"></i> Défense des libertés numériques en Europe</li>
+                                </ul>
+                            </div>
+                            <div class="parcours-skills">
+                                <span class="skill-tag">Allemagne</span>
+                                <span class="skill-tag">Éthique</span>
+                                <span class="skill-tag">CCC</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kevin Mitnick (reconverti White Hat) -->
+                    <div class="parcours-card">
+                        <div class="parcours-header">
+                            <div class="parcours-year"><i class="fas fa-user-secret"></i></div>
+                            <h3 class="parcours-title">Kevin Mitnick</h3>
+                            <p class="parcours-subtitle">Le hacker le plus recherché de son époque</p>
+                        </div>
+                        <div class="parcours-body">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Kevin_Mitnick_-_Secure_World_2013.jpg/440px-Kevin_Mitnick_-_Secure_World_2013.jpg" alt="Kevin Mitnick" class="hacker-photo" onerror="this.style.display='none'">
+                            <p class="parcours-description">
+                                Considéré comme l'un des hackers les plus célèbres de l'histoire, Kevin Mitnick s'est introduit dans certains des systèmes informatiques les mieux protégés au monde. Après une longue traque par le FBI, il a été arrêté, emprisonné, puis est devenu consultant en sécurité et conférencier reconnu, symbolisant la trajectoire du black hat reconverti en white hat.
+                            </p>
+                            <div class="stage-missions">
+                                <h4 class="missions-title"><i class="fas fa-info-circle"></i> Faits marquants</h4>
+                                <ul class="missions-list">
+                                    <li><i class="fas fa-check-circle"></i> Infiltration de réseaux gouvernementaux et d'entreprises majeures</li>
+                                    <li><i class="fas fa-check-circle"></i> Traqué et arrêté par le FBI en 1995</li>
+                                    <li><i class="fas fa-check-circle"></i> Reconverti en expert en sécurité et auteur</li>
+                                </ul>
+                            </div>
+                            <div class="parcours-skills">
+                                <span class="skill-tag">Reconverti</span>
+                                <span class="skill-tag">FBI</span>
+                                <span class="skill-tag">Ingénierie sociale</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-
-                <!-- Grey Hat -->
-                <div class="parcours-card">
-                    <div class="parcours-header">
-                        <div class="parcours-year"><i class="fas fa-hat-cowboy" style="color:#b0bec5;"></i></div>
-                        <h3 class="parcours-title">Grey Hat</h3>
-                        <p class="parcours-subtitle">Chapeau gris — entre deux mondes</p>
-                    </div>
-                    <div class="parcours-body">
-                        <p class="parcours-description">
-                            Le grey hat se situe dans une zone intermédiaire : sans intentions malveillantes affirmées, il peut néanmoins agir en dehors du cadre légal. Sa principale motivation est souvent la recherche de reconnaissance ou de gloire. Il peut découvrir une faille sans autorisation, puis en informer la victime — parfois en échange d'une rémunération.
-                        </p>
-                        <div class="stage-missions">
-                            <h4 class="missions-title"><i class="fas fa-info-circle"></i> Caractéristiques</h4>
-                            <ul class="missions-list">
-                                <li><i class="fas fa-check-circle"></i> Agit parfois en dehors du cadre légal</li>
-                                <li><i class="fas fa-check-circle"></i> Motivé par la gloire ou la curiosité</li>
-                                <li><i class="fas fa-check-circle"></i> Peut signaler ses découvertes après coup</li>
-                            </ul>
-                        </div>
-                        <div class="parcours-skills">
-                            <span class="skill-tag">Ambigu</span>
-                            <span class="skill-tag">Curiosité</span>
-                            <span class="skill-tag">Gloire</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Hacktiviste -->
-                <div class="parcours-card">
-                    <div class="parcours-header">
-                        <div class="parcours-year"><i class="fas fa-fist-raised"></i></div>
-                        <h3 class="parcours-title">Hacktiviste</h3>
-                        <p class="parcours-subtitle">Activisme numérique</p>
-                    </div>
-                    <div class="parcours-body">
-                        <p class="parcours-description">
-                            Les hacktivistes utilisent leurs compétences techniques comme arme politique. Ils s'attaquent à des organisations, gouvernements ou entreprises pour défendre une cause — liberté d'expression, droits humains, transparence. Leurs actions peuvent être illégales mais sont revendiquées publiquement. Le collectif Anonymous en est l'exemple le plus médiatisé.
-                        </p>
-                        <div class="stage-missions">
-                            <h4 class="missions-title"><i class="fas fa-info-circle"></i> Caractéristiques</h4>
-                            <ul class="missions-list">
-                                <li><i class="fas fa-check-circle"></i> Motivé par des convictions politiques ou sociales</li>
-                                <li><i class="fas fa-check-circle"></i> Actions revendiquées publiquement</li>
-                                <li><i class="fas fa-check-circle"></i> Cibles : gouvernements, multinationales, institutions</li>
-                            </ul>
-                        </div>
-                        <div class="parcours-skills">
-                            <span class="skill-tag">Politique</span>
-                            <span class="skill-tag">Anonymous</span>
-                            <span class="skill-tag">Activisme</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Script Kiddie -->
-                <div class="parcours-card">
-                    <div class="parcours-header">
-                        <div class="parcours-year"><i class="fas fa-child"></i></div>
-                        <h3 class="parcours-title">Script Kiddie</h3>
-                        <p class="parcours-subtitle">Novice sans compétences propres</p>
-                    </div>
-                    <div class="parcours-body">
-                        <p class="parcours-description">
-                            Également appelés « lamers », les script kiddies n'ont pas de compétences techniques propres. Ils réutilisent des outils, scripts ou exploits développés par d'autres pour mener des attaques sans en comprendre le fonctionnement. Bien que peu sophistiqués, ils peuvent causer des dommages réels sur des systèmes mal configurés ou non mis à jour.
-                        </p>
-                        <div class="stage-missions">
-                            <h4 class="missions-title"><i class="fas fa-info-circle"></i> Caractéristiques</h4>
-                            <ul class="missions-list">
-                                <li><i class="fas fa-check-circle"></i> Utilise des outils préfabriqués sans les comprendre</li>
-                                <li><i class="fas fa-check-circle"></i> Motivé par le frisson ou la provocation</li>
-                                <li><i class="fas fa-check-circle"></i> Dangereux malgré un faible niveau technique</li>
-                            </ul>
-                        </div>
-                        <div class="parcours-skills">
-                            <span class="skill-tag">Débutant</span>
-                            <span class="skill-tag">Outils tiers</span>
-                            <span class="skill-tag">Opportuniste</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Anonymous -->
-                <div class="parcours-card">
-                    <div class="parcours-header">
-                        <div class="parcours-year"><i class="fas fa-mask"></i></div>
-                        <h3 class="parcours-title">Anonymous</h3>
-                        <p class="parcours-subtitle">Collectif hacktiviste mondial</p>
-                    </div>
-                    <div class="parcours-body">
-                        <p class="parcours-description">
-                            Anonymous est un collectif décentralisé et sans hiérarchie, né dans les forums internet au milieu des années 2000. Reconnaissable à son masque de Guy Fawkes, il a mené des opérations d'envergure contre la Scientologie, des gouvernements autoritaires et des institutions corrompues, se positionnant comme défenseur de la liberté d'expression sur internet.
-                        </p>
-                        <div class="stage-missions">
-                            <h4 class="missions-title"><i class="fas fa-info-circle"></i> Actions notables</h4>
-                            <ul class="missions-list">
-                                <li><i class="fas fa-check-circle"></i> Opération contre l'Église de Scientologie (OpChanology)</li>
-                                <li><i class="fas fa-check-circle"></i> Soutien au mouvement Occupy et aux Printemps arabes</li>
-                                <li><i class="fas fa-check-circle"></i> Attaques DDoS contre gouvernements et entreprises</li>
-                            </ul>
-                        </div>
-                        <div class="parcours-skills">
-                            <span class="skill-tag">Décentralisé</span>
-                            <span class="skill-tag">Hacktivisme</span>
-                            <span class="skill-tag">DDoS</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Chaos Computer Club -->
-                <div class="parcours-card">
-                    <div class="parcours-header">
-                        <div class="parcours-year"><i class="fas fa-users"></i></div>
-                        <h3 class="parcours-title">Chaos Computer Club</h3>
-                        <p class="parcours-subtitle">Le plus grand groupe hacker européen</p>
-                    </div>
-                    <div class="parcours-body">
-                        <p class="parcours-description">
-                            Fondé en Allemagne en 1981, le Chaos Computer Club (CCC) est la plus grande association de hackers d'Europe. Reconnu pour son approche éthique et militante, il organise chaque année le Chaos Communication Congress, un événement de référence mondiale. Le CCC promeut la transparence numérique, la protection de la vie privée et la liberté de l'information.
-                        </p>
-                        <div class="stage-missions">
-                            <h4 class="missions-title"><i class="fas fa-info-circle"></i> Actions notables</h4>
-                            <ul class="missions-list">
-                                <li><i class="fas fa-check-circle"></i> Organisation du Chaos Communication Congress annuel</li>
-                                <li><i class="fas fa-check-circle"></i> Dénonciation de failles dans des systèmes gouvernementaux</li>
-                                <li><i class="fas fa-check-circle"></i> Défense des libertés numériques en Europe</li>
-                            </ul>
-                        </div>
-                        <div class="parcours-skills">
-                            <span class="skill-tag">Allemagne</span>
-                            <span class="skill-tag">Éthique</span>
-                            <span class="skill-tag">CCC</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Kevin Mitnick -->
-                <div class="parcours-card">
-                    <div class="parcours-header">
-                        <div class="parcours-year"><i class="fas fa-user-secret"></i></div>
-                        <h3 class="parcours-title">Kevin Mitnick</h3>
-                        <p class="parcours-subtitle">Le hacker le plus recherché de son époque</p>
-                    </div>
-                    <div class="parcours-body">
-                        <p class="parcours-description">
-                            Considéré comme l'un des hackers les plus célèbres de l'histoire, Kevin Mitnick s'est introduit dans certains des systèmes informatiques les mieux protégés au monde. Après une longue traque par le FBI, il a été arrêté, emprisonné, puis est devenu consultant en sécurité et conférencier reconnu, symbolisant la trajectoire du black hat reconverti en white hat.
-                        </p>
-                        <div class="stage-missions">
-                            <h4 class="missions-title"><i class="fas fa-info-circle"></i> Faits marquants</h4>
-                            <ul class="missions-list">
-                                <li><i class="fas fa-check-circle"></i> Infiltration de réseaux gouvernementaux et d'entreprises majeures</li>
-                                <li><i class="fas fa-check-circle"></i> Traqué et arrêté par le FBI en 1995</li>
-                                <li><i class="fas fa-check-circle"></i> Reconverti en expert en sécurité et auteur</li>
-                            </ul>
-                        </div>
-                        <div class="parcours-skills">
-                            <span class="skill-tag">Black Hat</span>
-                            <span class="skill-tag">FBI</span>
-                            <span class="skill-tag">Ingénierie sociale</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- George Hotz -->
-                <div class="parcours-card">
-                    <div class="parcours-header">
-                        <div class="parcours-year"><i class="fas fa-mobile-alt"></i></div>
-                        <h3 class="parcours-title">George Hotz</h3>
-                        <p class="parcours-subtitle">GeoHot — le jailbreaker prodige</p>
-                    </div>
-                    <div class="parcours-body">
-                        <p class="parcours-description">
-                            Connu sous le pseudonyme GeoHot, George Hotz s'est illustré en réalisant le premier jailbreak de l'iPhone en 2007, alors qu'il n'avait que 17 ans, puis en craquant la PlayStation 3 en 2010. Ces exploits lui ont valu une reconnaissance mondiale dans la communauté hacker, avant qu'il ne s'oriente vers la recherche en sécurité et le développement d'IA.
-                        </p>
-                        <div class="stage-missions">
-                            <h4 class="missions-title"><i class="fas fa-info-circle"></i> Faits marquants</h4>
-                            <ul class="missions-list">
-                                <li><i class="fas fa-check-circle"></i> Premier jailbreak de l'iPhone (2007)</li>
-                                <li><i class="fas fa-check-circle"></i> Crack de la PlayStation 3 (2010)</li>
-                                <li><i class="fas fa-check-circle"></i> Fondateur de Comma.ai (conduite autonome)</li>
-                            </ul>
-                        </div>
-                        <div class="parcours-skills">
-                            <span class="skill-tag">Jailbreak</span>
-                            <span class="skill-tag">Grey Hat</span>
-                            <span class="skill-tag">Reverse Engineering</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Gary McKinnon -->
-                <div class="parcours-card">
-                    <div class="parcours-header">
-                        <div class="parcours-year"><i class="fas fa-space-shuttle"></i></div>
-                        <h3 class="parcours-title">Gary McKinnon</h3>
-                        <p class="parcours-subtitle">Le hacker de la NASA et de l'armée américaine</p>
-                    </div>
-                    <div class="parcours-body">
-                        <p class="parcours-description">
-                            Citoyen britannique, Gary McKinnon est accusé d'avoir pénétré dans 97 ordinateurs appartenant à l'armée américaine et à la NASA entre 2001 et 2002, à la recherche de preuves sur l'existence de technologies extraterrestres dissimulées par le gouvernement. Son affaire a alimenté une longue bataille juridique entre le Royaume-Uni et les États-Unis autour de son extradition.
-                        </p>
-                        <div class="stage-missions">
-                            <h4 class="missions-title"><i class="fas fa-info-circle"></i> Faits marquants</h4>
-                            <ul class="missions-list">
-                                <li><i class="fas fa-check-circle"></i> Intrusion dans 97 systèmes militaires et de la NASA</li>
-                                <li><i class="fas fa-check-circle"></i> Motivé par la recherche de données sur les OVNIs</li>
-                                <li><i class="fas fa-check-circle"></i> Longue procédure d'extradition vers les États-Unis</li>
-                            </ul>
-                        </div>
-                        <div class="parcours-skills">
-                            <span class="skill-tag">NASA</span>
-                            <span class="skill-tag">Armée US</span>
-                            <span class="skill-tag">Intrusion</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bureau 121 -->
-                <div class="parcours-card">
-                    <div class="parcours-header">
-                        <div class="parcours-year"><i class="fas fa-flag"></i></div>
-                        <h3 class="parcours-title">Bureau 121</h3>
-                        <p class="parcours-subtitle">Unité de cyberguerre nord-coréenne</p>
-                    </div>
-                    <div class="parcours-body">
-                        <p class="parcours-description">
-                            Le Bureau 121 est une unité militaire spécialisée de l'armée nord-coréenne, officiellement désignée comme responsable de cyberattaques d'État. Notamment impliqué dans le piratage de Sony Pictures Entertainment, ce groupe illustre l'essor de la cyberguerre étatique, où des nations utilisent des hackers comme instrument de politique étrangère et d'espionnage.
-                        </p>
-                        <div class="stage-missions">
-                            <h4 class="missions-title"><i class="fas fa-info-circle"></i> Faits marquants</h4>
-                            <ul class="missions-list">
-                                <li><i class="fas fa-check-circle"></i> Attaque contre Sony Pictures Entertainment</li>
-                                <li><i class="fas fa-check-circle"></i> Opérations d'espionnage et de sabotage à l'étranger</li>
-                                <li><i class="fas fa-check-circle"></i> Unité officielle de l'armée nord-coréenne</li>
-                            </ul>
-                        </div>
-                        <div class="parcours-skills">
-                            <span class="skill-tag">État-nation</span>
-                            <span class="skill-tag">Corée du Nord</span>
-                            <span class="skill-tag">Cyberguerre</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- H.D Moore -->
-                <div class="parcours-card">
-                    <div class="parcours-header">
-                        <div class="parcours-year"><i class="fas fa-code"></i></div>
-                        <h3 class="parcours-title">H.D Moore</h3>
-                        <p class="parcours-subtitle">Créateur de Metasploit</p>
-                    </div>
-                    <div class="parcours-body">
-                        <p class="parcours-description">
-                            H.D Moore est le fondateur du framework Metasploit, devenu l'un des outils de test d'intrusion les plus utilisés au monde. Son travail a profondément transformé la façon dont les professionnels de la sécurité évaluent et testent la robustesse des systèmes. Il incarne le profil du hacker white hat dont les contributions bénéficient à l'ensemble de la communauté sécurité.
-                        </p>
-                        <div class="stage-missions">
-                            <h4 class="missions-title"><i class="fas fa-info-circle"></i> Faits marquants</h4>
-                            <ul class="missions-list">
-                                <li><i class="fas fa-check-circle"></i> Création du framework Metasploit en 2003</li>
-                                <li><i class="fas fa-check-circle"></i> Contribution majeure à la sécurité offensive</li>
-                                <li><i class="fas fa-check-circle"></i> Référence mondiale dans la communauté pentesting</li>
-                            </ul>
-                        </div>
-                        <div class="parcours-skills">
-                            <span class="skill-tag">Metasploit</span>
-                            <span class="skill-tag">White Hat</span>
-                            <span class="skill-tag">Open Source</span>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+
+            <!-- ═══════════════════════════════════════ -->
+            <!-- CATÉGORIE : GREY HAT                   -->
+            <!-- ═══════════════════════════════════════ -->
+            <div class="category-section">
+                <div class="category-header grey-hat">
+                    <span class="category-icon">🕵️</span>
+                    <div>
+                        <h3 class="category-title grey-hat">Hackers Grey Hat — Chapeau Gris</h3>
+                        <p class="category-desc">Dans la zone grise entre légalité et éthique, souvent motivés par la curiosité ou la gloire</p>
+                    </div>
+                </div>
+                <div class="parcours-grid">
+
+                    <!-- Grey Hat (catégorie) -->
+                    <div class="parcours-card">
+                        <div class="parcours-header">
+                            <div class="parcours-year"><i class="fas fa-hat-cowboy" style="color:#b0bec5;"></i></div>
+                            <h3 class="parcours-title">Grey Hat</h3>
+                            <p class="parcours-subtitle">Chapeau gris — entre deux mondes</p>
+                        </div>
+                        <div class="parcours-body">
+                            <p class="parcours-description">
+                                Le grey hat se situe dans une zone intermédiaire : sans intentions malveillantes affirmées, il peut néanmoins agir en dehors du cadre légal. Sa principale motivation est souvent la recherche de reconnaissance ou de gloire. Il peut découvrir une faille sans autorisation, puis en informer la victime — parfois en échange d'une rémunération.
+                            </p>
+                            <div class="stage-missions">
+                                <h4 class="missions-title"><i class="fas fa-info-circle"></i> Caractéristiques</h4>
+                                <ul class="missions-list">
+                                    <li><i class="fas fa-check-circle"></i> Agit parfois en dehors du cadre légal</li>
+                                    <li><i class="fas fa-check-circle"></i> Motivé par la gloire ou la curiosité</li>
+                                    <li><i class="fas fa-check-circle"></i> Peut signaler ses découvertes après coup</li>
+                                </ul>
+                            </div>
+                            <div class="parcours-skills">
+                                <span class="skill-tag">Ambigu</span>
+                                <span class="skill-tag">Curiosité</span>
+                                <span class="skill-tag">Gloire</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hacktiviste -->
+                    <div class="parcours-card">
+                        <div class="parcours-header">
+                            <div class="parcours-year"><i class="fas fa-fist-raised"></i></div>
+                            <h3 class="parcours-title">Hacktiviste</h3>
+                            <p class="parcours-subtitle">Activisme numérique</p>
+                        </div>
+                        <div class="parcours-body">
+                            <p class="parcours-description">
+                                Les hacktivistes utilisent leurs compétences techniques comme arme politique. Ils s'attaquent à des organisations, gouvernements ou entreprises pour défendre une cause — liberté d'expression, droits humains, transparence. Leurs actions peuvent être illégales mais sont revendiquées publiquement. Le collectif Anonymous en est l'exemple le plus médiatisé.
+                            </p>
+                            <div class="stage-missions">
+                                <h4 class="missions-title"><i class="fas fa-info-circle"></i> Caractéristiques</h4>
+                                <ul class="missions-list">
+                                    <li><i class="fas fa-check-circle"></i> Motivé par des convictions politiques ou sociales</li>
+                                    <li><i class="fas fa-check-circle"></i> Actions revendiquées publiquement</li>
+                                    <li><i class="fas fa-check-circle"></i> Cibles : gouvernements, multinationales, institutions</li>
+                                </ul>
+                            </div>
+                            <div class="parcours-skills">
+                                <span class="skill-tag">Politique</span>
+                                <span class="skill-tag">Anonymous</span>
+                                <span class="skill-tag">Activisme</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Anonymous -->
+                    <div class="parcours-card">
+                        <div class="parcours-header">
+                            <div class="parcours-year"><i class="fas fa-mask"></i></div>
+                            <h3 class="parcours-title">Anonymous</h3>
+                            <p class="parcours-subtitle">Collectif hacktiviste mondial</p>
+                        </div>
+                        <div class="parcours-body">
+                            <p class="parcours-description">
+                                Anonymous est un collectif décentralisé et sans hiérarchie, né dans les forums internet au milieu des années 2000. Reconnaissable à son masque de Guy Fawkes, il a mené des opérations d'envergure contre la Scientologie, des gouvernements autoritaires et des institutions corrompues, se positionnant comme défenseur de la liberté d'expression sur internet.
+                            </p>
+                            <div class="stage-missions">
+                                <h4 class="missions-title"><i class="fas fa-info-circle"></i> Actions notables</h4>
+                                <ul class="missions-list">
+                                    <li><i class="fas fa-check-circle"></i> Opération contre l'Église de Scientologie (OpChanology)</li>
+                                    <li><i class="fas fa-check-circle"></i> Soutien au mouvement Occupy et aux Printemps arabes</li>
+                                    <li><i class="fas fa-check-circle"></i> Attaques DDoS contre gouvernements et entreprises</li>
+                                </ul>
+                            </div>
+                            <div class="parcours-skills">
+                                <span class="skill-tag">Décentralisé</span>
+                                <span class="skill-tag">Hacktivisme</span>
+                                <span class="skill-tag">DDoS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- George Hotz -->
+                    <div class="parcours-card">
+                        <div class="parcours-header">
+                            <div class="parcours-year"><i class="fas fa-mobile-alt"></i></div>
+                            <h3 class="parcours-title">George Hotz</h3>
+                            <p class="parcours-subtitle">GeoHot — le jailbreaker prodige</p>
+                        </div>
+                        <div class="parcours-body">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/George_Hotz_2016_%28cropped%29.jpg/440px-George_Hotz_2016_%28cropped%29.jpg" alt="George Hotz" class="hacker-photo" onerror="this.style.display='none'">
+                            <p class="parcours-description">
+                                Connu sous le pseudonyme GeoHot, George Hotz s'est illustré en réalisant le premier jailbreak de l'iPhone en 2007, alors qu'il n'avait que 17 ans, puis en craquant la PlayStation 3 en 2010. Ces exploits lui ont valu une reconnaissance mondiale dans la communauté hacker, avant qu'il ne s'oriente vers la recherche en sécurité et le développement d'IA.
+                            </p>
+                            <div class="stage-missions">
+                                <h4 class="missions-title"><i class="fas fa-info-circle"></i> Faits marquants</h4>
+                                <ul class="missions-list">
+                                    <li><i class="fas fa-check-circle"></i> Premier jailbreak de l'iPhone (2007)</li>
+                                    <li><i class="fas fa-check-circle"></i> Crack de la PlayStation 3 (2010)</li>
+                                    <li><i class="fas fa-check-circle"></i> Fondateur de Comma.ai (conduite autonome)</li>
+                                </ul>
+                            </div>
+                            <div class="parcours-skills">
+                                <span class="skill-tag">Jailbreak</span>
+                                <span class="skill-tag">Grey Hat</span>
+                                <span class="skill-tag">Reverse Engineering</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ═══════════════════════════════════════ -->
+            <!-- CATÉGORIE : BLACK HAT                  -->
+            <!-- ═══════════════════════════════════════ -->
+            <div class="category-section">
+                <div class="category-header black-hat">
+                    <span class="category-icon">💀</span>
+                    <div>
+                        <h3 class="category-title black-hat">Hackers Black Hat — Chapeau Noir</h3>
+                        <p class="category-desc">Acteurs malveillants, criminels ou étatiques agissant illégalement pour nuire ou s'enrichir</p>
+                    </div>
+                </div>
+                <div class="parcours-grid">
+
+                    <!-- Black Hat (catégorie) -->
+                    <div class="parcours-card">
+                        <div class="parcours-header">
+                            <div class="parcours-year"><i class="fas fa-hat-cowboy" style="color:#ff6b6b;"></i></div>
+                            <h3 class="parcours-title">Black Hat</h3>
+                            <p class="parcours-subtitle">Chapeau noir — cybercriminel</p>
+                        </div>
+                        <div class="parcours-body">
+                            <p class="parcours-description">
+                                Le black hat agit de façon malveillante, cherchant à s'introduire dans des systèmes sans autorisation pour en tirer profit, nuire à des organisations ou dérober des informations sensibles. Ses motivations peuvent être financières, idéologiques ou simplement destructrices. Les plus virulents sont parfois surnommés « crashers ».
+                            </p>
+                            <div class="stage-missions">
+                                <h4 class="missions-title"><i class="fas fa-info-circle"></i> Caractéristiques</h4>
+                                <ul class="missions-list">
+                                    <li><i class="fas fa-check-circle"></i> Agit sans autorisation, dans l'illégalité</li>
+                                    <li><i class="fas fa-check-circle"></i> Motivations : profit, vengeance, nuisance</li>
+                                    <li><i class="fas fa-check-circle"></i> Peut être affilié à des groupes criminels organisés</li>
+                                </ul>
+                            </div>
+                            <div class="parcours-skills">
+                                <span class="skill-tag">Cybercriminalité</span>
+                                <span class="skill-tag">Malveillant</span>
+                                <span class="skill-tag">Illégal</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Script Kiddie -->
+                    <div class="parcours-card">
+                        <div class="parcours-header">
+                            <div class="parcours-year"><i class="fas fa-child"></i></div>
+                            <h3 class="parcours-title">Script Kiddie</h3>
+                            <p class="parcours-subtitle">Novice sans compétences propres</p>
+                        </div>
+                        <div class="parcours-body">
+                            <p class="parcours-description">
+                                Également appelés « lamers », les script kiddies n'ont pas de compétences techniques propres. Ils réutilisent des outils, scripts ou exploits développés par d'autres pour mener des attaques sans en comprendre le fonctionnement. Bien que peu sophistiqués, ils peuvent causer des dommages réels sur des systèmes mal configurés ou non mis à jour.
+                            </p>
+                            <div class="stage-missions">
+                                <h4 class="missions-title"><i class="fas fa-info-circle"></i> Caractéristiques</h4>
+                                <ul class="missions-list">
+                                    <li><i class="fas fa-check-circle"></i> Utilise des outils préfabriqués sans les comprendre</li>
+                                    <li><i class="fas fa-check-circle"></i> Motivé par le frisson ou la provocation</li>
+                                    <li><i class="fas fa-check-circle"></i> Dangereux malgré un faible niveau technique</li>
+                                </ul>
+                            </div>
+                            <div class="parcours-skills">
+                                <span class="skill-tag">Débutant</span>
+                                <span class="skill-tag">Outils tiers</span>
+                                <span class="skill-tag">Opportuniste</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gary McKinnon -->
+                    <div class="parcours-card">
+                        <div class="parcours-header">
+                            <div class="parcours-year"><i class="fas fa-space-shuttle"></i></div>
+                            <h3 class="parcours-title">Gary McKinnon</h3>
+                            <p class="parcours-subtitle">Le hacker de la NASA et de l'armée américaine</p>
+                        </div>
+                        <div class="parcours-body">
+                            <p class="parcours-description">
+                                Citoyen britannique, Gary McKinnon est accusé d'avoir pénétré dans 97 ordinateurs appartenant à l'armée américaine et à la NASA entre 2001 et 2002, à la recherche de preuves sur l'existence de technologies extraterrestres dissimulées par le gouvernement. Son affaire a alimenté une longue bataille juridique entre le Royaume-Uni et les États-Unis autour de son extradition.
+                            </p>
+                            <div class="stage-missions">
+                                <h4 class="missions-title"><i class="fas fa-info-circle"></i> Faits marquants</h4>
+                                <ul class="missions-list">
+                                    <li><i class="fas fa-check-circle"></i> Intrusion dans 97 systèmes militaires et de la NASA</li>
+                                    <li><i class="fas fa-check-circle"></i> Motivé par la recherche de données sur les OVNIs</li>
+                                    <li><i class="fas fa-check-circle"></i> Longue procédure d'extradition vers les États-Unis</li>
+                                </ul>
+                            </div>
+                            <div class="parcours-skills">
+                                <span class="skill-tag">NASA</span>
+                                <span class="skill-tag">Armée US</span>
+                                <span class="skill-tag">Intrusion</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bureau 121 -->
+                    <div class="parcours-card">
+                        <div class="parcours-header">
+                            <div class="parcours-year"><i class="fas fa-flag"></i></div>
+                            <h3 class="parcours-title">Bureau 121</h3>
+                            <p class="parcours-subtitle">Unité de cyberguerre nord-coréenne</p>
+                        </div>
+                        <div class="parcours-body">
+                            <p class="parcours-description">
+                                Le Bureau 121 est une unité militaire spécialisée de l'armée nord-coréenne, officiellement désignée comme responsable de cyberattaques d'État. Notamment impliqué dans le piratage de Sony Pictures Entertainment, ce groupe illustre l'essor de la cyberguerre étatique, où des nations utilisent des hackers comme instrument de politique étrangère et d'espionnage.
+                            </p>
+                            <div class="stage-missions">
+                                <h4 class="missions-title"><i class="fas fa-info-circle"></i> Faits marquants</h4>
+                                <ul class="missions-list">
+                                    <li><i class="fas fa-check-circle"></i> Attaque contre Sony Pictures Entertainment</li>
+                                    <li><i class="fas fa-check-circle"></i> Opérations d'espionnage et de sabotage à l'étranger</li>
+                                    <li><i class="fas fa-check-circle"></i> Unité officielle de l'armée nord-coréenne</li>
+                                </ul>
+                            </div>
+                            <div class="parcours-skills">
+                                <span class="skill-tag">État-nation</span>
+                                <span class="skill-tag">Corée du Nord</span>
+                                <span class="skill-tag">Cyberguerre</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </section>
 
     </main>
@@ -515,7 +651,7 @@
                     <a href="https://github.com/MatDup6080" class="social-link" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="mailto:mathieu.dupressoir@example.com" class="social-link" aria-label="Email">
+                    <a href="/cdn-cgi/l/email-protection#c5a8a4b1adaca0b0eba1b0b5b7a0b6b6aaacb785a0bda4a8b5a9a0eba6aaa8" class="social-link" aria-label="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -527,8 +663,11 @@
                     <li><a href="Veille_cyber.html">Introduction</a></li>
                     <li><a href="Fonctionnement.html">Fonctionnement</a></li>
                     <li><a href="Attaques.html">Attaques</a></li>
-                    <li><a href="Outils.html">Outils</a></li>
-                    <li><a href="Acteurs.html">Acteurs</a></li>
+                    <li><a href="Preventions.html">Fonctionnement</a></li>
+                    <li><a href="Acteurs.html">Fonctionnement</a></li>
+                    <li><a href="Hackers.html">Fonctionnement</a></li>
+                    <li><a href="Outils.html">Fonctionnement</a></li>
+                    <li><a href="Faits_divers.html">Fonctionnement</a></li>
                 </ul>
             </div>
 
@@ -536,6 +675,11 @@
                 <h3 class="footer-title">Ressources utiles</h3>
                 <ul class="footer-links">
                     <li><a href="https://www.ssi.gouv.fr/" target="_blank">ANSSI (France)</a></li>
+                    <li><a href="https://www.cert.ssi.gouv.fr/" target="_blank">CERT-FR</a></li>
+                    <li><a href="https://17cyber.gouv.fr" target="_blank">Assistance en ligne aux victimes d’actes de cybermalveillance</a></li>
+                    <li><a href="https://www.cybermalveillance.gouv.fr" target="_blank">GIP ACYMA - Cybermalveillance</a></li>
+                    <li><a href="http://www.cnil.fr" target="_blank">Le site de la CNIL</a></li>
+
                 </ul>
             </div>
 
@@ -544,17 +688,17 @@
                 <ul class="footer-contact">
                     <li>
                         <i class="fas fa-envelope"></i>
-                        <span>mathieu.dupressoir@example.com</span>
+                        <span>mathieu.dupressoir03@gmail.com</span>
                     </li>
                     <li>
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>France</span>
+                        <span>Compiegne, France</span>
                     </li>
                 </ul>
             </div>
         </div>
 
-        <div class="footer-bottom">
+               <div class="footer-bottom">
             <p>&copy; <span id="currentYear"></span> Mathieu Dupressoir — Portfolio</p>
         </div>
     </footer>

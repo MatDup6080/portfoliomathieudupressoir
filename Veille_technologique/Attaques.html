@@ -19,57 +19,66 @@
                 </div>
             </div>
 
-            <ul class="nav-menu">
-                <li>
-                    <a href="../index.html" class="nav-link">
-                        <i class="fas fa-user-circle"></i>
-                        <span>Portfolio</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Veille_cyber.html" class="nav-link active">
-                        <i class="fas fa-home"></i>
-                        <span>Introduction</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Fonctionnement.html" class="nav-link">
-                        <i class="fas fa-cogs"></i>
-                        <span>Fonctionnement</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Preventions.html" class="nav-link">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span>Préventions</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Outils.html" class="nav-link">
-                        <i class="fas fa-tools"></i>
-                        <span>Outils</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Acteurs.html" class="nav-link">
-                        <i class="fas fa-rocket"></i>
-                        <span>Acteurs</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Hackers.html" class="nav-link">
-                        <i class="fas fa-rocket"></i>
-                        <span>Hackers</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Faits_divers.html" class="nav-link">
-                        <i class="fas fa-chart-line"></i>
-                        <span>Faits divers</span>
-                    </a>
-                </li>
+            <div class="nav-scroll-wrapper">
+                <button class="nav-scroll-btn nav-scroll-left" id="navScrollLeft" aria-label="Défiler à gauche">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
 
-            </ul>
+                <ul class="nav-menu" id="navMenu">
+                    <li>
+                        <a href="../index.html" class="nav-link">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Portfolio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Veille_cyber.html" class="nav-link active">
+                            <i class="fas fa-home"></i>
+                            <span>Introduction</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Fonctionnement.html" class="nav-link">
+                            <i class="fas fa-cogs"></i>
+                            <span>Fonctionnement</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Preventions.html" class="nav-link">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Préventions</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Outils.html" class="nav-link">
+                            <i class="fas fa-tools"></i>
+                            <span>Outils</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Acteurs.html" class="nav-link">
+                            <i class="fas fa-rocket"></i>
+                            <span>Acteurs</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Hackers.html" class="nav-link">
+                            <i class="fas fa-rocket"></i>
+                            <span>Hackers</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Faits_divers.html" class="nav-link">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Faits divers</span>
+                        </a>
+                    </li>
+
+                </ul>
+                <button class="nav-scroll-btn nav-scroll-right" id="navScrollRight" aria-label="Défiler à droite">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
 
             <div class="nav-actions">
                 <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
@@ -85,7 +94,7 @@
                 <i class="fas fa-bars"></i>
             </button>
         </div>
-    </nav>
+</nav>
 
     <!-- Menu mobile -->
     <div class="mobile-menu" id="mobileMenu">
@@ -744,9 +753,14 @@
             <div class="footer-section">
                 <h3 class="footer-title">Navigation</h3>
                 <ul class="footer-links">
-                    <li><a href="#introduction">Introduction</a></li>
-                    <li><a href="#histoire">Histoire</a></li>
-                    <li><a href="#fonctionnement">Fonctionnement</a></li>
+                    <li><a href="Veille_cyber.html">Introduction</a></li>
+                    <li><a href="Fonctionnement.html">Fonctionnement</a></li>
+                    <li><a href="Attaques.html">Attaques</a></li>
+                    <li><a href="Preventions.html">Fonctionnement</a></li>
+                    <li><a href="Acteurs.html">Fonctionnement</a></li>
+                    <li><a href="Hackers.html">Fonctionnement</a></li>
+                    <li><a href="Outils.html">Fonctionnement</a></li>
+                    <li><a href="Faits_divers.html">Fonctionnement</a></li>
                 </ul>
             </div>
 
@@ -754,6 +768,10 @@
                 <h3 class="footer-title">Ressources utiles</h3>
                 <ul class="footer-links">
                     <li><a href="https://www.ssi.gouv.fr/" target="_blank">ANSSI (France)</a></li>
+                    <li><a href="https://www.cert.ssi.gouv.fr/" target="_blank">CERT-FR</a></li>
+                    <li><a href="https://17cyber.gouv.fr" target="_blank">Assistance en ligne aux victimes d’actes de cybermalveillance</a></li>
+                    <li><a href="https://www.cybermalveillance.gouv.fr" target="_blank">GIP ACYMA - Cybermalveillance</a></li>
+                    <li><a href="http://www.cnil.fr" target="_blank">Le site de la CNIL</a></li>
 
                 </ul>
             </div>
@@ -763,11 +781,11 @@
                 <ul class="footer-contact">
                     <li>
                         <i class="fas fa-envelope"></i>
-                        <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f69b97829e9f9383d892838684938585999f84b6938e979b869a93d895999b">[email&#160;protected]</a></span>
+                        <span>mathieu.dupressoir03@gmail.com</span>
                     </li>
                     <li>
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>France</span>
+                        <span>Compiegne, France</span>
                     </li>
                 </ul>
             </div>

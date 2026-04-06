@@ -18,57 +18,65 @@
                     <span class="logo-text">MD</span>
                 </div>
             </div>
+            <div class="nav-scroll-wrapper">
+                <button class="nav-scroll-btn nav-scroll-left" id="navScrollLeft" aria-label="Défiler à gauche">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
 
-            <ul class="nav-menu">
-                <li>
-                    <a href="../index.html" class="nav-link">
-                        <i class="fas fa-user-circle"></i>
-                        <span>Portfolio</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Veille_cyber.html" class="nav-link">
-                        <i class="fas fa-home"></i>
-                        <span>Introduction</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Fonctionnement.html" class="nav-link">
-                        <i class="fas fa-cogs"></i>
-                        <span>Fonctionnement</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Attaques.html" class="nav-link">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span>Attaques</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Preventions.html" class="nav-link">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span>Préventions</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Outils.html" class="nav-link">
-                        <i class="fas fa-tools"></i>
-                        <span>Outils</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Hackers.html" class="nav-link">
-                        <i class="fas fa-rocket"></i>
-                        <span>Hackers</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Faits_divers.html" class="nav-link">
-                        <i class="fas fa-chart-line"></i>
-                        <span>Faits divers</span>
-                    </a>
-                </li>
-            </ul>
+                <ul class="nav-menu" id="navMenu">
+                    <li>
+                        <a href="../index.html" class="nav-link">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Portfolio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Veille_cyber.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Introduction</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Fonctionnement.html" class="nav-link">
+                            <i class="fas fa-cogs"></i>
+                            <span>Fonctionnement</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Attaques.html" class="nav-link">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Attaques</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Preventions.html" class="nav-link">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Préventions</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Outils.html" class="nav-link">
+                            <i class="fas fa-tools"></i>
+                            <span>Outils</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Hackers.html" class="nav-link">
+                            <i class="fas fa-rocket"></i>
+                            <span>Hackers</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Faits_divers.html" class="nav-link">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Faits divers</span>
+                        </a>
+                    </li>
+                </ul>
+                <button class="nav-scroll-btn nav-scroll-right" id="navScrollRight" aria-label="Défiler à droite">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
 
             <div class="nav-actions">
                 <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
@@ -158,124 +166,417 @@
     <!-- Contenu principal -->
     <main class="main-content">
 
+        <!-- Styles de catégorie -->
+        <style>
+            .category-section {
+                margin-bottom: 3rem;
+            }
+
+            .category-header {
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                margin-bottom: 1.5rem;
+                padding-bottom: 0.75rem;
+                border-bottom: 2px solid var(--primary-color, #0ea5e9);
+            }
+
+                .category-header i {
+                    font-size: 1.4rem;
+                    color: var(--primary-color, #0ea5e9);
+                }
+
+                .category-header h3 {
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    color: var(--text-primary, #1e293b);
+                    margin: 0;
+                }
+
+                .category-header .category-count {
+                    margin-left: auto;
+                    background: var(--primary-color, #0ea5e9);
+                    color: #fff;
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                    padding: 0.2rem 0.6rem;
+                    border-radius: 999px;
+                }
+        </style>
+
         <!-- Les acteurs de la cybersécurité -->
         <section class="parcours-section" id="acteurs">
             <div class="section-header">
                 <h2 class="section-title">Les Acteurs Clés de la Cybersécurité</h2>
-                <p class="section-subtitle">Les organisations qui défendent et structurent la sécurité numérique en France</p>
+                <p class="section-subtitle">Les organisations qui défendent et structurent la sécurité numérique, classées par catégorie</p>
             </div>
 
-            <div class="parcours-grid">
-
-                <!-- 1. Orange Cyberdéfense -->
-                <div class="parcours-card">
-                    <div class="parcours-header">
-                        <div class="parcours-year"><i class="fas fa-shield-alt"></i></div>
-                        <h3 class="parcours-title">Orange Cyberdéfense</h3>
-                        <p class="parcours-subtitle">Filiale sécurité du groupe Orange</p>
-                    </div>
-                    <div class="parcours-body">
-                        <p class="parcours-description">
-                            Filiale du groupe Orange dédiée à la cybersécurité, Orange Cyberdéfense s'est imposée comme un acteur incontournable grâce à son expertise en gestion des incidents. Sa capacité à intervenir rapidement lors de cyberattaques majeures, aussi bien dans le secteur privé que public, en fait un partenaire de confiance pour les organisations les plus exposées.
-                        </p>
-                        <div class="stage-missions">
-                            <h4 class="missions-title"><i class="fas fa-briefcase"></i> Domaines d'intervention</h4>
-                            <ul class="missions-list">
-                                <li><i class="fas fa-check-circle"></i> Gestion et réponse aux incidents de sécurité</li>
-                                <li><i class="fas fa-check-circle"></i> Surveillance et détection des menaces (SOC)</li>
-                                <li><i class="fas fa-check-circle"></i> Accompagnement des entreprises et administrations</li>
-                            </ul>
-                        </div>
-                        <div class="parcours-skills">
-                            <span class="skill-tag">Incident Response</span>
-                            <span class="skill-tag">SOC</span>
-                            <span class="skill-tag">Secteur public</span>
-                        </div>
-                    </div>
+            <!-- ═══════════════════════════════════════════════════════
+                 CATÉGORIE 1 — Institutions & Régulateurs
+            ════════════════════════════════════════════════════════ -->
+            <div class="category-section">
+                <div class="category-header">
+                    <i class="fas fa-landmark"></i>
+                    <h3>Institutions &amp; Régulateurs</h3>
+                    <span class="category-count">4 acteurs</span>
                 </div>
+                <div class="parcours-grid">
 
-                <!-- 2. Thales -->
-                <div class="parcours-card">
-                    <div class="parcours-header">
-                        <div class="parcours-year"><i class="fas fa-satellite"></i></div>
-                        <h3 class="parcours-title">Thales</h3>
-                        <p class="parcours-subtitle">Défense & systèmes critiques</p>
-                    </div>
-                    <div class="parcours-body">
-                        <p class="parcours-description">
-                            Fort d'une longue expérience dans la défense et l'aéronautique, Thales met son savoir-faire au service de la protection des réseaux les plus sensibles. Il intervient notamment auprès des administrations d'État et des industries stratégiques, dont les systèmes d'information ne peuvent tolérer aucune compromission.
-                        </p>
-                        <div class="stage-missions">
-                            <h4 class="missions-title"><i class="fas fa-briefcase"></i> Domaines d'intervention</h4>
-                            <ul class="missions-list">
-                                <li><i class="fas fa-check-circle"></i> Protection des infrastructures critiques nationales</li>
-                                <li><i class="fas fa-check-circle"></i> Sécurisation des réseaux gouvernementaux</li>
-                                <li><i class="fas fa-check-circle"></i> Cybersécurité pour la défense et l'aéronautique</li>
-                            </ul>
+                    <!-- ANSSI -->
+                    <div class="parcours-card">
+                        <div class="parcours-header">
+                            <div class="parcours-year"><i class="fas fa-landmark"></i></div>
+                            <h3 class="parcours-title">ANSSI</h3>
+                            <p class="parcours-subtitle">Agence Nationale de la Sécurité des SI</p>
                         </div>
-                        <div class="parcours-skills">
-                            <span class="skill-tag">Défense</span>
-                            <span class="skill-tag">Infrastructures critiques</span>
-                            <span class="skill-tag">OIV</span>
+                        <div class="parcours-body">
+                            <p class="parcours-description">
+                                Véritable chef d'orchestre de la stratégie nationale en matière de cybersécurité, l'ANSSI coordonne la réponse aux incidents d'envergure nationale et définit les standards de sécurité que les organisations publiques et privées doivent atteindre. Elle joue un rôle central dans la sensibilisation, la réglementation et la montée en compétence de l'écosystème français.
+                            </p>
+                            <div class="stage-missions">
+                                <h4 class="missions-title"><i class="fas fa-briefcase"></i> Domaines d'intervention</h4>
+                                <ul class="missions-list">
+                                    <li><i class="fas fa-check-circle"></i> Définition des référentiels et standards nationaux</li>
+                                    <li><i class="fas fa-check-circle"></i> Coordination de la réponse aux crises cyber</li>
+                                    <li><i class="fas fa-check-circle"></i> Sensibilisation et certification des acteurs</li>
+                                </ul>
+                            </div>
+                            <div class="parcours-skills">
+                                <span class="skill-tag">Régulation</span>
+                                <span class="skill-tag">Stratégie nationale</span>
+                                <span class="skill-tag">Certification</span>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- CERT-FR -->
+                    <div class="parcours-card">
+                        <div class="parcours-header">
+                            <div class="parcours-year"><i class="fas fa-bell"></i></div>
+                            <h3 class="parcours-title">CERT-FR</h3>
+                            <p class="parcours-subtitle">Centre gouvernemental d'alerte et de réponse</p>
+                        </div>
+                        <div class="parcours-body">
+                            <p class="parcours-description">
+                                Rattaché à l'ANSSI, le CERT-FR (Computer Emergency Response Team) est la vigie de l'État face aux cybermenaces. Il publie des bulletins d'alerte, analyse les vulnérabilités et coordonne la réponse aux incidents affectant les administrations, les OIV et les opérateurs de services essentiels.
+                            </p>
+                            <div class="stage-missions">
+                                <h4 class="missions-title"><i class="fas fa-briefcase"></i> Domaines d'intervention</h4>
+                                <ul class="missions-list">
+                                    <li><i class="fas fa-check-circle"></i> Publication d'alertes et de bulletins de sécurité</li>
+                                    <li><i class="fas fa-check-circle"></i> Analyse des vulnérabilités et des malwares</li>
+                                    <li><i class="fas fa-check-circle"></i> Coordination de la réponse aux incidents nationaux</li>
+                                </ul>
+                            </div>
+                            <div class="parcours-skills">
+                                <span class="skill-tag">Veille</span>
+                                <span class="skill-tag">Alertes</span>
+                                <span class="skill-tag">Réponse incidents</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ENISA -->
+                    <div class="parcours-card">
+                        <div class="parcours-header">
+                            <div class="parcours-year"><i class="fas fa-globe-europe"></i></div>
+                            <h3 class="parcours-title">ENISA</h3>
+                            <p class="parcours-subtitle">Agence européenne pour la cybersécurité</p>
+                        </div>
+                        <div class="parcours-body">
+                            <p class="parcours-description">
+                                L'ENISA (European Union Agency for Cybersecurity) est l'équivalent européen de l'ANSSI. Elle accompagne les États membres dans la mise en œuvre de politiques cyber cohérentes, publie des rapports de référence sur l'état de la menace, et soutient l'application du règlement européen NIS2.
+                            </p>
+                            <div class="stage-missions">
+                                <h4 class="missions-title"><i class="fas fa-briefcase"></i> Domaines d'intervention</h4>
+                                <ul class="missions-list">
+                                    <li><i class="fas fa-check-circle"></i> Harmonisation des politiques cyber en Europe</li>
+                                    <li><i class="fas fa-check-circle"></i> Publication du rapport annuel sur les menaces (ENISA Threat Landscape)</li>
+                                    <li><i class="fas fa-check-circle"></i> Soutien à l'application de la directive NIS2</li>
+                                </ul>
+                            </div>
+                            <div class="parcours-skills">
+                                <span class="skill-tag">Europe</span>
+                                <span class="skill-tag">NIS2</span>
+                                <span class="skill-tag">Politique cyber</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cybermalveillance.gouv.fr -->
+                    <div class="parcours-card">
+                        <div class="parcours-header">
+                            <div class="parcours-year"><i class="fas fa-hands-helping"></i></div>
+                            <h3 class="parcours-title">Cybermalveillance.gouv.fr</h3>
+                            <p class="parcours-subtitle">GIP ACYMA — Assistance aux victimes</p>
+                        </div>
+                        <div class="parcours-body">
+                            <p class="parcours-description">
+                                Créé pour répondre aux besoins des victimes qui ne relèvent pas directement de l'ANSSI, le GIP ACYMA s'adresse aux particuliers, aux TPE/PME et aux collectivités. Il oriente les victimes vers des prestataires qualifiés et mène des campagnes nationales de sensibilisation aux risques numériques.
+                            </p>
+                            <div class="stage-missions">
+                                <h4 class="missions-title"><i class="fas fa-briefcase"></i> Domaines d'intervention</h4>
+                                <ul class="missions-list">
+                                    <li><i class="fas fa-check-circle"></i> Assistance en ligne aux victimes de cybermalveillance</li>
+                                    <li><i class="fas fa-check-circle"></i> Mise en relation avec des prestataires de confiance</li>
+                                    <li><i class="fas fa-check-circle"></i> Sensibilisation du grand public et des PME</li>
+                                </ul>
+                            </div>
+                            <div class="parcours-skills">
+                                <span class="skill-tag">Victimes</span>
+                                <span class="skill-tag">PME</span>
+                                <span class="skill-tag">Sensibilisation</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-
-                <!-- 3. Atos -->
-                <div class="parcours-card">
-                    <div class="parcours-header">
-                        <div class="parcours-year"><i class="fas fa-cloud"></i></div>
-                        <h3 class="parcours-title">Atos</h3>
-                        <p class="parcours-subtitle">Cloud de confiance & souveraineté</p>
-                    </div>
-                    <div class="parcours-body">
-                        <p class="parcours-description">
-                            Spécialiste des solutions cloud de confiance, Atos accompagne la transformation numérique des entreprises tout en plaçant la souveraineté des données au cœur de sa démarche. Ses offres garantissent le respect des réglementations européennes et permettent aux organisations de migrer vers le cloud sans sacrifier leur sécurité ni leur indépendance.
-                        </p>
-                        <div class="stage-missions">
-                            <h4 class="missions-title"><i class="fas fa-briefcase"></i> Domaines d'intervention</h4>
-                            <ul class="missions-list">
-                                <li><i class="fas fa-check-circle"></i> Cloud souverain et hébergement sécurisé</li>
-                                <li><i class="fas fa-check-circle"></i> Conformité RGPD et réglementations européennes</li>
-                                <li><i class="fas fa-check-circle"></i> Transformation digitale sécurisée des entreprises</li>
-                            </ul>
-                        </div>
-                        <div class="parcours-skills">
-                            <span class="skill-tag">Cloud souverain</span>
-                            <span class="skill-tag">RGPD</span>
-                            <span class="skill-tag">Conformité</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 4. ANSSI -->
-                <div class="parcours-card">
-                    <div class="parcours-header">
-                        <div class="parcours-year"><i class="fas fa-landmark"></i></div>
-                        <h3 class="parcours-title">ANSSI</h3>
-                        <p class="parcours-subtitle">Agence Nationale de la Sécurité des SI</p>
-                    </div>
-                    <div class="parcours-body">
-                        <p class="parcours-description">
-                            Véritable chef d'orchestre de la stratégie nationale en matière de cybersécurité, l'ANSSI coordonne la réponse aux incidents d'envergure nationale et définit les standards de sécurité que les organisations publiques et privées doivent atteindre. Elle joue un rôle central dans la sensibilisation, la réglementation et la montée en compétence de l'écosystème français.
-                        </p>
-                        <div class="stage-missions">
-                            <h4 class="missions-title"><i class="fas fa-briefcase"></i> Domaines d'intervention</h4>
-                            <ul class="missions-list">
-                                <li><i class="fas fa-check-circle"></i> Définition des référentiels et standards nationaux</li>
-                                <li><i class="fas fa-check-circle"></i> Coordination de la réponse aux crises cyber</li>
-                                <li><i class="fas fa-check-circle"></i> Sensibilisation et certification des acteurs</li>
-                            </ul>
-                        </div>
-                        <div class="parcours-skills">
-                            <span class="skill-tag">Régulation</span>
-                            <span class="skill-tag">Stratégie nationale</span>
-                            <span class="skill-tag">Certification</span>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+
+            <!-- ═══════════════════════════════════════════════════════
+                 CATÉGORIE 2 — Entreprises françaises & européennes
+            ════════════════════════════════════════════════════════ -->
+            <div class="category-section">
+                <div class="category-header">
+                    <i class="fas fa-flag"></i>
+                    <h3>Entreprises françaises &amp; européennes</h3>
+                    <span class="category-count">5 acteurs</span>
+                </div>
+                <div class="parcours-grid">
+
+                    <!-- Orange Cyberdéfense -->
+                    <div class="parcours-card">
+                        <div class="parcours-header">
+                            <div class="parcours-year"><i class="fas fa-shield-alt"></i></div>
+                            <h3 class="parcours-title">Orange Cyberdéfense</h3>
+                            <p class="parcours-subtitle">Filiale sécurité du groupe Orange</p>
+                        </div>
+                        <div class="parcours-body">
+                            <p class="parcours-description">
+                                Filiale du groupe Orange dédiée à la cybersécurité, Orange Cyberdéfense s'est imposée comme un acteur incontournable grâce à son expertise en gestion des incidents. Sa capacité à intervenir rapidement lors de cyberattaques majeures, aussi bien dans le secteur privé que public, en fait un partenaire de confiance pour les organisations les plus exposées.
+                            </p>
+                            <div class="stage-missions">
+                                <h4 class="missions-title"><i class="fas fa-briefcase"></i> Domaines d'intervention</h4>
+                                <ul class="missions-list">
+                                    <li><i class="fas fa-check-circle"></i> Gestion et réponse aux incidents de sécurité</li>
+                                    <li><i class="fas fa-check-circle"></i> Surveillance et détection des menaces (SOC)</li>
+                                    <li><i class="fas fa-check-circle"></i> Accompagnement des entreprises et administrations</li>
+                                </ul>
+                            </div>
+                            <div class="parcours-skills">
+                                <span class="skill-tag">Incident Response</span>
+                                <span class="skill-tag">SOC</span>
+                                <span class="skill-tag">Secteur public</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Thales -->
+                    <div class="parcours-card">
+                        <div class="parcours-header">
+                            <div class="parcours-year"><i class="fas fa-satellite"></i></div>
+                            <h3 class="parcours-title">Thales</h3>
+                            <p class="parcours-subtitle">Défense & systèmes critiques</p>
+                        </div>
+                        <div class="parcours-body">
+                            <p class="parcours-description">
+                                Fort d'une longue expérience dans la défense et l'aéronautique, Thales met son savoir-faire au service de la protection des réseaux les plus sensibles. Il intervient notamment auprès des administrations d'État et des industries stratégiques, dont les systèmes d'information ne peuvent tolérer aucune compromission.
+                            </p>
+                            <div class="stage-missions">
+                                <h4 class="missions-title"><i class="fas fa-briefcase"></i> Domaines d'intervention</h4>
+                                <ul class="missions-list">
+                                    <li><i class="fas fa-check-circle"></i> Protection des infrastructures critiques nationales</li>
+                                    <li><i class="fas fa-check-circle"></i> Sécurisation des réseaux gouvernementaux</li>
+                                    <li><i class="fas fa-check-circle"></i> Cybersécurité pour la défense et l'aéronautique</li>
+                                </ul>
+                            </div>
+                            <div class="parcours-skills">
+                                <span class="skill-tag">Défense</span>
+                                <span class="skill-tag">Infrastructures critiques</span>
+                                <span class="skill-tag">OIV</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Atos -->
+                    <div class="parcours-card">
+                        <div class="parcours-header">
+                            <div class="parcours-year"><i class="fas fa-cloud"></i></div>
+                            <h3 class="parcours-title">Atos</h3>
+                            <p class="parcours-subtitle">Cloud de confiance & souveraineté</p>
+                        </div>
+                        <div class="parcours-body">
+                            <p class="parcours-description">
+                                Spécialiste des solutions cloud de confiance, Atos accompagne la transformation numérique des entreprises tout en plaçant la souveraineté des données au cœur de sa démarche. Ses offres garantissent le respect des réglementations européennes et permettent aux organisations de migrer vers le cloud sans sacrifier leur sécurité ni leur indépendance.
+                            </p>
+                            <div class="stage-missions">
+                                <h4 class="missions-title"><i class="fas fa-briefcase"></i> Domaines d'intervention</h4>
+                                <ul class="missions-list">
+                                    <li><i class="fas fa-check-circle"></i> Cloud souverain et hébergement sécurisé</li>
+                                    <li><i class="fas fa-check-circle"></i> Conformité RGPD et réglementations européennes</li>
+                                    <li><i class="fas fa-check-circle"></i> Transformation digitale sécurisée des entreprises</li>
+                                </ul>
+                            </div>
+                            <div class="parcours-skills">
+                                <span class="skill-tag">Cloud souverain</span>
+                                <span class="skill-tag">RGPD</span>
+                                <span class="skill-tag">Conformité</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Airbus CyberSecurity -->
+                    <div class="parcours-card">
+                        <div class="parcours-header">
+                            <div class="parcours-year"><i class="fas fa-plane"></i></div>
+                            <h3 class="parcours-title">Airbus CyberSecurity</h3>
+                            <p class="parcours-subtitle">Sécurité industrielle & aérospatiale</p>
+                        </div>
+                        <div class="parcours-body">
+                            <p class="parcours-description">
+                                Filiale cybersécurité d'Airbus, cette entité protège les environnements industriels et les systèmes embarqués les plus complexes. Elle intervient auprès des secteurs aéronautique, spatial et de la défense européenne, avec une expertise pointue sur les systèmes SCADA et les réseaux OT (Operational Technology).
+                            </p>
+                            <div class="stage-missions">
+                                <h4 class="missions-title"><i class="fas fa-briefcase"></i> Domaines d'intervention</h4>
+                                <ul class="missions-list">
+                                    <li><i class="fas fa-check-circle"></i> Sécurité des systèmes industriels (OT/SCADA)</li>
+                                    <li><i class="fas fa-check-circle"></i> Protection des systèmes embarqués aéronautiques</li>
+                                    <li><i class="fas fa-check-circle"></i> Threat intelligence et renseignement cyber</li>
+                                </ul>
+                            </div>
+                            <div class="parcours-skills">
+                                <span class="skill-tag">OT/SCADA</span>
+                                <span class="skill-tag">Aéronautique</span>
+                                <span class="skill-tag">Défense</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sekoia.io -->
+                    <div class="parcours-card">
+                        <div class="parcours-header">
+                            <div class="parcours-year"><i class="fas fa-search"></i></div>
+                            <h3 class="parcours-title">Sekoia.io</h3>
+                            <p class="parcours-subtitle">Threat Intelligence & XDR français</p>
+                        </div>
+                        <div class="parcours-body">
+                            <p class="parcours-description">
+                                Start-up française fondée en 2017, Sekoia.io s'est imposée comme une référence en matière de Threat Intelligence et de détection des menaces avancées. Sa plateforme SOC/XDR souveraine est conçue pour les équipes de sécurité qui souhaitent une alternative européenne aux solutions américaines dominantes.
+                            </p>
+                            <div class="stage-missions">
+                                <h4 class="missions-title"><i class="fas fa-briefcase"></i> Domaines d'intervention</h4>
+                                <ul class="missions-list">
+                                    <li><i class="fas fa-check-circle"></i> Plateforme SIEM/XDR souveraine</li>
+                                    <li><i class="fas fa-check-circle"></i> Threat Intelligence et analyse des groupes APT</li>
+                                    <li><i class="fas fa-check-circle"></i> Détection et réponse aux menaces avancées</li>
+                                </ul>
+                            </div>
+                            <div class="parcours-skills">
+                                <span class="skill-tag">XDR</span>
+                                <span class="skill-tag">Threat Intel</span>
+                                <span class="skill-tag">Souveraineté</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════
+                 CATÉGORIE 3 — Acteurs internationaux
+            ════════════════════════════════════════════════════════ -->
+            <div class="category-section">
+                <div class="category-header">
+                    <i class="fas fa-globe"></i>
+                    <h3>Acteurs internationaux</h3>
+                    <span class="category-count">3 acteurs</span>
+                </div>
+                <div class="parcours-grid">
+
+                    <!-- CrowdStrike -->
+                    <div class="parcours-card">
+                        <div class="parcours-header">
+                            <div class="parcours-year"><i class="fas fa-crow"></i></div>
+                            <h3 class="parcours-title">CrowdStrike</h3>
+                            <p class="parcours-subtitle">Leader mondial de l'EDR & Threat Intel</p>
+                        </div>
+                        <div class="parcours-body">
+                            <p class="parcours-description">
+                                Fondée en 2011, CrowdStrike est devenue l'une des références mondiales en matière de détection et réponse sur les terminaux (EDR). Sa plateforme Falcon, basée sur l'IA et le cloud, est utilisée par des milliers d'entreprises pour détecter des menaces sophistiquées en temps réel. Son équipe de Threat Intelligence (Adversary Intelligence) suit et nomme les groupes d'attaquants les plus actifs au monde.
+                            </p>
+                            <div class="stage-missions">
+                                <h4 class="missions-title"><i class="fas fa-briefcase"></i> Domaines d'intervention</h4>
+                                <ul class="missions-list">
+                                    <li><i class="fas fa-check-circle"></i> Détection et réponse sur les terminaux (EDR/XDR)</li>
+                                    <li><i class="fas fa-check-circle"></i> Threat Intelligence sur les groupes APT</li>
+                                    <li><i class="fas fa-check-circle"></i> Réponse aux incidents (Falcon OverWatch)</li>
+                                </ul>
+                            </div>
+                            <div class="parcours-skills">
+                                <span class="skill-tag">EDR</span>
+                                <span class="skill-tag">IA</span>
+                                <span class="skill-tag">APT Tracking</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Palo Alto Networks -->
+                    <div class="parcours-card">
+                        <div class="parcours-header">
+                            <div class="parcours-year"><i class="fas fa-network-wired"></i></div>
+                            <h3 class="parcours-title">Palo Alto Networks</h3>
+                            <p class="parcours-subtitle">Pare-feux nouvelle génération & SASE</p>
+                        </div>
+                        <div class="parcours-body">
+                            <p class="parcours-description">
+                                Pionnier du pare-feu de nouvelle génération (NGFW), Palo Alto Networks propose aujourd'hui une plateforme de cybersécurité unifiée couvrant le réseau, le cloud et les terminaux. Son architecture SASE (Secure Access Service Edge) répond aux enjeux des entreprises distribuées et du télétravail généralisé.
+                            </p>
+                            <div class="stage-missions">
+                                <h4 class="missions-title"><i class="fas fa-briefcase"></i> Domaines d'intervention</h4>
+                                <ul class="missions-list">
+                                    <li><i class="fas fa-check-circle"></i> Pare-feux de nouvelle génération (NGFW)</li>
+                                    <li><i class="fas fa-check-circle"></i> Sécurisation des environnements cloud (Prisma Cloud)</li>
+                                    <li><i class="fas fa-check-circle"></i> Architecture SASE pour les entreprises distribuées</li>
+                                </ul>
+                            </div>
+                            <div class="parcours-skills">
+                                <span class="skill-tag">NGFW</span>
+                                <span class="skill-tag">SASE</span>
+                                <span class="skill-tag">Cloud Security</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Europol / EC3 -->
+                    <div class="parcours-card">
+                        <div class="parcours-header">
+                            <div class="parcours-year"><i class="fas fa-balance-scale"></i></div>
+                            <h3 class="parcours-title">Europol — EC3</h3>
+                            <p class="parcours-subtitle">European Cybercrime Centre</p>
+                        </div>
+                        <div class="parcours-body">
+                            <p class="parcours-description">
+                                Le Centre européen de lutte contre la cybercriminalité (EC3), créé au sein d'Europol en 2013, coordonne les enquêtes transnationales sur la cybercriminalité. Il appuie les États membres dans le démantèlement de réseaux criminels (ransomware, fraude en ligne, dark web) et publie des rapports annuels sur l'évolution de la menace criminelle numérique.
+                            </p>
+                            <div class="stage-missions">
+                                <h4 class="missions-title"><i class="fas fa-briefcase"></i> Domaines d'intervention</h4>
+                                <ul class="missions-list">
+                                    <li><i class="fas fa-check-circle"></i> Coordination des enquêtes cyber transfrontalières</li>
+                                    <li><i class="fas fa-check-circle"></i> Lutte contre les ransomwares et la fraude en ligne</li>
+                                    <li><i class="fas fa-check-circle"></i> Publication du rapport IOCTA (Internet Organised Crime Threat Assessment)</li>
+                                </ul>
+                            </div>
+                            <div class="parcours-skills">
+                                <span class="skill-tag">Cybercriminalité</span>
+                                <span class="skill-tag">Enquêtes</span>
+                                <span class="skill-tag">Europe</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </section>
 
     </main>
@@ -299,7 +600,7 @@
                     <a href="https://github.com/MatDup6080" class="social-link" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="mailto:mathieu.dupressoir@example.com" class="social-link" aria-label="Email">
+                    <a href="/cdn-cgi/l/email-protection#3c515d48545559491258494c4e594f4f53554e7c59445d514c5059125f5351" class="social-link" aria-label="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -311,7 +612,11 @@
                     <li><a href="Veille_cyber.html">Introduction</a></li>
                     <li><a href="Fonctionnement.html">Fonctionnement</a></li>
                     <li><a href="Attaques.html">Attaques</a></li>
-                    <li><a href="Outils.html">Outils</a></li>
+                    <li><a href="Preventions.html">Fonctionnement</a></li>
+                    <li><a href="Acteurs.html">Fonctionnement</a></li>
+                    <li><a href="Hackers.html">Fonctionnement</a></li>
+                    <li><a href="Outils.html">Fonctionnement</a></li>
+                    <li><a href="Faits_divers.html">Fonctionnement</a></li>
                 </ul>
             </div>
 
@@ -319,6 +624,11 @@
                 <h3 class="footer-title">Ressources utiles</h3>
                 <ul class="footer-links">
                     <li><a href="https://www.ssi.gouv.fr/" target="_blank">ANSSI (France)</a></li>
+                    <li><a href="https://www.cert.ssi.gouv.fr/" target="_blank">CERT-FR</a></li>
+                    <li><a href="https://17cyber.gouv.fr" target="_blank">Assistance en ligne aux victimes d’actes de cybermalveillance</a></li>
+                    <li><a href="https://www.cybermalveillance.gouv.fr" target="_blank">GIP ACYMA - Cybermalveillance</a></li>
+                    <li><a href="http://www.cnil.fr" target="_blank">Le site de la CNIL</a></li>
+
                 </ul>
             </div>
 
@@ -327,17 +637,17 @@
                 <ul class="footer-contact">
                     <li>
                         <i class="fas fa-envelope"></i>
-                        <span>mathieu.dupressoir@example.com</span>
+                        <span>mathieu.dupressoir03@gmail.com</span>
                     </li>
                     <li>
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>France</span>
+                        <span>Compiegne, France</span>
                     </li>
                 </ul>
             </div>
         </div>
 
-        <div class="footer-bottom">
+                <div class="footer-bottom">
             <p>&copy; <span id="currentYear"></span> Mathieu Dupressoir — Portfolio</p>
         </div>
     </footer>
