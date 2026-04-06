@@ -68,9 +68,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const typingText = document.getElementById('typingText');
     if (typingText) {
         const texts = [
-            'Développeur Full-Stack',
-            'Passionné par la cybersécurité et les réseaux',
-            'Explorateur des failles, des pare-feux et du chiffrement'
+            'Etudiant BTS SIO,',
+            'Passionné par la cybersécurité: ',
+            'La sécurité des applications',
+            'La sécurité des réseaux '
         ];
         let textIndex = 0, charIndex = 0, isDeleting = false;
 
