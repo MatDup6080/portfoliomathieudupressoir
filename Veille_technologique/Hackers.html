@@ -243,6 +243,25 @@
                 margin-bottom: 1rem;
                 border: 2px solid rgba(255,255,255,0.1);
             }
+
+            .video-link {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                background: #ff0000;
+                color: #fff;
+                padding: 0.5rem 1rem;
+                border-radius: 6px;
+                text-decoration: none;
+                font-size: 0.85rem;
+                font-weight: 600;
+                margin-bottom: 1rem;
+                transition: background 0.2s;
+            }
+
+                .video-link:hover {
+                    background: #cc0000;
+                }
         </style>
 
         <!-- Catégories de hackers -->
@@ -357,7 +376,7 @@
                         </div>
                         <div class="parcours-body">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Kevin_Mitnick_-_Secure_World_2013.jpg/440px-Kevin_Mitnick_-_Secure_World_2013.jpg" alt="Kevin Mitnick" class="hacker-photo" onerror="this.style.display='none'">
-                            <iframe class="video-embed" src="https://www.youtube.com/embed/XIbgDpcHsD0" title="Kevin Mitnick" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <a href="https://www.youtube.com/watch?v=XIbgDpcHsD0" target="_blank" class="video-link"><i class="fab fa-youtube"></i> Voir la vidéo</a>
                             <p class="parcours-description">
                                 Considéré comme l'un des hackers les plus célèbres de l'histoire, Kevin Mitnick s'est introduit dans certains des systèmes informatiques les mieux protégés au monde. Après une longue traque par le FBI, il a été arrêté, emprisonné, puis est devenu consultant en sécurité et conférencier reconnu, symbolisant la trajectoire du black hat reconverti en white hat.
                             </p>
@@ -455,7 +474,7 @@
                             <p class="parcours-subtitle">Collectif hacktiviste mondial</p>
                         </div>
                         <div class="parcours-body">
-                            <iframe class="video-embed" src="https://www.youtube.com/embed/QbSgGsJ3ioU" title="Anonymous" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <a href="https://www.youtube.com/watch?v=QbSgGsJ3ioU" target="_blank" class="video-link"><i class="fab fa-youtube"></i> Voir la vidéo</a>
                             <p class="parcours-description">
                                 Anonymous est un collectif décentralisé et sans hiérarchie, né dans les forums internet au milieu des années 2000. Reconnaissable à son masque de Guy Fawkes, il a mené des opérations d'envergure contre la Scientologie, des gouvernements autoritaires et des institutions corrompues, se positionnant comme défenseur de la liberté d'expression sur internet.
                             </p>
@@ -484,7 +503,7 @@
                         </div>
                         <div class="parcours-body">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/George_Hotz_2016_%28cropped%29.jpg/440px-George_Hotz_2016_%28cropped%29.jpg" alt="George Hotz" class="hacker-photo" onerror="this.style.display='none'">
-                            <iframe class="video-embed" src="https://www.youtube.com/embed/5Ydkg8Ea9Ik?start=160" title="George Hotz" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <a href="https://www.youtube.com/watch?v=5Ydkg8Ea9Ik&t=160s" target="_blank" class="video-link"><i class="fab fa-youtube"></i> Voir la vidéo</a>
                             <p class="parcours-description">
                                 Connu sous le pseudonyme GeoHot, George Hotz s'est illustré en réalisant le premier jailbreak de l'iPhone en 2007, alors qu'il n'avait que 17 ans, puis en craquant la PlayStation 3 en 2010. Ces exploits lui ont valu une reconnaissance mondiale dans la communauté hacker, avant qu'il ne s'oriente vers la recherche en sécurité et le développement d'IA.
                             </p>
@@ -582,7 +601,7 @@
                             <p class="parcours-subtitle">Le hacker de la NASA et de l'armée américaine</p>
                         </div>
                         <div class="parcours-body">
-                            <iframe class="video-embed" src="https://www.youtube.com/embed/TTSTV4ghYdo" title="Gary McKinnon" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <a href="https://www.youtube.com/watch?v=TTSTV4ghYdo" target="_blank" class="video-link"><i class="fab fa-youtube"></i> Voir la vidéo</a>
                             <p class="parcours-description">
                                 Citoyen britannique, Gary McKinnon est accusé d'avoir pénétré dans 97 ordinateurs appartenant à l'armée américaine et à la NASA entre 2001 et 2002, à la recherche de preuves sur l'existence de technologies extraterrestres dissimulées par le gouvernement. Son affaire a alimenté une longue bataille juridique entre le Royaume-Uni et les États-Unis autour de son extradition.
                             </p>
@@ -610,7 +629,7 @@
                             <p class="parcours-subtitle">Unité de cyberguerre nord-coréenne</p>
                         </div>
                         <div class="parcours-body">
-                            <iframe class="video-embed" src="https://www.youtube.com/embed/Xqszxa00eUg" title="Bureau 121" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <a href="https://www.youtube.com/watch?v=Xqszxa00eUg" target="_blank" class="video-link"><i class="fab fa-youtube"></i> Voir la vidéo</a>
                             <p class="parcours-description">
                                 Le Bureau 121 est une unité militaire spécialisée de l'armée nord-coréenne, officiellement désignée comme responsable de cyberattaques d'État. Notamment impliqué dans le piratage de Sony Pictures Entertainment, ce groupe illustre l'essor de la cyberguerre étatique, où des nations utilisent des hackers comme instrument de politique étrangère et d'espionnage.
                             </p>
@@ -692,7 +711,7 @@
                 <ul class="footer-contact">
                     <li>
                         <i class="fas fa-envelope"></i>
-                        <span>mathieu.dupressoir03@gmail.com</span>
+                        <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dbb6baafb3b2beaef5bfaeaba9bea8a8b4b2a9ebe89bbcb6bab2b7f5b8b4b6">[email&#160;protected]</a></span>
                     </li>
                     <li>
                         <i class="fas fa-map-marker-alt"></i>
@@ -702,7 +721,7 @@
             </div>
         </div>
 
-               <div class="footer-bottom">
+        <div class="footer-bottom">
             <p>&copy; <span id="currentYear"></span> Mathieu Dupressoir — Portfolio</p>
         </div>
     </footer>
