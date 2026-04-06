@@ -161,7 +161,7 @@ body.dark-theme .nav-scroll-btn {
     gap: 0.25rem;
     margin: 0;
     padding: 0 0.25rem;
-    overflow-x: hidden;
+    overflow-x: auto;
     scroll-behavior: smooth;
     flex: 1;
     min-width: 0;
