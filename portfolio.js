@@ -78,10 +78,11 @@ const typingText = document.getElementById('typingText');
 
 if (typingText) {
     const texts = [
-        'Développeur Full-Stack',
-        'Créateur d\'interfaces web modernes',
-        'Passionné de code, de design et d\'UX',
-        'Toujours prêt pour le prochain défi'
+        'Etudiant BTS SIO,',
+        'Passionné par la cybersécurité: ',
+        'La sécurité des applications',
+        'La sécurité des réseaux '
+        
     ];
 
     let textIndex = 0;
