@@ -95,30 +95,21 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(typeEffect, 1000);
     }
 
-    // ===== HIGHLIGHT MENU AU SCROLL =====
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
+    // ===== HIGHLIGHT MENU SELON LA PAGE COURANTE =====
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            if (window.scrollY >= section.offsetTop - 150) {
-                current = section.getAttribute('id');
-            }
-        });
-        navLinks.forEach(link => {
+    function setActiveLinks(selector) {
+        document.querySelectorAll(selector).forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href').substring(1) === current) {
+            const linkPage = link.getAttribute('href').split('/').pop().split('#')[0];
+            if (linkPage === currentPage) {
                 link.classList.add('active');
             }
         });
-        document.querySelectorAll('.mobile-nav-link').forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').substring(1) === current) {
-                link.classList.add('active');
-            }
-        });
-    });
+    }
+
+    setActiveLinks('.nav-link');
+    setActiveLinks('.mobile-nav-link');
 
     // ===== ANIMATIONS AU SCROLL =====
     const observer = new IntersectionObserver((entries) => {
