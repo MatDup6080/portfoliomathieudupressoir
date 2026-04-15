@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA & Cybersécurité | Mathieu Dupressoir</title>
+    <link rel="stylesheet" href="style_cyber.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* ===== HERO IA ===== */
+        .ia-hero {
+            padding: 10rem 2rem 5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .ia-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(139, 92, 246, 0.15);
+            border: 1px solid rgba(139, 92, 246, 0.4);
+            color: var(--accent);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            font-family: 'Roboto Mono', monospace;
+            margin-bottom: 2rem;
+            letter-spacing: 0.05em;
+        }
+
+        .ia-hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .ia-hero h1 span {
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .ia-hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+
+        /* ===== STATS BANNER ===== */
+        .stats-banner {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .stat-pill {
+            background: var(--bg-primary);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            border-radius: var(--radius);
+            padding: 1.25rem 2rem;
+            text-align: center;
+            min-width: 160px;
+            transition: var(--transition);
+        }
+
+        .stat-pill:hover {
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .stat-pill .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            font-family: 'Roboto Mono', monospace;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+        }
+
+        .stat-pill .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 0.25rem;
+        }
+
+        /* ===== SECTION HEADER ===== */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-title {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .section-title span {
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* ===== DEUX FACES : IA DÉFENSIVE / OFFENSIVE ===== */
+        .two-sides {
+            padding: 5rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .sides-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .sides-grid { grid-template-columns: 1fr; }
+        }
+
+        .side-card {
+            background: var(--bg-primary);
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            border: 1px solid rgba(239, 68, 68, 0.15);
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .side-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .side-card.defense {
+            border-top: 4px solid #22d3ee;
+        }
+
+        .side-card.offense {
+            border-top: 4px solid var(--primary);
+        }
+
+        .side-card-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .defense .side-card-icon {
+            background: rgba(34, 211, 238, 0.15);
+            color: #22d3ee;
+        }
+
+        .offense .side-card-icon {
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--primary);
+        }
+
+        .side-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .side-card > p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .side-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .side-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .side-list li i {
+            margin-top: 2px;
+            flex-shrink: 0;
+            font-size: 0.85rem;
+        }
+
+        .defense .side-list li i { color: #22d3ee; }
+        .offense .side-list li i { color: var(--primary); }
+
+        /* ===== FONCTIONNEMENT IA ===== */
+        .how-section {
+            padding: 5rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* ===== OUTILS IA ===== */
+        .tools-section {
+            padding: 5rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tool-card {
+            background: var(--bg-primary);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: var(--radius);
+            padding: 2rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--primary));
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+
+        .tool-card:hover::before { transform: scaleX(1); }
+
+        .tool-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+        }
+
+        .tool-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .tool-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(139, 92, 246, 0.15);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .tool-name {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .tool-type {
+            font-size: 0.75rem;
+            color: var(--accent);
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 500;
+        }
+
+        .tool-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+
+        /* ===== MENACES IA ===== */
+        .threats-section {
+            padding: 5rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .threats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .threat-card {
+            background: var(--bg-primary);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            border-radius: var(--radius);
+            padding: 2rem;
+            transition: var(--transition);
+        }
+
+        .threat-card:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow);
+            transform: translateX(5px);
+        }
+
+        .threat-tag {
+            display: inline-block;
+            background: rgba(239, 68, 68, 0.12);
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 600;
+            font-family: 'Roboto Mono', monospace;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+        }
+
+        .threat-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .threat-card h3 i {
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .threat-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+
+        /* ===== TIMELINE AVENIR ===== */
+        .future-section {
+            padding: 5rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2.5rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+            background: var(--bg-primary);
+            border: 1px solid rgba(239, 68, 68, 0.15);
+            border-radius: var(--radius);
+            padding: 1.75rem 2rem;
+            transition: var(--transition);
+        }
+
+        .timeline-item:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.05rem;
+            top: 1.75rem;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 3px solid var(--bg-primary);
+            box-shadow: 0 0 0 2px var(--primary);
+        }
+
+        .timeline-year {
+            font-size: 0.8rem;
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="logo-wrapper">
+                    <i class="fas fa-shield-alt logo-icon"></i>
+                    <span class="logo-text">MD</span>
+                </div>
+            </div>
+            <div class="nav-scroll-wrapper">
+                <button class="nav-scroll-btn nav-scroll-left" id="navScrollLeft" aria-label="Défiler à gauche">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li>
+                        <a href="../index.html" class="nav-link">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Portfolio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Veille_cyber.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Introduction</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Fonctionnement.html" class="nav-link">
+                            <i class="fas fa-cogs"></i>
+                            <span>Fonctionnement</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Attaques.html" class="nav-link">
+                            <i class="fas fa-skull-crossbones"></i>
+                            <span>Attaques</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Preventions.html" class="nav-link">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Préventions</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Outils.html" class="nav-link">
+                            <i class="fas fa-tools"></i>
+                            <span>Outils</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Acteurs.html" class="nav-link">
+                            <i class="fas fa-users"></i>
+                            <span>Acteurs</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Hackers.html" class="nav-link">
+                            <i class="fas fa-user-secret"></i>
+                            <span>Hackers</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Faits_divers.html" class="nav-link">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Faits divers</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="IA_cyber.html" class="nav-link">
+                            <i class="fas fa-robot"></i>
+                            <span>IA & Cyber</span>
+                        </a>
+                    </li>
+                </ul>
+                <button class="nav-scroll-btn nav-scroll-right" id="navScrollRight" aria-label="Défiler à droite">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="https://www.ssi.gouv.fr/" class="btn btn-primary btn-small" target="_blank">
+                    <i class="fas fa-lock"></i>
+                    <span>ANSSI</span>
+                </a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu mobile">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo-wrapper">
+                <i class="fas fa-shield-alt logo-icon"></i>
+                <span class="logo-text">DUP-M</span>
+            </div>
+            <button class="menu-close" id="menuClose" aria-label="Fermer le menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-menu">
+            <li><a href="../index.html" class="mobile-nav-link"><i class="fas fa-user-circle"></i><span>Portfolio</span></a></li>
+            <li><a href="Veille_cyber.html" class="mobile-nav-link"><i class="fas fa-home"></i><span>Introduction</span></a></li>
+            <li><a href="Fonctionnement.html" class="mobile-nav-link"><i class="fas fa-cogs"></i><span>Fonctionnement</span></a></li>
+            <li><a href="Attaques.html" class="mobile-nav-link"><i class="fas fa-skull-crossbones"></i><span>Attaques</span></a></li>
+            <li><a href="Preventions.html" class="mobile-nav-link"><i class="fas fa-shield-alt"></i><span>Préventions</span></a></li>
+            <li><a href="Outils.html" class="mobile-nav-link"><i class="fas fa-tools"></i><span>Outils</span></a></li>
+            <li><a href="Acteurs.html" class="mobile-nav-link"><i class="fas fa-users"></i><span>Acteurs</span></a></li>
+            <li><a href="Hackers.html" class="mobile-nav-link"><i class="fas fa-user-secret"></i><span>Hackers</span></a></li>
+            <li><a href="Faits_divers.html" class="mobile-nav-link"><i class="fas fa-chart-line"></i><span>Faits divers</span></a></li>
+            <li><a href="IA_cyber.html" class="mobile-nav-link"><i class="fas fa-robot"></i><span>IA & Cyber</span></a></li>
+        </ul>
+        <div class="mobile-menu-footer">
+            <a href="https://www.ssi.gouv.fr/" class="btn btn-primary btn-block" target="_blank">
+                <i class="fas fa-lock"></i>
+                <span>Visiter l'ANSSI</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <main class="main-content">
+
+        <!-- HERO -->
+        <section class="ia-hero">
+            <div class="ia-hero-badge">
+                <i class="fas fa-robot"></i>
+                INTELLIGENCE ARTIFICIELLE & CYBERSÉCURITÉ
+            </div>
+            <h1>L'IA, <span>nouvelle arme</span><br>de la cybersécurité</h1>
+            <p>L'intelligence artificielle bouleverse le monde de la cybersécurité. Elle est à la fois un bouclier pour les défenseurs et une arme redoutable entre les mains des attaquants.</p>
+
+            <div class="stats-banner">
+                <div class="stat-pill">
+                    <span class="stat-number">+300%</span>
+                    <div class="stat-label">Cyberattaques assistées par IA depuis 2022</div>
+                </div>
+                <div class="stat-pill">
+                    <span class="stat-number">60%</span>
+                    <div class="stat-label">Des SOC utilisent déjà l'IA en 2024</div>
+                </div>
+                <div class="stat-pill">
+                    <span class="stat-number">95%</span>
+                    <div class="stat-label">Des incidents détectés plus vite avec l'IA</div>
+                </div>
+                <div class="stat-pill">
+                    <span class="stat-number">$102Mds</span>
+                    <div class="stat-label">Marché IA en cybersécurité d'ici 2032</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEUX FACES DE L'IA -->
+        <section class="two-sides">
+            <div class="section-header">
+                <h2 class="section-title">L'IA : <span>deux visages</span> opposés</h2>
+                <p class="section-subtitle">L'intelligence artificielle est utilisée simultanément par les défenseurs et les attaquants, créant une course aux armements sans précédent.</p>
+            </div>
+            <div class="sides-grid">
+
+                <!-- DÉFENSE -->
+                <div class="side-card defense">
+                    <div class="side-card-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>IA Défensive</h3>
+                    <p>Les équipes de sécurité (Blue Teams, SOC) exploitent l'IA pour surveiller, détecter et répondre aux menaces en temps réel, bien plus rapidement qu'un humain seul ne pourrait le faire.</p>
+                    <ul class="side-list">
+                        <li><i class="fas fa-check-circle"></i> Détection d'anomalies comportementales (UEBA) sur les réseaux et utilisateurs</li>
+                        <li><i class="fas fa-check-circle"></i> Analyse automatique de millions de logs pour identifier des signaux faibles</li>
+                        <li><i class="fas fa-check-circle"></i> Corrélation d'indicateurs de compromission (IoC) en temps réel</li>
+                        <li><i class="fas fa-check-circle"></i> Réponse automatisée aux incidents (SOAR) pour isoler les machines infectées</li>
+                        <li><i class="fas fa-check-circle"></i> Filtrage anti-phishing intelligent dans les messageries d'entreprise</li>
+                        <li><i class="fas fa-check-circle"></i> Prédiction de vulnérabilités avant leur exploitation</li>
+                    </ul>
+                </div>
+
+                <!-- OFFENSE -->
+                <div class="side-card offense">
+                    <div class="side-card-icon"><i class="fas fa-skull-crossbones"></i></div>
+                    <h3>IA Offensive</h3>
+                    <p>Les cybercriminels et États-nations utilisent l'IA pour automatiser, personnaliser et amplifier leurs attaques, les rendant plus difficiles à détecter et à contrer.</p>
+                    <ul class="side-list">
+                        <li><i class="fas fa-times-circle"></i> Génération de malwares polymorphes qui mutent pour échapper aux antivirus</li>
+                        <li><i class="fas fa-times-circle"></i> Phishing hyper-ciblé grâce à l'analyse des réseaux sociaux des victimes</li>
+                        <li><i class="fas fa-times-circle"></i> Deepfakes audio/vidéo pour usurper l'identité de dirigeants (fraude au président)</li>
+                        <li><i class="fas fa-times-circle"></i> Automatisation du fuzzing pour découvrir des zero-days à grande échelle</li>
+                        <li><i class="fas fa-times-circle"></i> Contournement des CAPTCHA et des systèmes d'authentification</li>
+                        <li><i class="fas fa-times-circle"></i> Campagnes de désinformation massives et automatisées</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FONCTIONNEMENT -->
+        <section class="how-section">
+            <div class="section-header">
+                <h2 class="section-title">Comment <span>fonctionne</span> l'IA en cybersécurité ?</h2>
+                <p class="section-subtitle">Les systèmes de sécurité basés sur l'IA reposent sur plusieurs techniques de machine learning complémentaires.</p>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-brain"></i>
+                        <div>
+                            <h3>1. Machine Learning supervisé</h3>
+                            <p>Le modèle est entraîné sur des millions d'exemples d'attaques connues (malwares, e-mails de phishing, trafic malveillant) pour apprendre à les reconnaître. Il peut ensuite classifier un nouveau fichier ou flux réseau en "malveillant" ou "bénin" avec une grande précision. C'est la technique utilisée par la plupart des antivirus modernes de nouvelle génération (NGAV).</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-project-diagram"></i>
+                        <div>
+                            <h3>2. Détection d'anomalies (non supervisé)</h3>
+                            <p>Sans exemples d'attaques préalables, l'IA apprend le comportement "normal" d'un réseau, d'un utilisateur ou d'une application. Toute déviation significative par rapport à cette baseline déclenche une alerte. C'est particulièrement efficace contre les menaces inconnues (zero-days) et les attaques de type APT qui se déroulent sur plusieurs mois.</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-comments"></i>
+                        <div>
+                            <h3>3. Traitement du langage naturel (NLP)</h3>
+                            <p>Les modèles de NLP analysent le contenu des e-mails, des documents et des communications pour détecter le phishing, l'ingénierie sociale et la désinformation. Ils examinent le ton, la syntaxe, les liens suspects et le contexte pour distinguer un message légitime d'une tentative de manipulation, même lorsque l'orthographe est parfaite.</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-network-wired"></i>
+                        <div>
+                            <h3>4. Analyse comportementale des entités (UEBA)</h3>
+                            <p>L'IA construit un profil comportemental de chaque utilisateur et machine du réseau : heures de connexion habituelles, ressources accédées, volumes de données transférées. Si un compte accède soudainement à des données sensibles à 3h du matin depuis un pays inhabituel, l'alerte est immédiate — qu'il s'agisse d'un pirate ou d'une menace interne.</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-robot"></i>
+                        <div>
+                            <h3>5. Automatisation et orchestration (SOAR)</h3>
+                            <p>Une fois une menace détectée, les plateformes SOAR (Security Orchestration, Automation and Response) pilotées par l'IA déclenchent automatiquement des playbooks de réponse : isolation du poste infecté, blocage de l'IP malveillante, révocation des accès compromis et notification des équipes — le tout en quelques secondes au lieu de plusieurs heures.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUTILS IA -->
+        <section class="tools-section">
+            <div class="section-header">
+                <h2 class="section-title">Outils <span>IA</span> incontournables</h2>
+                <p class="section-subtitle">Les principales solutions d'intelligence artificielle utilisées par les professionnels de la cybersécurité.</p>
+            </div>
+            <div class="tools-grid">
+
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon"><i class="fas fa-eye"></i></div>
+                        <div>
+                            <div class="tool-name">Darktrace</div>
+                            <div class="tool-type">NDR / Détection réseau</div>
+                        </div>
+                    </div>
+                    <p class="tool-desc">Utilise l'IA auto-apprenante (inspirée du système immunitaire humain) pour modéliser le comportement normal de chaque utilisateur et appareil, puis détecter en temps réel les menaces inconnues sans signatures.</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon"><i class="fas fa-falcon"></i></div>
+                        <div>
+                            <div class="tool-name">CrowdStrike Falcon</div>
+                            <div class="tool-type">EDR / Protection endpoints</div>
+                        </div>
+                    </div>
+                    <p class="tool-desc">Plateforme EDR cloud-native qui exploite le machine learning pour détecter les malwares sans fichier (fileless), stopper les ransomwares en millisecondes et analyser les comportements suspects des processus système.</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon"><i class="fas fa-search"></i></div>
+                        <div>
+                            <div class="tool-name">Microsoft Sentinel</div>
+                            <div class="tool-type">SIEM / SOAR cloud</div>
+                        </div>
+                    </div>
+                    <p class="tool-desc">SIEM cloud de Microsoft intégrant Copilot for Security, un assistant IA qui traduit les alertes en langage naturel, propose des actions correctives et accélère les investigations des analystes SOC.</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon"><i class="fas fa-shield-virus"></i></div>
+                        <div>
+                            <div class="tool-name">SentinelOne</div>
+                            <div class="tool-type">EDR / XDR autonome</div>
+                        </div>
+                    </div>
+                    <p class="tool-desc">Plateforme XDR autonome capable de détecter, analyser et répondre aux menaces sans intervention humaine grâce à son moteur IA Singularity, qui rollback automatiquement les fichiers chiffrés par un ransomware.</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon"><i class="fas fa-bug"></i></div>
+                        <div>
+                            <div class="tool-name">Google VirusTotal + AI</div>
+                            <div class="tool-type">Analyse de menaces</div>
+                        </div>
+                    </div>
+                    <p class="tool-desc">VirusTotal intègre désormais des fonctionnalités IA pour générer des rapports d'analyse de malware en langage naturel, expliquer le comportement d'un code malveillant et relier les indicateurs à des campagnes connues.</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon"><i class="fas fa-user-shield"></i></div>
+                        <div>
+                            <div class="tool-name">Vectra AI</div>
+                            <div class="tool-type">NDR / Threat hunting</div>
+                        </div>
+                    </div>
+                    <p class="tool-desc">Spécialisé dans la détection des attaquants déjà présents dans le réseau (post-compromission), Vectra analyse les métadonnées réseau avec l'IA pour identifier les mouvements latéraux, le vol de credentials et les exfiltrations.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- MENACES IA ÉMERGENTES -->
+        <section class="threats-section">
+            <div class="section-header">
+                <h2 class="section-title">Menaces <span>émergentes</span> liées à l'IA</h2>
+                <p class="section-subtitle">Les nouvelles formes d'attaques rendues possibles ou amplifiées par l'intelligence artificielle.</p>
+            </div>
+            <div class="threats-grid">
+
+                <div class="threat-card">
+                    <span class="threat-tag">DEEPFAKE</span>
+                    <h3><i class="fas fa-video"></i> Fraude au Président 2.0</h3>
+                    <p>Des deepfakes audio et vidéo hyperréalistes permettent d'usurper la voix ou le visage d'un PDG lors d'un appel vidéo pour ordonner des virements frauduleux. En 2024, une entreprise hongkongaise a perdu 25 millions de dollars suite à une vidéoconférence entièrement simulée par IA.</p>
+                </div>
+
+                <div class="threat-card">
+                    <span class="threat-tag">LLM</span>
+                    <h3><i class="fas fa-code"></i> Malwares génératifs</h3>
+                    <p>Des LLM (grands modèles de langage) non censurés comme WormGPT ou FraudGPT permettent à des attaquants sans compétences techniques de générer du code malveillant, des e-mails de phishing convaincants et des scripts d'exploitation en quelques secondes.</p>
+                </div>
+
+                <div class="threat-card">
+                    <span class="threat-tag">PROMPT INJECTION</span>
+                    <h3><i class="fas fa-terminal"></i> Attaques contre les IA</h3>
+                    <p>Les systèmes d'IA eux-mêmes deviennent des cibles : le prompt injection consiste à manipuler un assistant IA via des instructions cachées dans des documents ou des sites web pour lui faire exécuter des actions malveillantes au nom de l'utilisateur.</p>
+                </div>
+
+                <div class="threat-card">
+                    <span class="threat-tag">RECONNAISSANCE</span>
+                    <h3><i class="fas fa-search-location"></i> OSINT boosté à l'IA</h3>
+                    <p>L'IA automatise et accélère massivement la phase de reconnaissance : agrégation de données depuis LinkedIn, GitHub, Shodan et les réseaux sociaux pour construire des profils détaillés de cibles et identifier les vecteurs d'attaque optimaux en quelques minutes.</p>
+                </div>
+
+                <div class="threat-card">
+                    <span class="threat-tag">ADVERSARIAL AI</span>
+                    <h3><i class="fas fa-random"></i> Contournement des défenses IA</h3>
+                    <p>Les attaques adversariales consistent à modifier légèrement un malware (ajout de bytes invisibles) pour le faire classifier comme "bénin" par les systèmes de détection basés sur le machine learning, exploitant les angles morts mathématiques des modèles.</p>
+                </div>
+
+                <div class="threat-card">
+                    <span class="threat-tag">SOCIAL ENGINEERING</span>
+                    <h3><i class="fas fa-comments"></i> Phishing ultra-personnalisé</h3>
+                    <p>L'IA analyse l'historique public d'une cible (posts, articles, e-mails divulgués) pour générer des e-mails de spear-phishing sur mesure, avec le bon ton, les bons détails contextuels et les bons liens, rendant la détection humaine presque impossible.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- AVENIR -->
+        <section class="future-section">
+            <div class="section-header">
+                <h2 class="section-title">L'avenir de l'<span>IA</span> en cybersécurité</h2>
+                <p class="section-subtitle">Les grandes tendances qui vont transformer le domaine dans les prochaines années.</p>
+            </div>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2025 — MAINTENANT</div>
+                    <h3>Copilots IA pour les analystes SOC</h3>
+                    <p>Les assistants IA comme Microsoft Copilot for Security ou Google Security AI Workbench assistent les analystes en temps réel : résumé des alertes, requêtes en langage naturel dans les logs, suggestions de remédiation. L'humain garde le contrôle, l'IA gère le volume.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2026 — PROCHE</div>
+                    <h3>Agents IA autonomes de threat hunting</h3>
+                    <p>Des agents IA capables de mener de manière autonome des campagnes de chasse aux menaces : ils parcourent les journaux, corrèlent les IoC, lancent des requêtes Shodan, et remontent un rapport complet à l'analyste sans intervention humaine intermédiaire.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2027-2030 — FUTUR</div>
+                    <h3>Cryptographie post-quantique + IA</h3>
+                    <p>L'émergence des ordinateurs quantiques menace les algorithmes de chiffrement actuels (RSA, ECC). L'IA sera essentielle pour migrer automatiquement les infrastructures vers les nouveaux standards post-quantiques (CRYSTALS-Kyber, CRYSTALS-Dilithium) certifiés par le NIST.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2030+ — HORIZON</div>
+                    <h3>Cyber-immunité autonome</h3>
+                    <p>Des systèmes capables de détecter, contenir et éliminer une menace entièrement de manière autonome, sans intervention humaine, à la manière du système immunitaire biologique. L'enjeu : garantir que ces systèmes restent sous contrôle éthique et juridique humain.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>DUP-M</span>
+                </div>
+                <p class="footer-description">
+                    Passionné par la cybersécurité. Je me garde toujours informé des dernières découvertes et avancées dans ce domaine.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/mathieu-dupressoir-384376329/" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/MatDup6080" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    </div>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Navigation</h3>
+                <ul class="footer-links">
+                    <li><a href="Veille_cyber.html">Introduction</a></li>
+                    <li><a href="Fonctionnement.html">Fonctionnement</a></li>
+                    <li><a href="Attaques.html">Attaques</a></li>
+                    <li><a href="Preventions.html">Préventions</a></li>
+                    <li><a href="Acteurs.html">Acteurs</a></li>
+                    <li><a href="Hackers.html">Hackers</a></li>
+                    <li><a href="Outils.html">Outils</a></li>
+                    <li><a href="Faits_divers.html">Faits divers</a></li>
+                    <li><a href="IA_cyber.html">IA & Cybersécurité</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Ressources utiles</h3>
+                <ul class="footer-links">
+                    <li><a href="https://www.ssi.gouv.fr/" target="_blank">ANSSI (France)</a></li>
+                    <li><a href="https://www.cert.ssi.gouv.fr/" target="_blank">CERT-FR</a></li>
+                    <li><a href="https://17cyber.gouv.fr" target="_blank">Assistance cybermalveillance</a></li>
+                    <li><a href="https://www.cybermalveillance.gouv.fr" target="_blank">GIP ACYMA</a></li>
+                    <li><a href="http://www.cnil.fr" target="_blank">Le site de la CNIL</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Contact</h3>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>mathieu.dupressoir03@gmail.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Compiègne, France</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Mathieu Dupressoir — Portfolio</p>
+        </div>
+    </footer>
+
+    <script src="Veille_cyber.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
